@@ -9,6 +9,7 @@ import { siteConfigs } from "../../../scripts/site-configs";
 import { ColorGame } from "../../color-game/scripts/color-game";
 import { containerOptions, settings } from "../game-settings";
 import "./../../../resources/i18n";
+import ColorGameDiceOdds from "./dice-odds";
 const { Settlements, Rounds } = gc;
 
 const { movingNode, getPositionAtDestNode, playSpine, fadeOut, fadeIn } = AnimationUtils;
@@ -32,6 +33,9 @@ export default class Game extends GameComponent {
 
     @property(ColorGame)
     colorGame: ColorGame = null;
+
+    @property(ColorGameDiceOdds)
+    dicesOdds: ColorGameDiceOdds = null;
 
     override namespace = settings.name;
     override containerOptions = containerOptions;
