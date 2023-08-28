@@ -1,5 +1,5 @@
 import gc from "@sg/game-client-base";
-import { Label, _decorator } from "cc";
+import { Label, _decorator, log } from "cc";
 import GameComponent from "db://shared-components/game/scripts/components/game-component";
 import { WinningResult } from "db://shared-components/shared/common-components/winning-result/scripts/winning-result";
 import { startGame } from "db://shared-components/shared/scripts/startup";
@@ -40,10 +40,10 @@ export default class Game extends GameComponent {
     override namespace = settings.name;
     override containerOptions = containerOptions;
 
-    private choiceWinningSounds = {
-        dragon: "dragon-growl",
-        tiger: "tiger-growl",
-    };
+    protected clientRoundId = -1;
+    protected openAnimationIndex = 0;
+    protected randomResults = [1, 1, 1];
+
     onLoad() {
         super.onLoad();
         this.winningResult.hideQuickly();
@@ -58,12 +58,36 @@ export default class Game extends GameComponent {
         super.finishShowResult(settlementResult);
     }
 
+    @render(Rounds.RoundStore, (store) => store.clientRoundId)
+    storeClientRoundId(clientRoundId: number) {
+        this.clientRoundId = clientRoundId;
+        this.calculateForDices();
+    }
+
+    @render(Rounds.RoundTimeStore, (store) => store.isInRoundTime)
+    renderInRoundTime(isInRoundTime: boolean) {
+        if (isInRoundTime) {
+            this.colorGame.resetColorBox(this.randomResults);
+        }
+    }
+
+    calculateForDices() {
+        const seedNumber = 123;
+        this.openAnimationIndex = (this.clientRoundId * seedNumber) % this.colorGame.openAnimationCount;
+        const temp = (this.clientRoundId * seedNumber).toString().slice(-3);
+        this.randomResults = [];
+        for (let i = 0; i < 3; i++) {
+            this.randomResults.push(+temp[i] % 6);
+        }
+        log("openAnimationIndex ", this.openAnimationIndex);
+        log("randomResults ", this.randomResults);
+    }
+
     async showResult(result: gc.GameServiceMessage.TResult, hasAnimation: boolean) {
         if (result) {
             const results = Object.values(result);
             console.log("results ", results);
-            const roundId = 1;
-            const animationIndex = roundId % this.colorGame.openAnimationCount;
+            const animationIndex = this.openAnimationIndex;
             if (hasAnimation) {
                 this.colorGame.showResult(results, animationIndex);
             } else {
@@ -76,7 +100,7 @@ export default class Game extends GameComponent {
     async handleStartRound(isStartRound: boolean) {
         if (isStartRound) {
             super.handleStartRound(isStartRound);
-            this.colorGame.resetColorBox();
+            this.colorGame.resetColorBox(this.randomResults);
         }
     }
 }

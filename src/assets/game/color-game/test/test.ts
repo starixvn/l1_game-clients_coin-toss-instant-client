@@ -55,7 +55,7 @@ export class test extends Component {
     }
 
     onDemoClose() {
-        this.colorGame.resetColorBox();
+        this.colorGame.resetColorBox([1, 1, 1]);
     }
 
     onNewRecordClick(duration: number) {

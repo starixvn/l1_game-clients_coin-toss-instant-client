@@ -51,10 +51,9 @@ export class ColorGame extends Component {
         this.closeRecord = records;
     }
 
-    async resetColorBox() {
+    async resetColorBox(results: number[]) {
         await this.box.close();
         const animationInfo = this.closeRecord;
-        const results = [1, 1, 1];
         this.setResultDices(results, animationInfo.faceUp, 1);
         this.playDicesAnimation(animationInfo.rotation, null);
     }
