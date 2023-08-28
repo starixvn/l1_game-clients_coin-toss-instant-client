@@ -56,7 +56,15 @@ export default class Game extends GameComponent {
 
     async showResult(result: gc.GameServiceMessage.TResult, hasAnimation: boolean) {
         if (result) {
-            console.log("Show Result", result);
+            const results = Object.values(result);
+            console.log("results ", results);
+            const roundId = 1;
+            const animationIndex = roundId % this.colorGame.openAnimationCount;
+            if (hasAnimation) {
+                this.colorGame.showResult(results, animationIndex);
+            } else {
+                this.colorGame.showResultStatic(results, animationIndex);
+            }
         }
     }
 
@@ -64,6 +72,7 @@ export default class Game extends GameComponent {
     async handleStartRound(isStartRound: boolean) {
         if (isStartRound) {
             super.handleStartRound(isStartRound);
+            this.colorGame.resetColorBox();
         }
     }
 }
