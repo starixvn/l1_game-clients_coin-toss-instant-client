@@ -8,5 +8,25 @@
       "fitWidth": false
     }
   },
-  "custom_joint_texture_layouts": []
+  "custom_joint_texture_layouts": [],
+  "physics": {
+    "gravity": {
+      "y": -12
+    },
+    "collisionGroups": [
+      {
+        "index": 1,
+        "name": "DICE"
+      },
+      {
+        "index": 2,
+        "name": "BOX"
+      }
+    ],
+    "collisionMatrix": {
+      "0": 7,
+      "1": 7,
+      "2": 7
+    }
+  }
 }

@@ -1,0 +1,108 @@
+import { Component, JsonAsset, Node, Vec3, _decorator, tween } from "cc";
+import { ColorGameBox } from "./color-game-box";
+import Dice from "./dice";
+const { ccclass, property } = _decorator;
+
+interface Record {
+  rotation: { 0: []; 1: []; 2: [] };
+  faceUp: { 0: Vec3; 1: Vec3; 2: Vec3 };
+}
+
+@ccclass("ColorGame")
+export class ColorGame extends Component {
+  @property(ColorGameBox)
+  box: ColorGameBox = null;
+
+  @property(Node)
+  diceContainer: Node = null;
+
+  @property(JsonAsset)
+  animationJson: JsonAsset = null;
+
+  @property
+  stepToRotate = 20;
+
+  dices: Dice[] = [];
+
+  protected openRecords: Record[] = [];
+  protected closeRecord: Record;
+
+  onLoad() {
+    this.dices = this.diceContainer.getComponentsInChildren(Dice);
+    this.loadAnimation();
+  }
+
+  loadAnimation() {
+    if (this.animationJson) {
+      this.openRecords = this.animationJson.json.open;
+      this.closeRecord = this.animationJson.json.close;
+    }
+  }
+
+  pushNewRecordForOpen(records: Record[]) {
+    this.openRecords.push(...records);
+  }
+
+  changeCloseRecord(records: Record) {
+    this.closeRecord = records;
+  }
+
+  async resetColorBox() {
+    await this.box.close();
+    const animationInfo = this.closeRecord;
+    const results = [1, 1, 1];
+    this.setResultDices(results, animationInfo.faceUp, 1);
+    this.playDicesAnimation(animationInfo.rotation, null);
+  }
+
+  showResult(results: number[]) {
+    if (this.openRecords.length === 0) {
+      return;
+    }
+    this.box.open();
+    this.scheduleOnce(() => {}, 0.2);
+
+    const animationInfo = this.getOpenAnimation();
+
+    this.playDicesAnimation(animationInfo.rotation, (percent) => {
+      this.setResultDices(results, animationInfo.faceUp, percent);
+    });
+  }
+
+  playDicesAnimation(rotation: any, changeDice: (percent) => void) {
+    const stepCounts = rotation[0].length;
+    const stepToRotate = this.stepToRotate; //Math.floor(stepCounts);
+    let step = 0;
+    console.time("playDicesAnimation");
+    tween(this.node)
+      .call(() => {
+        this.dices.forEach((dice, index) => {
+          const info = rotation[index][step];
+          dice.cube.position = info.position;
+          dice.cube.eulerAngles = info.eulerAngles;
+        });
+        step++;
+        if (step <= stepToRotate) {
+          changeDice && changeDice(step / stepToRotate);
+        }
+      })
+      .delay(1.0 / 60)
+      .union()
+      .repeat(stepCounts)
+      .call(() => {
+        console.timeEnd("playDicesAnimation");
+      })
+      .start();
+  }
+
+  getOpenAnimation() {
+    return this.openRecords[this.openRecords.length - 1];
+  }
+
+  setResultDices(results: Number[], faceUp: any, percent: number) {
+    this.dices.forEach((dice, index) => {
+      const result = results[index];
+      dice.setResult(+result, faceUp[index], percent);
+    });
+  }
+}
