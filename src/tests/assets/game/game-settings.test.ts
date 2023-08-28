@@ -10,8 +10,8 @@ describe("settings", () => {
     it("should have data as expected", () => {
         // Assert
         expect(settings).toStrictEqual({
-            id: 67,
-            name: "DragonTigerFight",
+            id: 71,
+            name: "ColorGame",
             durations: {
                 wholeRound: 41,
                 lockingBet: 5,
