@@ -72,13 +72,14 @@ export default class Game extends GameComponent {
 
     async showResult(result: gc.GameServiceMessage.TResult, hasAnimation: boolean) {
         if (result) {
-            this.renderResultCards(result);
+            // this.renderResultCards(result);
 
-            if (hasAnimation) {
-                await this.openCards();
-            } else {
-                this.openCardsWithoutAnim();
-            }
+            // if (hasAnimation) {
+            //     await this.openCards();
+            // } else {
+            //     this.openCardsWithoutAnim();
+            // }
+            console.log("Show Result", result);
         }
     }
 

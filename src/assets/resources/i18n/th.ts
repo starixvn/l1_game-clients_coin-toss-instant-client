@@ -115,23 +115,10 @@ export const languages = {
         "under_maintenance_time": "เริ่มต้นจาก %{startTime} ถึง %{endTime} (GMT+8)",
         "win": "ชนะ"
     },
-    "DragonTigerFight": {
-        "bet_history_dragon": "(มังกร",
-        "bet_history_tiger": "เสือ)",
-        "dragon_win": "มังกรชนะ",
-        "game_icon_name": "เสือมังกรไฟท์",
-        "game_name": "เสือมังกรไฟท์",
-        "glossary_blackDragon": "มังกรดำ",
-        "glossary_blackTiger": "เสือดำ",
-        "glossary_dragon": "มังกร",
-        "glossary_redDragon": "มังกรแดง",
-        "glossary_redTiger": "เสือแดง",
-        "glossary_tie": "เสมอ",
-        "glossary_tiger": "เสือ",
-        "option_black": "ดำ",
-        "option_red": "แดง",
-        "tie_win": "เสมอ!",
-        "tiger_win": "เสือชนะ"
+    "ColorGame": {
+        "double_dice": "สองเท่า",
+        "single_dice": "เดี่ยว",
+        "triple_dice": "สามเท่า"
     }
 };
 

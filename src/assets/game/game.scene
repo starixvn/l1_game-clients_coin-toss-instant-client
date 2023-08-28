@@ -217,7 +217,7 @@
     "_priority": 0,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 401.6937618147448,
+    "_orthoHeight": 393,
     "_near": 0,
     "_far": 1000,
     "_color": {
@@ -5074,7 +5074,7 @@
     "nodeContentContainer": null,
     "lengthOfMd5": 28,
     "md5Tip": null,
-    "_id": "36SZ9GoW5M4onyZVmiq0nH"
+    "_id": "44yWzilnRPCp2AfpDtaGsD"
   },
   {
     "__type__": "cc.Node",
@@ -6211,10 +6211,7 @@
     "propertyPath": [
       "audioConfig"
     ],
-    "value": {
-      "__uuid__": "99851487-efe5-428b-ae71-bf1dd4b90cb7",
-      "__expectedType__": "cc.JsonAsset"
-    }
+    "value": null
   },
   {
     "__type__": "cc.TargetInfo",
@@ -8504,7 +8501,7 @@
   {
     "__type__": "cc.TargetInfo",
     "localID": [
-      "1cjcGG6UFPJJgLl2xkFVrh"
+      "5e1xhL6HNPPK86sR5hOre9"
     ]
   },
   {

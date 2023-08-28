@@ -1,14 +1,15 @@
 export enum Choice {
-    Dragon = 0,
-    Tiger,
+    Hot = 0,
+    Cold,
 }
 
 export enum BetChoice {
-    Dragon = "dragon",
-    Tiger = "tiger",
-    Tie = "tie",
-    Red_Dragon = "redDragon",
-    Black_Dragon = "blackDragon",
-    Red_Tiger = "redTiger",
-    Black_Tiger = "blackTiger",
+    Hot = "dragon",
+    Cold = "tiger",
+    Yellow = "yellow",
+    White = "white",
+    Pink = "pink",
+    Blue = "blue",
+    Red = "red",
+    Green = "green",
 }
