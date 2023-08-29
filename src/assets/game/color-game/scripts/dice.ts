@@ -63,9 +63,8 @@ export default class Dice extends Component {
         Quat.multiply(multiply, rotateToOrigin, upRotate);
 
         const rotation = new Quat();
-        const initRotation = new Quat();
 
-        Quat.slerp(rotation, Quat.fromEuler(initRotation, 0, 0, 0), multiply, percent);
+        Quat.slerp(rotation, node.rotation, multiply, percent);
         node.setRotation(rotation);
     }
 

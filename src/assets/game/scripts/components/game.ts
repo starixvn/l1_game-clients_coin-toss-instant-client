@@ -43,6 +43,7 @@ export default class Game extends GameComponent {
     protected clientRoundId = -1;
     protected openAnimationIndex = 0;
     protected randomResults = [1, 1, 1];
+    protected hasResetBox = false;
 
     onLoad() {
         super.onLoad();
@@ -66,8 +67,9 @@ export default class Game extends GameComponent {
 
     @render(Rounds.RoundTimeStore, (store) => store.isInRoundTime)
     renderInRoundTime(isInRoundTime: boolean) {
-        if (isInRoundTime) {
+        if (isInRoundTime && !this.hasResetBox) {
             this.colorGame.resetColorBox(this.randomResults);
+            this.hasResetBox = true;
         }
     }
 
@@ -84,13 +86,14 @@ export default class Game extends GameComponent {
     async showResult(result: gc.GameServiceMessage.TResult, hasAnimation: boolean) {
         if (result) {
             const results = Object.values(result);
-            console.log("results ", results);
             const animationIndex = this.openAnimationIndex;
             if (hasAnimation) {
                 this.colorGame.showResult(results, animationIndex);
             } else {
                 this.colorGame.showResultStatic(results, animationIndex);
             }
+
+            this.hasResetBox = false;
         }
     }
 
@@ -99,6 +102,7 @@ export default class Game extends GameComponent {
         if (isStartRound) {
             super.handleStartRound(isStartRound);
             this.colorGame.resetColorBox(this.randomResults);
+            this.hasResetBox = true;
         }
     }
 }

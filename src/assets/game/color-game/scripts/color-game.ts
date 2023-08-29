@@ -1,4 +1,4 @@
-import { Component, JsonAsset, Node, Vec3, _decorator, tween } from "cc";
+import { Component, JsonAsset, Node, Vec3, _decorator, log, tween } from "cc";
 import { ColorGameBox } from "./color-game-box";
 import Dice from "./dice";
 const { ccclass, property } = _decorator;
@@ -19,8 +19,7 @@ export class ColorGame extends Component {
     @property(JsonAsset)
     animationJson: JsonAsset = null;
 
-    @property
-    stepToRotate = 20;
+    stepToRotate = 30;
 
     dices: Dice[] = [];
 
@@ -34,6 +33,7 @@ export class ColorGame extends Component {
     onLoad() {
         this.dices = this.diceContainer.getComponentsInChildren(Dice);
         this.loadAnimation();
+        this.hideAllDices();
     }
 
     loadAnimation() {
@@ -53,6 +53,7 @@ export class ColorGame extends Component {
 
     async resetColorBox(results: number[]) {
         await this.box.close();
+        this.showAllDices();
         const animationInfo = this.closeRecord;
         this.setResultDices(results, animationInfo.faceUp, 1);
         this.playDicesAnimation(animationInfo.rotation, null);
@@ -62,16 +63,19 @@ export class ColorGame extends Component {
         if (this.openRecords.length === 0) {
             return;
         }
+        this.showAllDices();
         this.box.open();
+        log("showResult ", animationIndex);
         const animationInfo = this.getOpenAnimation(animationIndex);
-
         this.playDicesAnimation(animationInfo.rotation, (percent) => {
             this.setResultDices(results, animationInfo.faceUp, percent);
         });
     }
 
     showResultStatic(results: number[], animationIndex: number) {
+        this.showAllDices();
         this.box.open(false);
+        log("showResultStatic ", animationIndex);
         const animationInfo = this.getOpenAnimation(animationIndex);
         this.setLastPositionForAnimation(animationInfo.rotation);
         this.setResultDices(results, animationInfo.faceUp, 1);
@@ -84,6 +88,14 @@ export class ColorGame extends Component {
             dice.cube.position = info.position;
             dice.cube.eulerAngles = info.eulerAngles;
         });
+    }
+
+    protected hideAllDices() {
+        this.diceContainer.active = false;
+    }
+
+    protected showAllDices() {
+        this.diceContainer.active = true;
     }
 
     playDicesAnimation(rotation: any, changeDice: (percent) => void) {
