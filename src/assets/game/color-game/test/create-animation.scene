@@ -108,7 +108,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 699,
-      "y": 393,
+      "y": 392.99999999999994,
       "z": 0
     },
     "_lrot": {
@@ -193,7 +193,7 @@
     "_priority": 1073741824,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 393,
+    "_orthoHeight": 392.99999999999994,
     "_near": 1,
     "_far": 2000,
     "_color": {
@@ -4346,9 +4346,9 @@
     "__prefab": null,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 250,
+      "g": 195,
+      "b": 100,
       "a": 255
     },
     "_useColorTemperature": false,
@@ -6269,11 +6269,13 @@
     "instance": {
       "__id__": 232
     },
-    "targetOverrides": null
+    "targetOverrides": null,
+    "nestedPrefabInstanceRoots": null
   },
   {
     "__type__": "cc.PrefabInstance",
     "fileId": "1foej+upZMeanOPGS8HFY8",
+    "prefabRootNode": null,
     "mountedChildren": [],
     "mountedComponents": [],
     "propertyOverrides": [
@@ -6378,11 +6380,13 @@
     "instance": {
       "__id__": 240
     },
-    "targetOverrides": null
+    "targetOverrides": null,
+    "nestedPrefabInstanceRoots": null
   },
   {
     "__type__": "cc.PrefabInstance",
     "fileId": "0aymAVU7VNd5QGlOWSfCfW",
+    "prefabRootNode": null,
     "mountedChildren": [],
     "mountedComponents": [],
     "propertyOverrides": [
@@ -6487,11 +6491,13 @@
     "instance": {
       "__id__": 248
     },
-    "targetOverrides": null
+    "targetOverrides": null,
+    "nestedPrefabInstanceRoots": null
   },
   {
     "__type__": "cc.PrefabInstance",
     "fileId": "9a5KIDQA9Db6aUUKWEUZZx",
+    "prefabRootNode": null,
     "mountedChildren": [],
     "mountedComponents": [],
     "propertyOverrides": [
@@ -9461,8 +9467,8 @@
     "_target": null,
     "_left": 5.684341886080802e-14,
     "_right": 5.684341886080802e-14,
-    "_top": 0,
-    "_bottom": 0,
+    "_top": -5.684341886080802e-14,
+    "_bottom": -5.684341886080802e-14,
     "_horizontalCenter": 0,
     "_verticalCenter": 0,
     "_isAbsLeft": true,

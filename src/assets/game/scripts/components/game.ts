@@ -1,5 +1,5 @@
 import gc from "@sg/game-client-base";
-import { Label, _decorator, log } from "cc";
+import { Label, _decorator } from "cc";
 import GameComponent from "db://shared-components/game/scripts/components/game-component";
 import { WinningResult } from "db://shared-components/shared/common-components/winning-result/scripts/winning-result";
 import { startGame } from "db://shared-components/shared/scripts/startup";
@@ -79,8 +79,6 @@ export default class Game extends GameComponent {
         for (let i = 0; i < 3; i++) {
             this.randomResults.push(+temp[i] % 6);
         }
-        log("openAnimationIndex ", this.openAnimationIndex);
-        log("randomResults ", this.randomResults);
     }
 
     async showResult(result: gc.GameServiceMessage.TResult, hasAnimation: boolean) {

@@ -89,7 +89,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 1.308,
+      "x": 0,
       "y": 0,
       "z": 0
     },
@@ -506,8 +506,6 @@
       "__id__": 0
     },
     "fileId": "21F7/TOn9CU4UU0rIGgASr",
-    "instance": null,
-    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -939,7 +937,7 @@
       "__uuid__": "8b542add-cad9-43de-ae49-e7a0cdad8d09@08c68",
       "__expectedType__": "cc.Mesh"
     },
-    "_shadowCastingMode": 0,
+    "_shadowCastingMode": 1,
     "_shadowReceivingMode": 1,
     "_shadowBias": 0,
     "_shadowNormalBias": 0,
@@ -1479,12 +1477,12 @@
       "__type__": "cc.Quat",
       "x": 0,
       "y": 0,
-      "z": 0.09049224726870964,
+      "z": 0.09049224726870966,
       "w": 0.9958971599438663
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 0.2874166965484619,
+      "x": 0.187417,
       "y": 0.2874166965484619,
       "z": 0.2874166965484619
     },
@@ -1494,7 +1492,7 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 10.383852677991541
+      "z": 10.383852677991545
     },
     "_id": ""
   },
@@ -2157,7 +2155,7 @@
       "__uuid__": "8b542add-cad9-43de-ae49-e7a0cdad8d09@fd4a2",
       "__expectedType__": "cc.Mesh"
     },
-    "_shadowCastingMode": 0,
+    "_shadowCastingMode": 1,
     "_shadowReceivingMode": 1,
     "_shadowBias": 0,
     "_shadowNormalBias": 0,
@@ -2941,9 +2939,9 @@
     },
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 250,
+      "g": 195,
+      "b": 100,
       "a": 255
     },
     "_useColorTemperature": false,
@@ -3006,6 +3004,7 @@
       "__id__": 0
     },
     "fileId": "b1ZX4O1EVFmaTE1YoA+6p5",
+    "instance": null,
     "targetOverrides": null,
     "nestedPrefabInstanceRoots": [
       {
