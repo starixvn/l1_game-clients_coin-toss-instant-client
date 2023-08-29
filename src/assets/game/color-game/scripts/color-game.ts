@@ -119,7 +119,7 @@ export class ColorGame extends Component {
     setResultDices(results: Number[], faceUp: any, percent: number) {
         this.dices.forEach((dice, index) => {
             const result = results[index];
-            dice.setResult(+result, faceUp[index], percent);
+            dice.setResult(+result, faceUp[index], percent, index);
         });
     }
 }

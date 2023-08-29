@@ -49,13 +49,18 @@ export class test extends Component {
         });
     }
 
+    get demoResults() {
+        return this.editBox.string.split(",").map((a) => +a);
+    }
+
     onDemoOpen() {
-        const results = this.editBox.string.split(",").map((a) => +a);
+        const results = this.demoResults;
         this.colorGame.showResult(results, 0);
     }
 
     onDemoClose() {
-        this.colorGame.resetColorBox([1, 1, 1]);
+        const results = this.demoResults;
+        this.colorGame.resetColorBox(results);
     }
 
     onNewRecordClick(duration: number) {
