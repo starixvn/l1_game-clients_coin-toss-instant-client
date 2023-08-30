@@ -34,9 +34,6 @@ export default class Game extends GameComponent {
     @property(ColorGame)
     colorGame: ColorGame = null;
 
-    @property(ColorGameDiceOdds)
-    dicesOdds: ColorGameDiceOdds = null;
-
     override namespace = settings.name;
     override containerOptions = containerOptions;
 
