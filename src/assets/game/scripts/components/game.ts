@@ -94,7 +94,7 @@ export default class Game extends GameComponent {
         }
     }
 
-            this.playSound(this.choiceWinningSounds[winChoice]);
+    // this.playSound(this.choiceWinningSounds[winChoice]);
     async handleStartRound(isStartRound: boolean) {
         if (isStartRound) {
             super.handleStartRound(isStartRound);

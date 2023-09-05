@@ -117,8 +117,16 @@ export const languages = {
     },
     "ColorGame": {
         "double_dice": "สองเท่า",
+        "glossary_blue": "BLUE",
+        "glossary_cold": "สีเย็น",
+        "green": "สีเขียว",
+        "hot": "สีร้อนแรง",
+        "pink": "สีชมพู",
+        "red": "สีแดง",
         "single_dice": "เดี่ยว",
-        "triple_dice": "สามเท่า"
+        "triple_dice": "สามเท่า",
+        "white": "สีขาว",
+        "yellow": "สีเหลือง"
     }
 };
 

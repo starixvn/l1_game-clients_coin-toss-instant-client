@@ -116,9 +116,21 @@ export const languages = {
         "win": "贏"
     },
     "ColorGame": {
+        "blue": "藍色",
+        "cold": "冷",
         "double_dice": "雙倍",
+        "game_icon_name": "色彩遊戲",
+        "game_name": "色彩遊戲",
+        "glossary_blue": "藍色",
+        "glossary_cold": "冷",
+        "green": "綠色",
+        "hot": "熱",
+        "pink": "粉色",
+        "red": "紅色",
         "single_dice": "單",
-        "triple_dice": "三倍"
+        "triple_dice": "三倍",
+        "white": "白色",
+        "yellow": "黃色"
     }
 };
 

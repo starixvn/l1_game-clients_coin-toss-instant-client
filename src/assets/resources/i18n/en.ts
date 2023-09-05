@@ -121,6 +121,8 @@ export const languages = {
         "double_dice": "Double",
         "game_icon_name": "COLOR GAME",
         "game_name": "COLOR GAME",
+        "glossary_blue": "BLUE",
+        "glossary_cold": "COLD",
         "green": "GREEN",
         "hot": "HOT",
         "pink": "PINK",

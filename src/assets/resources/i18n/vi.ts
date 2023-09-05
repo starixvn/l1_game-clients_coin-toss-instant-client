@@ -121,6 +121,8 @@ export const languages = {
         "double_dice": "Đôi",
         "game_icon_name": "XÍ NGẦU LỤC SẮC",
         "game_name": "XÍ NGẦU LỤC SẮC",
+        "glossary_blue": "XANH DƯƠNG",
+        "glossary_cold": "LẠNH",
         "green": "XANH LÁ",
         "hot": "NÓNG",
         "pink": "HỒNG",

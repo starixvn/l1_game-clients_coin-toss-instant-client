@@ -117,8 +117,16 @@ export const languages = {
     },
     "ColorGame": {
         "double_dice": "Dobel",
+        "glossary_blue": "BIRU",
+        "glossary_cold": "DINGIN",
+        "green": "HIJAU",
+        "hot": "PANAS",
+        "pink": "MERAH MUDA",
+        "red": "MERAH",
         "single_dice": "Single",
-        "triple_dice": "Tripel"
+        "triple_dice": "Tripel",
+        "white": "PUTIH",
+        "yellow": "KUNING"
     }
 };
 
