@@ -2,12 +2,12 @@
   "ver": "1.1.45",
   "importer": "prefab",
   "imported": true,
-  "uuid": "f9b227ce-441b-4ef2-8a2c-6f566e2993a8",
+  "uuid": "2fa18982-eaf5-4736-8a54-1234679992ce",
   "files": [
     ".json"
   ],
   "subMetas": {},
   "userData": {
-    "syncNodeName": "custom-led-light-item"
+    "syncNodeName": "custom-history-result"
   }
 }
