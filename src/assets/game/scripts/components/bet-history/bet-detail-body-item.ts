@@ -11,7 +11,7 @@ export interface ColorGameResult {
     dice3: number;
 }
 
-const resultMapper: { [key: string]: number } = {
+export const resultMapper: { [key: string]: number } = {
     yellow: 0,
     red: 1,
     pink: 2,
