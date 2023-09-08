@@ -4,8 +4,8 @@ export enum Choice {
 }
 
 export enum BetChoice {
-    Hot = "dragon",
-    Cold = "tiger",
+    Hot = "hot",
+    Cold = "cold",
     Yellow = "yellow",
     White = "white",
     Pink = "pink",

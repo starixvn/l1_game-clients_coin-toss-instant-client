@@ -388,7 +388,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 94.6,
+      "width": 93.81,
       "height": 44
     },
     "_anchorPoint": {
@@ -540,7 +540,7 @@
       "b": 255,
       "a": 255
     },
-    "_string": "Red Tiger",
+    "_string": "Yellow",
     "_horizontalAlign": 0,
     "_verticalAlign": 1,
     "_actualFontSize": 19,
@@ -599,7 +599,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 86.28857421875,
+      "width": 59.8388671875,
       "height": 55.44
     },
     "_anchorPoint": {
@@ -827,7 +827,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 34.83,
+      "width": 32.85,
       "height": 44
     },
     "_anchorPoint": {
@@ -1035,7 +1035,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 20.98,
+      "width": 19.79,
       "height": 44
     },
     "_anchorPoint": {
