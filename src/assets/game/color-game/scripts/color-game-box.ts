@@ -7,7 +7,7 @@ export class ColorGameBox extends Component {
     lockNode: Node = null;
 
     private readonly openEulerAngleZ = 30;
-    private readonly closeEulerAngleZ = -80;
+    private readonly closeEulerAngleZ = -90;
 
     open(animated = true) {
         return new Promise<void>((resolve) => {

@@ -1,4 +1,4 @@
-import { _decorator, Component, EditBox, Node, sys, v3 } from "cc";
+import { _decorator, Component, EditBox, Label, Node, RigidBody, sys, v3, Vec3 } from "cc";
 import { ColorGame } from "../scripts/color-game";
 import { ColorGameBox } from "../scripts/color-game-box";
 import Dice from "../scripts/dice";
@@ -18,8 +18,12 @@ export class test extends Component {
     @property(ColorGame)
     colorGame: ColorGame = null;
 
+    @property(Label)
+    animationIndexLabel: Label = null;
+
     dices: Dice[] = [];
 
+    protected animationIndex = 0;
     protected isAnimating = false;
     protected tempRotation = { 0: [], 1: [], 2: [] };
 
@@ -55,7 +59,7 @@ export class test extends Component {
 
     onDemoOpen() {
         const results = this.demoResults;
-        this.colorGame.showResult(results, 0);
+        this.colorGame.showResult(results, this.animationIndex);
     }
 
     onDemoClose() {
@@ -136,6 +140,40 @@ export class test extends Component {
 
     async onOpenClick() {
         this.onNewRecordClick(2);
+        this.scheduleOnce(this.applyForce, 0.3);
         await this.colorBox.open();
+    }
+
+    applyForce() {
+        const rigidBodies = this.dices.map((dice) => dice.cube.getComponent(RigidBody));
+
+        const applyForce = () =>
+            rigidBodies.forEach((body) => {
+                // body.applyLocalForce(Vec3.random(new Vec3(), 3), Vec3.UP);
+                body.applyLocalForce(v3(0, 2, 0), Vec3.random(new Vec3(), 1));
+            });
+
+        applyForce();
+    }
+
+    onClickNextAnimation() {
+        this.animationIndex++;
+        this.updateAnimationIndex();
+    }
+
+    onClickPrevAnimation() {
+        this.animationIndex--;
+        this.updateAnimationIndex();
+    }
+
+    updateAnimationIndex() {
+        if (this.animationIndex >= this.colorGame.openAnimationCount) {
+            this.animationIndex = this.colorGame.openAnimationCount - 1;
+        }
+        if (this.animationIndex <= 0) {
+            this.animationIndex = 0;
+        }
+
+        this.animationIndexLabel.string = `Animation Id: ${this.animationIndex}`;
     }
 }
