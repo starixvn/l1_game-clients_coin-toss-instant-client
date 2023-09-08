@@ -1,7 +1,6 @@
 import gc from "@sg/game-client-base";
 import { Label, _decorator } from "cc";
 import GameComponent from "db://shared-components/game/scripts/components/game-component";
-import { WinningResult } from "db://shared-components/shared/common-components/winning-result/scripts/winning-result";
 import { startGame } from "db://shared-components/shared/scripts/startup";
 import { AnimationUtils } from "db://shared-components/shared/utils";
 import Observer from "observer";
@@ -9,8 +8,9 @@ import { siteConfigs } from "../../../scripts/site-configs";
 import { ColorGame } from "../../color-game/scripts/color-game";
 import { containerOptions, settings } from "../game-settings";
 import "./../../../resources/i18n";
-import ColorGameDiceOdds from "./dice-odds";
-const { Settlements, Rounds } = gc;
+import { ColorGameDoubleTripleResult } from "./double-triple-result";
+import { WinningResult } from "../../../../extensions/shared-components/assets/shared/common-components/winning-result/scripts/winning-result";
+const { Rounds } = gc;
 
 const { movingNode, getPositionAtDestNode, playSpine, fadeOut, fadeIn } = AnimationUtils;
 
@@ -34,6 +34,9 @@ export default class Game extends GameComponent {
     @property(ColorGame)
     colorGame: ColorGame = null;
 
+    @property(ColorGameDoubleTripleResult)
+    doubleTripleResult: ColorGameDoubleTripleResult = null;
+
     override namespace = settings.name;
     override containerOptions = containerOptions;
 
@@ -47,13 +50,12 @@ export default class Game extends GameComponent {
         this.winningResult.hideQuickly();
     }
 
-    async finishShowResult(settlementResult: gc.GameServiceMessage.TSettlementResult) {
-        this.winningResult.setSettlementResult(settlementResult);
+    async finishShowWinningResult(result: gc.GameServiceMessage.TResult) {
+        this.winningResult.setResult(result);
+        await AnimationUtils.delayTime(1.5);
         await this.winningResult.show();
-        const showWinningResult = 1;
-        await AnimationUtils.delayTime(showWinningResult);
+        await AnimationUtils.delayTime(3);
         this.winningResult.hide();
-        super.finishShowResult(settlementResult);
     }
 
     @render(Rounds.RoundStore, (store) => store.clientRoundId)
@@ -84,11 +86,15 @@ export default class Game extends GameComponent {
         if (result) {
             const results = Object.values(result);
             const animationIndex = this.openAnimationIndex;
+
             if (hasAnimation) {
                 this.colorGame.showResult(results, animationIndex);
             } else {
                 this.colorGame.showResultStatic(results, animationIndex);
             }
+
+            this.finishShowWinningResult(result);
+            this.doubleTripleResult.setResult(results);
 
             this.hasResetBox = false;
         }
