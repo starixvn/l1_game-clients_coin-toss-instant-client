@@ -49,9 +49,14 @@ export default class BetDetailBodyItem extends BaseBetDetailBodyItem {
         this.lblWin.string = FormatUtils.numberWithCommas(winningAmount, 2);
         this.setHighlightTicketDetail(winningAmount > amount);
 
-        this.lblOdds.string = isWin
-            ? (fractionalOddsFormat ? FormatUtils.numberWithCommas(+effectiveOdds - 1, 2) : effectiveOdds).toString()
-            : "-";
+        if (inferableChoices.includes(choice)) {
+            const inferableOdd = freeBet ? odds[choice] - 1 : odds[choice];
+            this.lblOdds.string = (fractionalOddsFormat ? FormatUtils.numberWithCommas(+inferableOdd - 1, 2) : inferableOdd).toString();
+        } else {
+            this.lblOdds.string = isWin
+                ? (fractionalOddsFormat ? FormatUtils.numberWithCommas(+effectiveOdds - 1, 2) : effectiveOdds).toString()
+                : "-";
+        }
     }
 
     getWinningOdd(
