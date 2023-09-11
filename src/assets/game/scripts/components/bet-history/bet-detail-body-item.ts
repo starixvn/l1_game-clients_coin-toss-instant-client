@@ -40,35 +40,31 @@ export default class BetDetailBodyItem extends BaseBetDetailBodyItem {
         fractionalOddsFormat: boolean
     ) {
         const { amount, choice } = betDetailsLog;
-        const winningOdd = this.getWinningOdd(choice, settlementResult, result, odds);
+        const isWin = settlementResult[choice];
         super.setData(betDetailsLog, index, odds, settlementResult, result, freeBet, fractionalOddsFormat);
 
+        const winningOdd = this.getWinningOdd(choice, isWin, result, odds);
         const effectiveOdds = freeBet ? winningOdd - 1 : winningOdd;
         const winningAmount = amount * effectiveOdds;
         this.lblWin.string = FormatUtils.numberWithCommas(winningAmount, 2);
-        settlementResult[choice] && this.setHighlightTicketDetail(winningAmount > amount);
+        this.setHighlightTicketDetail(winningAmount > amount);
 
-        this.lblOdds.string = (fractionalOddsFormat ? FormatUtils.numberWithCommas(+effectiveOdds - 1, 2) : effectiveOdds).toString();
+        this.lblOdds.string = isWin
+            ? (fractionalOddsFormat ? FormatUtils.numberWithCommas(+effectiveOdds - 1, 2) : effectiveOdds).toString()
+            : "-";
     }
 
     getWinningOdd(
         choice: string,
-        settlementResult: gc.BetHistory.DynamicObject<boolean>,
+        isWin: boolean,
         result: gc.BetHistory.DynamicObject<ColorGameResult>,
         odds: gc.BetHistory.DynamicObject<number>
     ) {
-        const winningOddsName = this.getWinningOddName(choice, settlementResult, result);
-
+        const winningOddsName = this.getWinningOddName(choice, isWin, result);
         return winningOddsName === "" ? 0 : odds[winningOddsName];
     }
 
-    getWinningOddName(
-        choice: string,
-        settlementResult: gc.BetHistory.DynamicObject<boolean>,
-        result: gc.BetHistory.DynamicObject<ColorGameResult>
-    ) {
-        const isWin = settlementResult[choice];
-
+    getWinningOddName(choice: string, isWin: boolean, result: gc.BetHistory.DynamicObject<ColorGameResult>) {
         if (inferableChoices.includes(choice) && isWin) {
             return choice;
         } else if (isWin) {
