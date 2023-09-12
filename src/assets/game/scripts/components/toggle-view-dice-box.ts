@@ -1,7 +1,8 @@
 import gc from "@sg/game-client-base";
-import { _decorator, Node, Tween, UIOpacity, v3, tween } from "cc";
-import { ObserverComponent } from "../../../../extensions/shared-components/assets/shared/common-components/observer-component/scripts/observer-component";
+import { Node, Tween, UIOpacity, _decorator, tween, v3 } from "cc";
 import Observer from "observer";
+import { ObserverComponent } from "../../../../extensions/shared-components/assets/shared/common-components/observer-component/scripts/observer-component";
+import { ColorGameViewDicesBox } from "./view-dice-box";
 const { Rounds } = gc;
 const { RoundTimeStore } = Rounds;
 
@@ -61,13 +62,21 @@ export class ColorGameToggleViewDicesBox extends ObserverComponent {
     tweenExpand() {
         Tween.stopAllByTarget(this.diceBoxNode);
         Tween.stopAllByTarget(this.showableOpacity);
-        tween(this.diceBoxNode).to(this.showDuration, { position: this.showPosition }).start();
+        tween(this.diceBoxNode)
+            .to(this.showDuration, { position: this.showPosition })
+            .call(() => {
+                const diceBox = this.diceBoxNode.getComponent(ColorGameViewDicesBox);
+                diceBox.browseAllCameras();
+            })
+            .start();
         tween(this.showableOpacity).to(this.showDuration, { opacity: 255 }).start();
     }
 
     tweenCollapse() {
         Tween.stopAllByTarget(this.diceBoxNode);
         Tween.stopAllByTarget(this.showableOpacity);
+        const diceBox = this.diceBoxNode.getComponent(ColorGameViewDicesBox);
+        diceBox.stopBrowseCameras();
         tween(this.diceBoxNode).to(this.showDuration, { position: this.hidePosition }).start();
         tween(this.showableOpacity).to(this.showDuration, { opacity: 0 }).start();
     }

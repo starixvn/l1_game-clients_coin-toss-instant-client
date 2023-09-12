@@ -1,5 +1,5 @@
 import gc from "@sg/game-client-base";
-import { _decorator } from "cc";
+import { _decorator, Camera, Node, Tween, tween } from "cc";
 import Observer from "observer";
 import { ObserverComponent } from "../../../../extensions/shared-components/assets/shared/common-components/observer-component/scripts/observer-component";
 
@@ -9,8 +9,28 @@ const { RoundTimeStore } = Rounds;
 const { ccclass, property } = _decorator;
 const { observer, render, handle } = Observer;
 
+enum CameraType {
+    Center = 0,
+    Right,
+    Left,
+    Top,
+    Bottom,
+}
+
 @ccclass("ColorGameViewDicesBox")
 export class ColorGameViewDicesBox extends ObserverComponent {
+    @property(Node)
+    miniCameraContainer;
+    protected cameraNodes: Node[] = [];
+
+    protected browseTween: Tween<Node>;
+
+    onLoad() {
+        if (this.miniCameraContainer) {
+            this.cameraNodes = this.miniCameraContainer.getComponentsInChildren(Camera).map((camera) => camera.node);
+        }
+    }
+
     @handle(gc.Audios.AudioHandler, (handle, id: string) => handle.playSFX(id))
     playSoundClick() {
         return gc.Audios.AudioIds.CLICK;
@@ -21,23 +41,61 @@ export class ColorGameViewDicesBox extends ObserverComponent {
         this.node.active = isPlacingBet;
     }
 
+    browseAllCameras() {
+        const gapTime = 0.2;
+        const order = [
+            //
+            CameraType.Center,
+            CameraType.Right,
+            CameraType.Left,
+            CameraType.Top,
+            CameraType.Bottom,
+            CameraType.Center,
+        ];
+        let index = 0;
+        this.browseTween = tween(this.node)
+            .call(() => {
+                this.displayCamera(order[index]);
+                index++;
+            })
+            .delay(gapTime)
+            .union()
+            .repeat(order.length)
+            .start();
+    }
+
+    stopBrowseCameras() {
+        this.browseTween?.stop();
+        this.browseTween = null;
+    }
+
+    displayCamera(type: CameraType) {
+        this.cameraNodes.forEach((node, index) => {
+            node.active = type === index;
+        });
+    }
+
     onClickTop() {
         this.playSoundClick();
-        console.log("Click Top Button");
+        this.stopBrowseCameras();
+        this.displayCamera(CameraType.Top);
     }
 
     onClickBottom() {
         this.playSoundClick();
-        console.log("Click Bottom Button");
+        this.stopBrowseCameras();
+        this.displayCamera(CameraType.Bottom);
     }
 
     onClickLeft() {
         this.playSoundClick();
-        console.log("Click Left Button");
+        this.stopBrowseCameras();
+        this.displayCamera(CameraType.Left);
     }
 
     onClickRight() {
         this.playSoundClick();
-        console.log("Click Right Button");
+        this.stopBrowseCameras();
+        this.displayCamera(CameraType.Right);
     }
 }
