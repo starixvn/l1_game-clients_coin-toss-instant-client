@@ -44,8 +44,8 @@ export class ColorGameViewDicesBox extends ObserverComponent {
     }
 
     setVisibility(isPlacingBet: boolean) {
-        // this.node.active = isPlacingBet;
-        // this.miniCameraContainer.active = isPlacingBet;
+        this.node.active = isPlacingBet;
+        this.miniCameraContainer.active = isPlacingBet;
     }
 
     browseAllCameras() {
