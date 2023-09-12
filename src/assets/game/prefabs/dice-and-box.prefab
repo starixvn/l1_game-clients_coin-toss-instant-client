@@ -1679,9 +1679,9 @@
     "_clearFlags": 6,
     "_rect": {
       "__type__": "cc.Rect",
-      "x": 0.415,
+      "x": 0.4175,
       "y": 0.805,
-      "width": 0.17,
+      "width": 0.165,
       "height": 0.19
     },
     "_aperture": 19,
@@ -1851,9 +1851,9 @@
     "_clearFlags": 6,
     "_rect": {
       "__type__": "cc.Rect",
-      "x": 0.415,
+      "x": 0.4175,
       "y": 0.805,
-      "width": 0.17,
+      "width": 0.165,
       "height": 0.19
     },
     "_aperture": 19,
@@ -2023,9 +2023,9 @@
     "_clearFlags": 6,
     "_rect": {
       "__type__": "cc.Rect",
-      "x": 0.415,
+      "x": 0.4175,
       "y": 0.805,
-      "width": 0.17,
+      "width": 0.165,
       "height": 0.19
     },
     "_aperture": 19,
@@ -2195,9 +2195,9 @@
     "_clearFlags": 6,
     "_rect": {
       "__type__": "cc.Rect",
-      "x": 0.415,
+      "x": 0.4175,
       "y": 0.805,
-      "width": 0.17,
+      "width": 0.165,
       "height": 0.19
     },
     "_aperture": 19,
@@ -2367,9 +2367,9 @@
     "_clearFlags": 6,
     "_rect": {
       "__type__": "cc.Rect",
-      "x": 0.415,
+      "x": 0.4175,
       "y": 0.805,
-      "width": 0.17,
+      "width": 0.165,
       "height": 0.19
     },
     "_aperture": 19,

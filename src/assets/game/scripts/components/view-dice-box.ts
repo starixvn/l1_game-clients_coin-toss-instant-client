@@ -31,18 +31,22 @@ export class ColorGameViewDicesBox extends ObserverComponent {
         }
     }
 
+    start() {
+        this.cameraNodes.forEach((node) => (node.active = false));
+    }
+
     @handle(gc.Audios.AudioHandler, (handle, id: string) => handle.playSFX(id))
     playSoundClick() {
         return gc.Audios.AudioIds.CLICK;
     }
 
-    @render(RoundTimeStore, (store) => store.isPlacingBet)
     setVisibility(isPlacingBet: boolean) {
         this.node.active = isPlacingBet;
+        this.miniCameraContainer.active = isPlacingBet;
     }
 
     browseAllCameras() {
-        const gapTime = 0.2;
+        const gapTime = 0.4;
         const order = [
             //
             CameraType.Center,
