@@ -27,18 +27,19 @@ export default class Dice extends Component {
             case ColorDice.White:
                 upVector = v3(0, -1, 0);
                 break;
-            case ColorDice.Green:
+            case ColorDice.Red:
+                upVector = v3(0, 0, 1);
+                break;
+            case ColorDice.Yellow:
                 upVector = v3(0, 0, -1);
                 break;
             case ColorDice.Blue:
-                upVector = v3(0, 0, 1);
-                break;
-            case ColorDice.Red:
-                upVector = v3(-1, 0, 0);
-                break;
-            case ColorDice.Yellow:
                 upVector = v3(1, 0, 0);
                 break;
+            case ColorDice.Green:
+                upVector = v3(-1, 0, 0);
+                break;
+
             default:
                 console.error("Invalid face number. Should be between 0 and 5.");
                 return;
