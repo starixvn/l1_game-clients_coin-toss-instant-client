@@ -68,6 +68,8 @@ export class ColorGameWinningResult extends WinningResult {
                 case ColorDice.Yellow:
                     ctx.color = new Color().fromHEX("#ffcf00");
                     break;
+                default:
+                    ctx.color = new Color().fromHEX("#ffffff");
             }
         });
     }

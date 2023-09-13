@@ -359,7 +359,7 @@
         "__id__": 11
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 17
@@ -588,7 +588,7 @@
         "__id__": 21
       }
     ],
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 27
@@ -599,7 +599,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 3.8,
+      "x": 4.8,
       "y": 0,
       "z": 0
     },

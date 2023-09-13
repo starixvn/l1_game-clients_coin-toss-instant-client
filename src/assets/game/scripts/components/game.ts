@@ -9,10 +9,8 @@ import { ColorGame } from "../../color-game/scripts/color-game";
 import { containerOptions, settings } from "../game-settings";
 import "./../../../resources/i18n";
 import { ColorGameDoubleTripleResult } from "./double-triple-result";
-import { WinningResult } from "../../../../extensions/shared-components/assets/shared/common-components/winning-result/scripts/winning-result";
+import { ColorGameWinningResult } from "./winning-result";
 const { Rounds } = gc;
-
-const { movingNode, getPositionAtDestNode, playSpine, fadeOut, fadeIn } = AnimationUtils;
 
 startGame(settings.name, containerOptions, siteConfigs);
 
@@ -28,8 +26,8 @@ export default class Game extends GameComponent {
     @property({ type: Label, override: true, visible: false })
     lblMaxBet: Label = null;
 
-    @property(WinningResult)
-    winningResult: WinningResult = null;
+    @property(ColorGameWinningResult)
+    winningResult: ColorGameWinningResult = null;
 
     @property(ColorGame)
     colorGame: ColorGame = null;
@@ -52,10 +50,12 @@ export default class Game extends GameComponent {
 
     async finishShowResult(result: gc.GameServiceMessage.TResult, settlementResult: gc.GameServiceMessage.TSettlementResult) {
         this.winningResult.setResult(result);
-        await AnimationUtils.delayTime(1.5);
+        await AnimationUtils.delayTime(1);
         await this.winningResult.show();
-        await AnimationUtils.delayTime(3);
+        await AnimationUtils.delayTime(2);
+        this.doubleTripleResult.setResult(result);
         this.winningResult.hide();
+        super.finishShowResult(result, settlementResult);
     }
 
     @render(Rounds.RoundStore, (store) => store.clientRoundId)
@@ -92,8 +92,6 @@ export default class Game extends GameComponent {
             } else {
                 this.colorGame.showResultStatic(results, animationIndex);
             }
-
-            this.doubleTripleResult.setResult(results);
 
             this.hasResetBox = false;
         }
