@@ -50,7 +50,7 @@ export default class Game extends GameComponent {
         this.winningResult.hideQuickly();
     }
 
-    async finishShowWinningResult(result: gc.GameServiceMessage.TResult) {
+    async finishShowResult(result: gc.GameServiceMessage.TResult, settlementResult: gc.GameServiceMessage.TSettlementResult) {
         this.winningResult.setResult(result);
         await AnimationUtils.delayTime(1.5);
         await this.winningResult.show();
@@ -93,7 +93,6 @@ export default class Game extends GameComponent {
                 this.colorGame.showResultStatic(results, animationIndex);
             }
 
-            this.finishShowWinningResult(result);
             this.doubleTripleResult.setResult(results);
 
             this.hasResetBox = false;
