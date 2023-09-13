@@ -27,6 +27,7 @@ export class ColorGameViewDicesBox extends ObserverComponent {
     protected browseTween: Tween<Node>;
 
     onLoad() {
+        super.onLoad();
         if (this.miniCameraContainer) {
             this.cameraNodes = this.miniCameraContainer.getComponentsInChildren(Camera).map((camera) => camera.node);
 
