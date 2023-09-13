@@ -1661,7 +1661,7 @@
       "__id__": 111
     },
     "_projection": 1,
-    "_priority": 1,
+    "_priority": 0,
     "_fov": 30,
     "_fovAxis": 0,
     "_orthoHeight": 10,
@@ -1679,10 +1679,10 @@
     "_clearFlags": 6,
     "_rect": {
       "__type__": "cc.Rect",
-      "x": 0.4175,
-      "y": 0.805,
-      "width": 0.165,
-      "height": 0.19
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
     },
     "_aperture": 19,
     "_shutter": 7,
@@ -1833,7 +1833,7 @@
       "__id__": 117
     },
     "_projection": 1,
-    "_priority": 1,
+    "_priority": 0,
     "_fov": 26,
     "_fovAxis": 0,
     "_orthoHeight": 10,
@@ -1851,10 +1851,10 @@
     "_clearFlags": 6,
     "_rect": {
       "__type__": "cc.Rect",
-      "x": 0.4175,
-      "y": 0.805,
-      "width": 0.165,
-      "height": 0.19
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
     },
     "_aperture": 19,
     "_shutter": 7,
@@ -2005,7 +2005,7 @@
       "__id__": 123
     },
     "_projection": 1,
-    "_priority": 1,
+    "_priority": 0,
     "_fov": 26,
     "_fovAxis": 0,
     "_orthoHeight": 10,
@@ -2023,10 +2023,10 @@
     "_clearFlags": 6,
     "_rect": {
       "__type__": "cc.Rect",
-      "x": 0.4175,
-      "y": 0.805,
-      "width": 0.165,
-      "height": 0.19
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
     },
     "_aperture": 19,
     "_shutter": 7,
@@ -2177,7 +2177,7 @@
       "__id__": 129
     },
     "_projection": 1,
-    "_priority": 1,
+    "_priority": 0,
     "_fov": 28,
     "_fovAxis": 0,
     "_orthoHeight": 10,
@@ -2195,10 +2195,10 @@
     "_clearFlags": 6,
     "_rect": {
       "__type__": "cc.Rect",
-      "x": 0.4175,
-      "y": 0.805,
-      "width": 0.165,
-      "height": 0.19
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
     },
     "_aperture": 19,
     "_shutter": 7,
@@ -2349,7 +2349,7 @@
       "__id__": 135
     },
     "_projection": 1,
-    "_priority": 1,
+    "_priority": 0,
     "_fov": 28,
     "_fovAxis": 0,
     "_orthoHeight": 10,
@@ -2367,10 +2367,10 @@
     "_clearFlags": 6,
     "_rect": {
       "__type__": "cc.Rect",
-      "x": 0.4175,
-      "y": 0.805,
-      "width": 0.165,
-      "height": 0.19
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
     },
     "_aperture": 19,
     "_shutter": 7,

@@ -1,5 +1,5 @@
 import gc from "@sg/game-client-base";
-import { Node, Tween, _decorator, tween, v3 } from "cc";
+import { Node, Tween, UIOpacity, _decorator, tween, v3 } from "cc";
 import Observer from "observer";
 import { ObserverComponent } from "../../../../extensions/shared-components/assets/shared/common-components/observer-component/scripts/observer-component";
 import { ColorGameViewDicesBox } from "./view-dice-box";
@@ -22,16 +22,31 @@ export class ColorGameToggleViewDicesBox extends ObserverComponent {
 
     protected readonly showDuration = 0.2;
     protected readonly showPosition = v3(0, 314, 0);
-    protected readonly hidePosition = v3(0, 314, 0);
-    // protected readonly hidePosition = v3(0, 477, 0);
+    protected readonly hidePosition = v3(0, 477, 0);
     protected shown = false;
+
+    protected _colorGameViewDicesBox: ColorGameViewDicesBox;
+
+    get colorGameViewDicesBox() {
+        if (!this._colorGameViewDicesBox) {
+            this._colorGameViewDicesBox = this.diceBoxNode.getComponent(ColorGameViewDicesBox);
+        }
+        return this._colorGameViewDicesBox;
+    }
+    protected _diceBoxOpacity: UIOpacity;
+
+    get diceBoxOpacity() {
+        if (!this._diceBoxOpacity) {
+            this._diceBoxOpacity = this.diceBoxNode.addComponent(UIOpacity);
+        }
+        return this._diceBoxOpacity;
+    }
 
     @render(RoundTimeStore, (store) => store.isPlacingBet)
     setVisibility(isPlacingBet: boolean) {
         this.node.active = isPlacingBet;
 
-        const diceBox = this.diceBoxNode.getComponent(ColorGameViewDicesBox);
-        diceBox.setVisibility(isPlacingBet);
+        this.colorGameViewDicesBox.setVisibility(isPlacingBet);
     }
 
     collapse(animated = true) {
@@ -43,12 +58,10 @@ export class ColorGameToggleViewDicesBox extends ObserverComponent {
             return;
         }
         this.tweenCollapse();
-        this.showMiniCamera(false);
     }
 
     showMiniCamera(show: boolean) {
-        const diceBox = this.diceBoxNode.getComponent(ColorGameViewDicesBox);
-        diceBox.setVisibility(show);
+        this.colorGameViewDicesBox.setVisibility(show);
     }
 
     expand() {
@@ -71,19 +84,26 @@ export class ColorGameToggleViewDicesBox extends ObserverComponent {
     tweenExpand() {
         Tween.stopAllByTarget(this.diceBoxNode);
         this.diceBoxNode.position = this.hidePosition;
+        this.diceBoxOpacity.opacity = 1;
+        this.colorGameViewDicesBox.initCameraCenter();
+        tween(this.diceBoxOpacity).to(0.1, { opacity: 255 }).start();
         tween(this.diceBoxNode)
             .to(this.showDuration, { position: this.showPosition })
             .call(() => {
-                const diceBox = this.diceBoxNode.getComponent(ColorGameViewDicesBox);
-                diceBox.browseAllCameras();
+                this.colorGameViewDicesBox.browseAllCameras();
             })
             .start();
     }
 
     tweenCollapse() {
         Tween.stopAllByTarget(this.diceBoxNode);
-        const diceBox = this.diceBoxNode.getComponent(ColorGameViewDicesBox);
-        diceBox.stopBrowseCameras();
-        tween(this.diceBoxNode).to(this.showDuration, { position: this.hidePosition }).start();
+
+        this.colorGameViewDicesBox.stopBrowseCameras();
+        tween(this.diceBoxNode)
+            .to(this.showDuration, { position: this.hidePosition })
+            .call(() => {
+                this.diceBoxOpacity.opacity = 1;
+            })
+            .start();
     }
 }

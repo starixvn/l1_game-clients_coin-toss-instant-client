@@ -1,8 +1,7 @@
 import gc from "@sg/game-client-base";
-import { _decorator, Camera, Node, Tween, tween } from "cc";
+import { _decorator, Camera, Node, RenderTexture, Sprite, SpriteFrame, Tween, tween, UITransform } from "cc";
 import Observer from "observer";
 import { ObserverComponent } from "../../../../extensions/shared-components/assets/shared/common-components/observer-component/scripts/observer-component";
-import { UiAdaptiveCamera } from "./ui-adaptive-camera";
 
 const { Rounds } = gc;
 const { RoundTimeStore } = Rounds;
@@ -22,21 +21,42 @@ enum CameraType {
 export class ColorGameViewDicesBox extends ObserverComponent {
     @property(Node)
     miniCameraContainer;
-    protected cameraNodes: Node[] = [];
+
+    @property(Sprite)
+    renderSprite: Sprite = null;
+
+    protected cameraNodes: Camera[] = [];
+    protected renderCameraSprites: SpriteFrame[] = [];
 
     protected browseTween: Tween<Node>;
 
     onLoad() {
         super.onLoad();
         if (this.miniCameraContainer) {
-            this.cameraNodes = this.miniCameraContainer.getComponentsInChildren(Camera).map((camera) => camera.node);
-
-            this.cameraNodes.forEach((node) => node.addComponent(UiAdaptiveCamera));
+            this.cameraNodes = this.miniCameraContainer.getComponentsInChildren(Camera);
         }
     }
 
+    generateRenderSpriteFrames() {
+        const transform = this.renderSprite.getComponent(UITransform);
+        const ratio = 2;
+        const width = ratio * transform.width;
+        const height = ratio * transform.height;
+        this.cameraNodes.forEach((camera) => {
+            const sp = new SpriteFrame();
+            const renderTex = new RenderTexture();
+            renderTex.reset({
+                width,
+                height,
+            });
+            camera.targetTexture = renderTex;
+            sp.texture = renderTex;
+            this.renderCameraSprites.push(sp);
+        });
+    }
+
     start() {
-        this.cameraNodes.forEach((node) => (node.active = false));
+        this.generateRenderSpriteFrames();
     }
 
     @handle(gc.Audios.AudioHandler, (handle, id: string) => handle.playSFX(id))
@@ -47,6 +67,10 @@ export class ColorGameViewDicesBox extends ObserverComponent {
     setVisibility(isPlacingBet: boolean) {
         this.node.active = isPlacingBet;
         this.miniCameraContainer.active = isPlacingBet;
+    }
+
+    initCameraCenter() {
+        this.displayCamera(CameraType.Center);
     }
 
     browseAllCameras() {
@@ -78,9 +102,7 @@ export class ColorGameViewDicesBox extends ObserverComponent {
     }
 
     displayCamera(type: CameraType) {
-        this.cameraNodes.forEach((node, index) => {
-            node.active = type === index;
-        });
+        this.renderSprite.spriteFrame = this.renderCameraSprites[type];
     }
 
     onClickTop() {
