@@ -49,7 +49,7 @@ export class ColorGameViewDicesBox extends ObserverComponent {
     }
 
     browseAllCameras() {
-        const gapTime = 0.4;
+        const gapTime = 0.7;
         const order = [
             //
             CameraType.Center,
