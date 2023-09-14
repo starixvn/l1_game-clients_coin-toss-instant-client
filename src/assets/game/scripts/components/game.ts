@@ -1,5 +1,5 @@
 import gc from "@sg/game-client-base";
-import { Label, _decorator } from "cc";
+import { AudioSource, Label, _decorator, tween } from "cc";
 import GameComponent from "db://shared-components/game/scripts/components/game-component";
 import { startGame } from "db://shared-components/shared/scripts/startup";
 import { AnimationUtils } from "db://shared-components/shared/utils";
@@ -10,7 +10,7 @@ import { containerOptions, settings } from "../game-settings";
 import "./../../../resources/i18n";
 import { ColorGameDoubleTripleResult } from "./double-triple-result";
 import { ColorGameWinningResult } from "./winning-result";
-const { Rounds } = gc;
+const { Rounds, Translator } = gc;
 
 startGame(settings.name, containerOptions, siteConfigs);
 
@@ -38,6 +38,15 @@ export default class Game extends GameComponent {
     override namespace = settings.name;
     override containerOptions = containerOptions;
 
+    private winningSounds = {
+        0: "yellow",
+        1: "red",
+        2: "pink",
+        3: "white",
+        4: "blue",
+        5: "green",
+    };
+
     protected clientRoundId = -1;
     protected openAnimationIndex = 0;
     protected randomResults = [1, 1, 1];
@@ -51,7 +60,9 @@ export default class Game extends GameComponent {
     async finishShowResult(result: gc.GameServiceMessage.TResult, settlementResult: gc.GameServiceMessage.TSettlementResult) {
         this.winningResult.setResult(result);
         await AnimationUtils.delayTime(1);
+
         await this.winningResult.show();
+        this.winningSound(result);
         await AnimationUtils.delayTime(2);
         this.doubleTripleResult.setResult(result);
         this.winningResult.hide();
@@ -95,6 +106,24 @@ export default class Game extends GameComponent {
 
             this.hasResetBox = false;
         }
+    }
+
+    async winningSound(data: gc.GameServiceMessage.TResult) {
+        const results = Object.values(data);
+        console.log("winningSound");
+
+        for (const result of results) {
+            const winColorName = this.winningSounds[result];
+            this.playSound(this.getAudioKeyForLanguage(winColorName));
+            await AnimationUtils.delayTime(1);
+        }
+
+        this.playSound(this.getAudioKeyForLanguage("win"));
+    }
+
+    getAudioKeyForLanguage(name: string): string {
+        console.log(`${name}_${Translator.getLanguageId() || "en"}`);
+        return `${name}_${Translator.getLanguageId() || "en"}`;
     }
 
     // this.playSound(this.choiceWinningSounds[winChoice]);

@@ -1,8 +1,12 @@
 import gc from "@sg/game-client-base";
+import Observer from "observer";
 import { _decorator, Color, Node, Sprite, tween, v3 } from "cc";
 import { WinningResult } from "../../../../extensions/shared-components/assets/shared/common-components/winning-result/scripts/winning-result";
 import { AnimationUtils } from "../../../../extensions/shared-components/assets/shared/utils/utils";
 const { ccclass, property } = _decorator;
+
+const { Translator } = gc;
+const { handle } = Observer;
 
 export enum ColorDice {
     Yellow = 0,
