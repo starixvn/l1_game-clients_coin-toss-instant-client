@@ -120,7 +120,7 @@ export const languages = {
         "cold": "COLD",
         "double_dice": "Double",
         "game_icon_name": "COLOR GAME",
-        "game_name": "COLOR GAME",
+        "game_name": "Color Game",
         "glossary_blue": "Blue",
         "glossary_cold": "Cold",
         "glossary_green": "Green",
