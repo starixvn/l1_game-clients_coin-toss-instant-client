@@ -5,60 +5,40 @@
             "delay": 6000,
             "response": [
                 {
-                    "namespace": "/user/dragontigerfight",
-                    "event": "DragonTigerFight",
+                    "namespace": "/user/colorgame",
+                    "event": "ColorGame",
                     "payload": {
                         "finish": {
-                            "result": {
-                                "dragon": {
-                                    "rank": 9,
-                                    "suit": 2
-                                },
-                                "tiger": {
-                                    "rank": 11,
-                                    "suit": 1
-                                }
-                            },
+                            "result": { "dice1": 0, "dice2": 1, "dice3": 4 },
                             "settlementResult": {
-                                "dragon": false,
-                                "tiger": true,
-                                "tie": false,
-                                "blackDragon": true,
-                                "redDragon": false,
-                                "blackTiger": false,
-                                "redTiger": true
+                                "yellow": true,
+                                "red": true,
+                                "pink": false,
+                                "white": false,
+                                "blue": true,
+                                "green": false,
+                                "hot": true,
+                                "cold": false
                             },
                             "roundId": 2,
                             "winningPlayers": {}
-                        },
-                        "resultHash": {
-                            "rawValue": "{0♦ 0♥}_{#96169f06d0497cb3622f6d08c0}",
-                            "extraInfos": {
-                                "dragon": {
-                                    "rank": 9,
-                                    "suit": 2
-                                },
-                                "tiger": {
-                                    "rank": 11,
-                                    "suit": 1
-                                }
-                            }
                         }
                     }
                 },
                 {
-                    "namespace": "/user/dragontigerfight",
-                    "event": "DragonTigerFight",
+                    "namespace": "/user/colorgame",
+                    "event": "ColorGame",
                     "payload": {
                         "status": {
                             "winningByChoices": {
-                                "dragon": 0,
-                                "tiger": 1.95,
-                                "tie": 0,
-                                "blackDragon": 0,
-                                "redDragon": 0,
-                                "blackTiger": 0,
-                                "redTiger": 0
+                                "yellow": 0,
+                                "red": 2,
+                                "pink": 2,
+                                "white": 0,
+                                "blue": 2,
+                                "green": 0,
+                                "hot": 1.97,
+                                "cold": 0
                             },
                             "win": true,
                             "bet": 1.95
@@ -66,8 +46,8 @@
                     }
                 },
                 {
-                    "namespace": "/user/dragontigerfight",
-                    "event": "DragonTigerFight",
+                    "namespace": "/user/colorgame",
+                    "event": "ColorGame",
                     "payload": {
                         "winners": {
                             "roundId": 2,
@@ -77,13 +57,14 @@
                                     "win": true,
                                     "bet": 390,
                                     "winningByChoices": {
-                                        "dragon": 0,
-                                        "tiger": 390,
-                                        "tie": 0,
-                                        "blackDragon": 0,
-                                        "redDragon": 0,
-                                        "blackTiger": 0,
-                                        "redTiger": 0
+                                        "yellow": 0,
+                                        "red": 2,
+                                        "pink": 2,
+                                        "white": 0,
+                                        "blue": 2,
+                                        "green": 0,
+                                        "hot": 1.97,
+                                        "cold": 0
                                     }
                                 }
                             }

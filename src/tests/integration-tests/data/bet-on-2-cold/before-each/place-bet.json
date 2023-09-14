@@ -2,29 +2,29 @@
     "name": "Place Bet",
     "server": {
         "waitForRequest": {
-            "namespace": "/user/dragontigerfight",
+            "namespace": "/user/colorgame",
             "event": "bet",
             "payload": {
                 "m": 1,
                 "username": "Conall",
-                "betChoice": "dragon",
+                "betChoice": "cold",
                 "amount": 1,
                 "freeBet": false
             }
         },
         "response": [
             {
-                "namespace": "/user/dragontigerfight",
-                "event": "DragonTigerFight",
+                "namespace": "/user/colorgame",
+                "event": "ColorGame",
                 "payload": {
                     "ownBets": {
-                        "dragon": 1
+                        "cold": 1
                     },
                     "totalBets": {
-                        "dragon": 1
+                        "cold": 1
                     },
                     "endBet": 1,
-                    "betChoice": "dragon",
+                    "betChoice": "cold",
                     "freeBet": false,
                     "user": {
                         "red": 1999,
@@ -33,7 +33,7 @@
                         "maxBet": 3000
                     },
                     "ownChip": {
-                        "betChoice": "dragon",
+                        "betChoice": "cold",
                         "amount": 1
                     }
                 }
@@ -41,7 +41,7 @@
         ]
     },
     "client": {
-        "action": "Integration.click('dragon')",
+        "action": "Integration.click('tiger')",
         "waitUntilMetExpectation": true,
         "waitExpectationTimeout": 60000,
         "actual": "Integration.label('balance')",

@@ -513,7 +513,7 @@
         }
     },
     "animations": {
-        "dragon": {
+        "hot": {
             "slots": {
                 "Layer3": {
                     "color": [
@@ -815,7 +815,7 @@
                 }
             }
         },
-        "tiger": {
+        "cold": {
             "slots": {
                 "Layer3": { "attachment": [{ "time": 0, "name": null }] },
                 "Layer5": { "attachment": [{ "time": 0, "name": null }] },
