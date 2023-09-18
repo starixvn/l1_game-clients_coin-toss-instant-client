@@ -680,7 +680,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "rank",
+    "_name": "inferable-choice",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
@@ -707,7 +707,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 35,
+      "x": 57.166,
       "y": 2.54,
       "z": 0
     },
@@ -767,7 +767,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 76.130859375,
+      "width": 160,
       "height": 52.92
     },
     "_anchorPoint": {
@@ -804,13 +804,13 @@
       "a": 255
     },
     "_string": "Cold",
-    "_horizontalAlign": 1,
+    "_horizontalAlign": 0,
     "_verticalAlign": 1,
     "_actualFontSize": 36,
     "_fontSize": 36,
     "_fontFamily": "Arial",
     "_lineHeight": 42,
-    "_overflow": 0,
+    "_overflow": 1,
     "_enableWrapText": true,
     "_font": {
       "__uuid__": "0b9efa3d-c517-4301-af5b-ac67552528db",
@@ -920,7 +920,7 @@
     "__prefab": {
       "__id__": 45
     },
-    "dices": [
+    "dicesSpriteFrames": [
       {
         "__id__": 5
       },
@@ -931,10 +931,10 @@
         "__id__": 17
       }
     ],
-    "rank": {
+    "lblInferableChoice": {
       "__id__": 35
     },
-    "atlas": {
+    "mainAtlas": {
       "__uuid__": "2d67d332-0b65-4c26-aacf-03f54c9217cc",
       "__expectedType__": "cc.SpriteAtlas"
     },

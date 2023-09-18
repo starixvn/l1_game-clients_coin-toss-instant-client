@@ -9,21 +9,23 @@ const { ccclass, property } = _decorator;
 @ccclass
 export default class ResultBodyItem extends BaseResultBodyItem {
     @property(Sprite)
-    dices: Sprite[] = [];
+    dicesSpriteFrames: Sprite[] = [];
 
     @property(Label)
-    rank: Label = null;
+    lblInferableChoice: Label = null;
 
     @property(SpriteAtlas)
-    atlas: SpriteAtlas = null;
+    mainAtlas: SpriteAtlas = null;
 
     setData(result: any, settlementResult: gc.BetHistory.DynamicObject<boolean>) {
-        this.dices.forEach((dice, index) => {
+        this.dicesSpriteFrames.forEach((dice, index) => {
             const color = this.getKeyByValue(resultMapper, result[`dice${index + 1}`]);
-            dice.spriteFrame = this.atlas?.getSpriteFrame(`history-result-count-${color}`);
+            dice.spriteFrame = this.mainAtlas?.getSpriteFrame(`history-result-count-${color}`);
         });
 
-        this.rank.string = gc.Translator.gameTranslate(`glossary_${settlementResult[BetChoice.Hot] ? BetChoice.Hot : BetChoice.Cold}`);
+        this.lblInferableChoice.string = gc.Translator.gameTranslate(
+            `glossary_${settlementResult[BetChoice.Hot] ? BetChoice.Hot : BetChoice.Cold}`
+        );
     }
 
     getKeyByValue(resultMapper: object, value: number) {
