@@ -1287,8 +1287,8 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 0.434,
-      "z": 6.9
+      "y": 0.168,
+      "z": 3.411
     },
     "_lrot": {
       "__type__": "cc.Quat",
@@ -1345,7 +1345,7 @@
     "_rect": {
       "__type__": "cc.Rect",
       "x": 0,
-      "y": 0.31,
+      "y": 0,
       "width": 1,
       "height": 1
     },
@@ -1353,8 +1353,11 @@
     "_shutter": 7,
     "_iso": 0,
     "_screenScale": 1,
-    "_visibility": 1083179008,
-    "_targetTexture": null,
+    "_visibility": 8388608,
+    "_targetTexture": {
+      "__uuid__": "89b3e207-a55d-41f4-9805-332d75f4fe5a",
+      "__expectedType__": "cc.RenderTexture"
+    },
     "_postProcess": null,
     "_usePostProcess": false,
     "_cameraType": -1,
