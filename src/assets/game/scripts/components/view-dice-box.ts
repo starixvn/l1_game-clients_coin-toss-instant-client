@@ -103,6 +103,9 @@ export class ColorGameViewDicesBox extends ObserverComponent {
 
     displayCamera(type: CameraType) {
         this.renderSprite.spriteFrame = this.renderCameraSprites[type];
+        this.cameraNodes.forEach((camera, index) => {
+            camera.node.active = index === type;
+        });
     }
 
     onClickTop() {

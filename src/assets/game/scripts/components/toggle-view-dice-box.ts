@@ -23,7 +23,7 @@ export class ColorGameToggleViewDicesBox extends ObserverComponent {
     protected readonly showDuration = 0.2;
     protected readonly showPosition = v3(0, 314, 0);
     protected readonly hidePosition = v3(0, 477, 0);
-    protected shown = false;
+    protected isShowing = false;
 
     protected _colorGameViewDicesBox: ColorGameViewDicesBox;
 
@@ -46,13 +46,16 @@ export class ColorGameToggleViewDicesBox extends ObserverComponent {
     setVisibility(isPlacingBet: boolean) {
         this.node.active = isPlacingBet;
 
-        this.colorGameViewDicesBox.setVisibility(isPlacingBet);
+        if (isPlacingBet && this.isShowing) {
+            this.expand();
+        } else {
+            this.collapse();
+        }
     }
 
     collapse(animated = true) {
-        this.shown = false;
-        this.toggleIcon(this.shown);
-
+        this.toggleIcon(this.isShowing);
+        this.showMiniCamera(false);
         if (!animated) {
             this.diceBoxNode.position = this.hidePosition;
             return;
@@ -65,10 +68,9 @@ export class ColorGameToggleViewDicesBox extends ObserverComponent {
     }
 
     expand() {
-        this.shown = true;
-        this.toggleIcon(this.shown);
-        this.tweenExpand();
+        this.toggleIcon(this.isShowing);
         this.showMiniCamera(true);
+        this.tweenExpand();
     }
 
     toggleIcon(active: boolean) {
@@ -77,8 +79,8 @@ export class ColorGameToggleViewDicesBox extends ObserverComponent {
     }
 
     onClickExpand() {
-        this.shown = !this.shown;
-        this.shown ? this.expand() : this.collapse();
+        this.isShowing = !this.isShowing;
+        this.isShowing ? this.expand() : this.collapse();
     }
 
     tweenExpand() {
