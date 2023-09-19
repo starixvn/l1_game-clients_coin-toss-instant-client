@@ -22,28 +22,17 @@
           "inBundle": false
         },
         {
-          "url": "db://shared-components/session-timeout/session-timeout.scene",
-          "uuid": "1b4ca76d-3ce5-41e6-a47c-0fb1f85bb3f4",
-          "inBundle": false
-        },
-        {
-          "url": "db://shared-components/under-maintenance/under-maintenance.scene",
-          "uuid": "3640a00f-a2ed-4aec-b369-779ede63f5df",
-          "inBundle": false
-        },
-        {
-          "url": "db://shared-components/game/scoreboards/scoreboard.scene",
-          "uuid": "9ec9624e-8ef6-4e81-bf0e-34a4eab4a438",
-          "inBundle": false
-        },
-        {
           "url": "db://shared-components/shared/common-components/integrations/identifier.scene",
           "uuid": "8fa0d7ef-6c87-40c2-bd73-c63184ba47ff",
           "inBundle": false
         },
         {
           "url": "db://assets/game-instant/game-instant-landscape.scene",
-          "uuid": "6fe2895f-4bf7-4de8-bf45-3224f9a59622"
+          "uuid": "ad2c4f56-4008-49e0-891a-0f6d92bb381f"
+        },
+        {
+          "url": "db://assets/game-instant/game-instant-portrait.scene",
+          "uuid": "41c56f39-fd80-4431-9cbe-b37ff65f2352"
         }
       ],
       "polyfills": {
@@ -53,14 +42,15 @@
     },
     "options": {
       "web-mobile": {
-        "orientation": "landscape",
+        "orientation": "auto",
         "embedWebDebugger": false,
-        "__version__": "1.0.1"
+        "__version__": "1.0.1",
+        "cullEngineAsmJsModule": false
       }
     },
     "taskOptionsMap": {
       "1681353552761": {
-        "orientation": "landscape",
+        "orientation": "auto",
         "embedWebDebugger": false,
         "__version__": "1.0.1",
         "cullEngineAsmJsModule": false
