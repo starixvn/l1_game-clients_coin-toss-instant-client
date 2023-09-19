@@ -1,5 +1,5 @@
 import gc from "@sg/game-client-base";
-import { AudioSource, Label, _decorator, tween } from "cc";
+import { Label, _decorator } from "cc";
 import GameComponent from "db://shared-components/game/scripts/components/game-component";
 import { startGame } from "db://shared-components/shared/scripts/startup";
 import { AnimationUtils } from "db://shared-components/shared/utils";
@@ -51,6 +51,7 @@ export default class Game extends GameComponent {
     protected openAnimationIndex = 0;
     protected randomResults = [1, 1, 1];
     protected hasResetBox = false;
+    protected currentPlaySFXDuration: number = 0;
 
     onLoad() {
         super.onLoad();
@@ -115,7 +116,7 @@ export default class Game extends GameComponent {
         for (const result of results) {
             const winColorName = this.winningSounds[result];
             this.playSound(this.getAudioKeyForLanguage(winColorName));
-            await AnimationUtils.delayTime(1);
+            await AnimationUtils.delayTime(this.currentPlaySFXDuration);
         }
 
         this.playSound(this.getAudioKeyForLanguage("win"));
@@ -133,5 +134,11 @@ export default class Game extends GameComponent {
             this.colorGame.resetColorBox(this.randomResults);
             this.hasResetBox = true;
         }
+    }
+
+    @render(gc.Audios.AudioStore, (store) => store.currentPlaySFXDuration, { fireImmediately: false })
+    handleCurrentPlaySFXDuration(currentPlaySFXDuration: number) {
+        this.currentPlaySFXDuration = currentPlaySFXDuration;
+        console.log("------------------currentPlaySFXDuration", currentPlaySFXDuration);
     }
 }
