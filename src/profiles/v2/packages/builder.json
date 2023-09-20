@@ -11,7 +11,7 @@
         "progress": 1,
         "state": "success",
         "stage": "build",
-        "message": "9-19-2023 14:32:14 build success in 76051 ms!",
+        "message": "9-20-2023 11:20:58 build success in 254114 ms!",
         "options": {
           "name": "cocos-3x",
           "platform": "web-mobile",
@@ -29,14 +29,9 @@
           "mainBundleCompressionType": "merge_dep",
           "useSplashScreen": false,
           "packAutoAtlas": true,
-          "startScene": "cdeb5c24-9ba8-4cab-a306-8a562fd04b39",
+          "startScene": "374bdfc3-a787-4bd2-817b-4efe75860854",
           "outputName": "web-mobile",
           "scenes": [
-            {
-              "url": "db://assets/game/splash/splash.scene",
-              "uuid": "cdeb5c24-9ba8-4cab-a306-8a562fd04b39",
-              "inBundle": false
-            },
             {
               "url": "db://shared-components/feature-structure/scene.scene",
               "uuid": "b97b166d-3dd1-4968-8fa8-488f447e05b0",
@@ -54,6 +49,10 @@
             {
               "url": "db://assets/game-instant/game-instant-portrait.scene",
               "uuid": "41c56f39-fd80-4431-9cbe-b37ff65f2352"
+            },
+            {
+              "url": "db://assets/game-instant/splash.scene",
+              "uuid": "374bdfc3-a787-4bd2-817b-4efe75860854"
             }
           ],
           "web-desktop": [],
@@ -67,7 +66,7 @@
           "bundleCommonChunk": false,
           "logDest": "project://temp/builder/log/web-mobile4-13-2023 09-39.log"
         },
-        "time": "9-19-2023 14:30:58",
+        "time": "9-20-2023 11:16:44",
         "dirty": false
       }
     }
@@ -80,13 +79,8 @@
     "useSplashScreen": false,
     "skipCompressTexture": false,
     "mainBundleIsRemote": false,
-    "startScene": "cdeb5c24-9ba8-4cab-a306-8a562fd04b39",
+    "startScene": "374bdfc3-a787-4bd2-817b-4efe75860854",
     "scenes": [
-      {
-        "url": "db://assets/game/splash/splash.scene",
-        "uuid": "cdeb5c24-9ba8-4cab-a306-8a562fd04b39",
-        "inBundle": false
-      },
       {
         "url": "db://shared-components/feature-structure/scene.scene",
         "uuid": "b97b166d-3dd1-4968-8fa8-488f447e05b0",
@@ -104,6 +98,10 @@
       {
         "url": "db://assets/game-instant/game-instant-portrait.scene",
         "uuid": "41c56f39-fd80-4431-9cbe-b37ff65f2352"
+      },
+      {
+        "url": "db://assets/game-instant/splash.scene",
+        "uuid": "374bdfc3-a787-4bd2-817b-4efe75860854"
       }
     ],
     "polyfills": {

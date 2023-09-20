@@ -55,10 +55,6 @@ export default class Game extends GameComponent {
     protected hasResetBox = false;
     protected diceDropSound = "dice_drop";
     protected delayTimeShowWinningBox = 2;
-    protected isInstantMode = true;
-
-    // hard code run instant
-    protected system: number = 3;
 
     onLoad() {
         super.onLoad();
