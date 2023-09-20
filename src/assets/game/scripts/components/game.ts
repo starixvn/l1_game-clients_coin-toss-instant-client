@@ -60,10 +60,11 @@ export default class Game extends GameComponent {
 
     async finishShowResult(result: gc.GameServiceMessage.TResult, settlementResult: gc.GameServiceMessage.TSettlementResult) {
         this.winningResult.setResult(result);
-        await AnimationUtils.delayTime(1);
+        this.playSound("dice_drop");
 
-        await this.winningResult.show();
+        await AnimationUtils.delayTime(1.5);
         this.winningSound(result);
+        await this.winningResult.show();
         await AnimationUtils.delayTime(2);
         this.doubleTripleResult.setResult(result);
         this.winningResult.hide();
@@ -110,24 +111,22 @@ export default class Game extends GameComponent {
     }
 
     async winningSound(data: gc.GameServiceMessage.TResult) {
-        const results = Object.values(data);
-        console.log("winningSound");
+        if (data) {
+            const results = Object.values(data);
 
-        for (const result of results) {
-            const winColorName = this.winningSounds[result];
-            this.playSound(this.getAudioKeyForLanguage(winColorName));
-            await AnimationUtils.delayTime(this.currentPlaySFXDuration);
+            for (const result of results) {
+                await AnimationUtils.delayTime(1);
+                const winColorName = this.winningSounds[result];
+                this.playSound(this.getAudioKeyForLanguage(winColorName));
+                console.log("currentPlaySFXDuration", this.currentPlaySFXDuration);
+            }
         }
-
-        this.playSound(this.getAudioKeyForLanguage("win"));
     }
 
     getAudioKeyForLanguage(name: string): string {
-        console.log(`${name}_${Translator.getLanguageId() || "en"}`);
         return `${name}_${Translator.getLanguageId() || "en"}`;
     }
 
-    // this.playSound(this.choiceWinningSounds[winChoice]);
     async handleStartRound(isStartRound: boolean) {
         if (isStartRound) {
             super.handleStartRound(isStartRound);
@@ -139,6 +138,5 @@ export default class Game extends GameComponent {
     @render(gc.Audios.AudioStore, (store) => store.currentPlaySFXDuration, { fireImmediately: false })
     handleCurrentPlaySFXDuration(currentPlaySFXDuration: number) {
         this.currentPlaySFXDuration = currentPlaySFXDuration;
-        console.log("------------------currentPlaySFXDuration", currentPlaySFXDuration);
     }
 }

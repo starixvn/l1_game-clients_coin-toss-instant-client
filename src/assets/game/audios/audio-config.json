@@ -124,5 +124,8 @@
     },
     "win_zh_tw": {
         "bundle": "resources"
+    },
+    "dice_drop": {
+        "bundle": "resources"
     }
 }
