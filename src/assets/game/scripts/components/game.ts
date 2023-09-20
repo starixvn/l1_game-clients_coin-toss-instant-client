@@ -10,12 +10,13 @@ import { containerOptions, settings } from "../game-settings";
 import "./../../../resources/i18n";
 import { ColorGameDoubleTripleResult } from "./double-triple-result";
 import { ColorGameWinningResult } from "./winning-result";
+import { ColorDice } from "../../color-game/scripts/dice";
 const { Rounds, Translator } = gc;
 
 startGame(settings.name, containerOptions, siteConfigs);
 
 const { ccclass, property } = _decorator;
-const { observer, render, handle } = Observer;
+const { observer, render } = Observer;
 
 @ccclass
 @observer(settings.name)
@@ -39,12 +40,12 @@ export default class Game extends GameComponent {
     override containerOptions = containerOptions;
 
     private winningSounds = {
-        0: "yellow",
-        1: "red",
-        2: "pink",
-        3: "white",
-        4: "blue",
-        5: "green",
+        [ColorDice.Yellow]: "yellow",
+        [ColorDice.Red]: "red",
+        [ColorDice.Pink]: "pink",
+        [ColorDice.White]: "white",
+        [ColorDice.Blue]: "blue",
+        [ColorDice.Green]: "green",
     };
 
     protected clientRoundId = -1;
@@ -52,7 +53,9 @@ export default class Game extends GameComponent {
     protected randomResults = [1, 1, 1];
     protected hasResetBox = false;
     protected currentPlaySFXDuration: number = 0;
-
+    protected diceDropSound = "dice_drop";
+    protected delayTimeShowWinningBox = 1.5;
+    protected durationTimeShowWinningBox = 2;
     onLoad() {
         super.onLoad();
         this.winningResult.hideQuickly();
@@ -60,12 +63,11 @@ export default class Game extends GameComponent {
 
     async finishShowResult(result: gc.GameServiceMessage.TResult, settlementResult: gc.GameServiceMessage.TSettlementResult) {
         this.winningResult.setResult(result);
-        this.playSound("dice_drop");
-
-        await AnimationUtils.delayTime(1.5);
+        this.playSound(this.diceDropSound);
+        await AnimationUtils.delayTime(this.delayTimeShowWinningBox);
         this.winningSound(result);
         await this.winningResult.show();
-        await AnimationUtils.delayTime(2);
+        await AnimationUtils.delayTime(this.durationTimeShowWinningBox);
         this.doubleTripleResult.setResult(result);
         this.winningResult.hide();
         super.finishShowResult(result, settlementResult);
@@ -113,12 +115,12 @@ export default class Game extends GameComponent {
     async winningSound(data: gc.GameServiceMessage.TResult) {
         if (data) {
             const results = Object.values(data);
-
+            await AnimationUtils.delayTime(1);
             for (const result of results) {
-                await AnimationUtils.delayTime(1);
                 const winColorName = this.winningSounds[result];
                 this.playSound(this.getAudioKeyForLanguage(winColorName));
                 console.log("currentPlaySFXDuration", this.currentPlaySFXDuration);
+                await AnimationUtils.delayTime(this.currentPlaySFXDuration);
             }
         }
     }
