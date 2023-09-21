@@ -61,6 +61,7 @@ export default class Game extends GameComponent {
         super.onLoad();
         this.winningResult.hideQuickly();
     }
+    //
 
     async finishShowResult(result: gc.GameServiceMessage.TResult, settlementResult: gc.GameServiceMessage.TSettlementResult) {
         this.winningResult.setResult(result);
@@ -115,16 +116,32 @@ export default class Game extends GameComponent {
 
     async winningSound(data: gc.GameServiceMessage.TResult) {
         if (data) {
+            let cancelLoadSounds = false;
+            const maxWaitTime = 5000;
             const results = Object.values(data);
+            const timeoutCancelId = setTimeout(() => {
+                cancelLoadSounds = true;
+            }, maxWaitTime);
+
             for (const result of results) {
                 const winColorName = this.winningSounds[result];
                 const soundId = this.getAudioKeyForLanguage(winColorName);
                 this.playSound(soundId);
                 await FunctionUtils.delayMilliseconds(100);
-                await FunctionUtils.waitUntil(() => {
-                    return this.sfxState?.id === soundId && this.sfxState?.state === gc.Audios.SFXState.ENDED;
-                }, 100);
+                await FunctionUtils.waitUntil(
+                    () => {
+                        return !cancelLoadSounds && this.sfxState?.id === soundId && this.sfxState?.state === gc.Audios.SFXState.ENDED;
+                    },
+                    100,
+                    maxWaitTime
+                );
+
+                if (cancelLoadSounds) {
+                    break;
+                }
             }
+
+            timeoutCancelId && clearTimeout(timeoutCancelId);
         }
     }
 
