@@ -2,15 +2,15 @@ import gc from "@sg/game-client-base";
 import { Label, _decorator } from "cc";
 import GameComponent from "db://shared-components/game/scripts/components/game-component";
 import { startGame } from "db://shared-components/shared/scripts/startup";
-import { AnimationUtils } from "db://shared-components/shared/utils";
+import { AnimationUtils, FunctionUtils } from "db://shared-components/shared/utils";
 import Observer from "observer";
 import { siteConfigs } from "../../../scripts/site-configs";
 import { ColorGame } from "../../color-game/scripts/color-game";
+import { ColorDice } from "../../color-game/scripts/dice";
 import { containerOptions, settings } from "../game-settings";
 import "./../../../resources/i18n";
 import { ColorGameDoubleTripleResult } from "./double-triple-result";
 import { ColorGameWinningResult } from "./winning-result";
-import { ColorDice } from "../../color-game/scripts/dice";
 const { Rounds, Translator } = gc;
 
 startGame(settings.name, containerOptions, siteConfigs);
@@ -52,9 +52,11 @@ export default class Game extends GameComponent {
     protected openAnimationIndex = 0;
     protected randomResults = [1, 1, 1];
     protected hasResetBox = false;
-    protected currentPlaySFXDuration: number = 0;
     protected diceDropSound = "dice_drop";
-    protected delayTimeShowWinningBox = 2;
+    protected delayTimeShowWinningBox = 1.5;
+    protected durationTimeShowWinningBox = 2;
+    protected sfxState: gc.Audios.ISFXState = null;
+
     onLoad() {
         super.onLoad();
         this.winningResult.hideQuickly();
@@ -65,8 +67,10 @@ export default class Game extends GameComponent {
         this.playSound(this.diceDropSound);
         await AnimationUtils.delayTime(this.delayTimeShowWinningBox);
         this.winningSound(result);
-        this.winningResult.show();
+        await this.winningResult.show();
+        await AnimationUtils.delayTime(this.durationTimeShowWinningBox);
         this.doubleTripleResult.setResult(result);
+        this.winningResult.hide();
         super.finishShowResult(result, settlementResult);
     }
 
@@ -81,7 +85,6 @@ export default class Game extends GameComponent {
         if (isInRoundTime && !this.hasResetBox) {
             this.colorGame.resetColorBox(this.randomResults);
             this.hasResetBox = true;
-            this.winningResult.hideQuickly();
         }
     }
 
@@ -113,12 +116,14 @@ export default class Game extends GameComponent {
     async winningSound(data: gc.GameServiceMessage.TResult) {
         if (data) {
             const results = Object.values(data);
-            await AnimationUtils.delayTime(1);
             for (const result of results) {
                 const winColorName = this.winningSounds[result];
-                this.playSound(this.getAudioKeyForLanguage(winColorName));
-                console.log("currentPlaySFXDuration", this.currentPlaySFXDuration);
-                await AnimationUtils.delayTime(this.currentPlaySFXDuration);
+                const soundId = this.getAudioKeyForLanguage(winColorName);
+                this.playSound(soundId);
+                await FunctionUtils.delayMilliseconds(100);
+                await FunctionUtils.waitUntil(() => {
+                    return this.sfxState?.id === soundId && this.sfxState?.state === gc.Audios.SFXState.ENDED;
+                }, 100);
             }
         }
     }
@@ -132,12 +137,11 @@ export default class Game extends GameComponent {
             super.handleStartRound(isStartRound);
             this.colorGame.resetColorBox(this.randomResults);
             this.hasResetBox = true;
-            this.winningResult.hide();
         }
     }
 
-    @render(gc.Audios.AudioStore, (store) => store.currentPlaySFXDuration, { fireImmediately: false })
-    handleCurrentPlaySFXDuration(currentPlaySFXDuration: number) {
-        this.currentPlaySFXDuration = currentPlaySFXDuration;
+    @render(gc.Audios.AudioStore, (store) => store.sfxState)
+    updateStateSfx(sfxState: gc.Audios.ISFXState) {
+        this.sfxState = sfxState;
     }
 }
