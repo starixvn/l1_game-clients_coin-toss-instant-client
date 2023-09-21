@@ -20,20 +20,28 @@ enum CameraType {
 @ccclass("ColorGameViewDicesBox")
 export class ColorGameViewDicesBox extends ObserverComponent {
     @property(Node)
-    miniCameraContainer;
+    miniCameraContainer: Node = null;
 
     @property(Sprite)
     renderSprite: Sprite = null;
 
-    protected cameraNodes: Camera[] = [];
-    protected renderCameraSprites: SpriteFrame[] = [];
-
+    protected cameraNodes: Node[] = [];
+    protected camera: Camera;
     protected browseTween: Tween<Node>;
+
+    protected fov = {
+        [CameraType.Center]: 30,
+        [CameraType.Right]: 26,
+        [CameraType.Left]: 26,
+        [CameraType.Bottom]: 28,
+        [CameraType.Top]: 28,
+    };
 
     onLoad() {
         super.onLoad();
         if (this.miniCameraContainer) {
-            this.cameraNodes = this.miniCameraContainer.getComponentsInChildren(Camera);
+            this.cameraNodes = this.miniCameraContainer.getChildByName("anchor").children;
+            this.camera = this.miniCameraContainer.getChildByName("camera").getComponent(Camera);
         }
     }
 
@@ -42,17 +50,19 @@ export class ColorGameViewDicesBox extends ObserverComponent {
         const ratio = 2;
         const width = ratio * transform.width;
         const height = ratio * transform.height;
-        this.cameraNodes.forEach((camera) => {
-            const sp = new SpriteFrame();
-            const renderTex = new RenderTexture();
-            renderTex.reset({
-                width,
-                height,
-            });
-            camera.targetTexture = renderTex;
-            sp.texture = renderTex;
-            this.renderCameraSprites.push(sp);
+
+        const spriteFrame = new SpriteFrame();
+        const renderTex = new RenderTexture();
+        renderTex.reset({
+            width,
+            height,
         });
+
+        this.camera.targetTexture = renderTex;
+        spriteFrame.texture = renderTex;
+        this.renderSprite.spriteFrame = spriteFrame;
+
+        this.displayCamera(CameraType.Center);
     }
 
     start() {
@@ -102,10 +112,10 @@ export class ColorGameViewDicesBox extends ObserverComponent {
     }
 
     displayCamera(type: CameraType) {
-        this.renderSprite.spriteFrame = this.renderCameraSprites[type];
-        this.cameraNodes.forEach((camera, index) => {
-            camera.node.active = index === type;
-        });
+        const cameraNode = this.cameraNodes[type];
+        this.camera.node.position = cameraNode.position;
+        this.camera.node.rotation = cameraNode.rotation;
+        this.camera.fov = this.fov[type];
     }
 
     onClickTop() {
