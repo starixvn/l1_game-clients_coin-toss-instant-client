@@ -127,7 +127,7 @@ export default class Game extends GameComponent {
                 const winColorName = this.winningSounds[result];
                 const soundId = this.getAudioKeyForLanguage(winColorName);
                 this.playSound(soundId);
-                await FunctionUtils.delayMilliseconds(100);
+                await FunctionUtils.delay(100);
                 await FunctionUtils.waitUntil(
                     () => {
                         return !cancelLoadSounds && this.sfxState?.id === soundId && this.sfxState?.state === gc.Audios.SFXState.ENDED;
