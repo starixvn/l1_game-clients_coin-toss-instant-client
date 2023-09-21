@@ -53,25 +53,21 @@ export default class Game extends GameComponent {
     protected randomResults = [1, 1, 1];
     protected hasResetBox = false;
     protected diceDropSound = "dice_drop";
-    protected delayTimeShowWinningBox = 1.5;
-    protected durationTimeShowWinningBox = 2;
+    protected delayTimeShowWinningBox = 2;
     protected sfxState: gc.Audios.ISFXState = null;
 
     onLoad() {
         super.onLoad();
         this.winningResult.hideQuickly();
     }
-    //
 
     async finishShowResult(result: gc.GameServiceMessage.TResult, settlementResult: gc.GameServiceMessage.TSettlementResult) {
         this.winningResult.setResult(result);
         this.playSound(this.diceDropSound);
         await AnimationUtils.delayTime(this.delayTimeShowWinningBox);
         this.winningSound(result);
-        await this.winningResult.show();
-        await AnimationUtils.delayTime(this.durationTimeShowWinningBox);
+        this.winningResult.show();
         this.doubleTripleResult.setResult(result);
-        this.winningResult.hide();
         super.finishShowResult(result, settlementResult);
     }
 
@@ -86,6 +82,7 @@ export default class Game extends GameComponent {
         if (isInRoundTime && !this.hasResetBox) {
             this.colorGame.resetColorBox(this.randomResults);
             this.hasResetBox = true;
+            this.winningResult.hideQuickly();
         }
     }
 
@@ -154,6 +151,7 @@ export default class Game extends GameComponent {
             super.handleStartRound(isStartRound);
             this.colorGame.resetColorBox(this.randomResults);
             this.hasResetBox = true;
+            this.winningResult.hide();
         }
     }
 

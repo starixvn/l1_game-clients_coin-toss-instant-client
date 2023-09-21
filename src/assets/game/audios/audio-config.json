@@ -107,24 +107,6 @@
     "yellow_zh_tw": {
         "bundle": "resources"
     },
-    "win_en": {
-        "bundle": "resources"
-    },
-    "win_vi": {
-        "bundle": "resources"
-    },
-    "win_th": {
-        "bundle": "resources"
-    },
-    "win_id": {
-        "bundle": "resources"
-    },
-    "win_zh_cn": {
-        "bundle": "resources"
-    },
-    "win_zh_tw": {
-        "bundle": "resources"
-    },
     "dice_drop": {
         "bundle": "resources"
     }
