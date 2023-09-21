@@ -1,26 +1,26 @@
 import gc from "@sg/game-client-base";
-import Observer from "observer";
 import { _decorator, Color, Node, Sprite, tween, v3 } from "cc";
 import { WinningResult } from "../../../../extensions/shared-components/assets/shared/common-components/winning-result/scripts/winning-result";
 import { AnimationUtils } from "../../../../extensions/shared-components/assets/shared/utils/utils";
+import { ColorDice } from "../../color-game/scripts/dice";
 const { ccclass, property } = _decorator;
-
-const { Translator } = gc;
-const { handle } = Observer;
-
-export enum ColorDice {
-    Yellow = 0,
-    Red = 1,
-    Pink = 2,
-    White = 3,
-    Blue = 4,
-    Green = 5,
-}
 
 @ccclass("ColorGameWinningResult")
 export class ColorGameWinningResult extends WinningResult {
     @property(Node)
     colors: Node[] = [];
+
+    private colorHex = {
+        [ColorDice.Yellow]: "#ffcf00",
+        [ColorDice.Red]: "#cb2821",
+        [ColorDice.Pink]: "#fd477c",
+        [ColorDice.White]: "#ffffff",
+        [ColorDice.Blue]: "#168cc9",
+        [ColorDice.Green]: "#2dad2c",
+    };
+
+    protected delayTimeShowWinning = 2;
+    protected durationTimeShowWinning = 5;
 
     show(duration = 0.3) {
         return new Promise((resolve) => {
@@ -44,6 +44,7 @@ export class ColorGameWinningResult extends WinningResult {
                     },
                     { easing: "sineOut" }
                 )
+
                 .call(resolve)
                 .start();
         });
@@ -58,22 +59,22 @@ export class ColorGameWinningResult extends WinningResult {
 
             switch (result) {
                 case ColorDice.Pink:
-                    ctx.color = new Color().fromHEX("#fd477c");
+                    ctx.color = new Color().fromHEX(this.colorHex[ColorDice.Pink]);
                     break;
                 case ColorDice.Green:
-                    ctx.color = new Color().fromHEX("#2dad2c");
+                    ctx.color = new Color().fromHEX(this.colorHex[ColorDice.Green]);
                     break;
                 case ColorDice.Blue:
-                    ctx.color = new Color().fromHEX("#168cc9");
+                    ctx.color = new Color().fromHEX(this.colorHex[ColorDice.Blue]);
                     break;
                 case ColorDice.Red:
-                    ctx.color = new Color().fromHEX("#cb2821");
+                    ctx.color = new Color().fromHEX(this.colorHex[ColorDice.Red]);
                     break;
                 case ColorDice.Yellow:
-                    ctx.color = new Color().fromHEX("#ffcf00");
+                    ctx.color = new Color().fromHEX(this.colorHex[ColorDice.Yellow]);
                     break;
                 default:
-                    ctx.color = new Color().fromHEX("#ffffff");
+                    ctx.color = new Color().fromHEX(this.colorHex[ColorDice.White]);
             }
         });
     }
