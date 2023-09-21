@@ -56,26 +56,7 @@ export class ColorGameWinningResult extends WinningResult {
         this.colors.forEach((color, index) => {
             const result = results[index];
             const ctx = color.getComponent(Sprite);
-
-            switch (result) {
-                case ColorDice.Pink:
-                    ctx.color = new Color().fromHEX(this.colorHex[ColorDice.Pink]);
-                    break;
-                case ColorDice.Green:
-                    ctx.color = new Color().fromHEX(this.colorHex[ColorDice.Green]);
-                    break;
-                case ColorDice.Blue:
-                    ctx.color = new Color().fromHEX(this.colorHex[ColorDice.Blue]);
-                    break;
-                case ColorDice.Red:
-                    ctx.color = new Color().fromHEX(this.colorHex[ColorDice.Red]);
-                    break;
-                case ColorDice.Yellow:
-                    ctx.color = new Color().fromHEX(this.colorHex[ColorDice.Yellow]);
-                    break;
-                default:
-                    ctx.color = new Color().fromHEX(this.colorHex[ColorDice.White]);
-            }
+            ctx.color = new Color().fromHEX(this.colorHex[result]);
         });
     }
 }
