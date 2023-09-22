@@ -4,6 +4,7 @@ import GameComponent from "db://shared-components/game/scripts/components/game-c
 import { startGame } from "db://shared-components/shared/scripts/startup";
 import { AnimationUtils, FunctionUtils } from "db://shared-components/shared/utils";
 import Observer from "observer";
+import { AudioUtils } from "../../../../extensions/shared-components/assets/game/audios/utils/audio-utils";
 import { siteConfigs } from "../../../scripts/site-configs";
 import { ColorGame } from "../../color-game/scripts/color-game";
 import { ColorDice } from "../../color-game/scripts/dice";
@@ -54,7 +55,6 @@ export default class Game extends GameComponent {
     protected hasResetBox = false;
     protected diceDropSound = "dice_drop";
     protected delayTimeShowWinningBox = 2;
-    protected sfxState: gc.Audios.ISFXState = null;
 
     onLoad() {
         super.onLoad();
@@ -116,29 +116,24 @@ export default class Game extends GameComponent {
             let cancelLoadSounds = false;
             const maxWaitTime = 5000;
             const results = Object.values(data);
-            const timeoutCancelId = setTimeout(() => {
+            const timeoutCancelWinningSound = setTimeout(() => {
                 cancelLoadSounds = true;
             }, maxWaitTime);
 
             for (const result of results) {
                 const winColorName = this.winningSounds[result];
                 const soundId = this.getAudioKeyForLanguage(winColorName);
-                this.playSound(soundId);
-                await FunctionUtils.delay(100);
-                await FunctionUtils.waitUntil(
-                    () => {
-                        return !cancelLoadSounds && this.sfxState?.id === soundId && this.sfxState?.state === gc.Audios.SFXState.ENDED;
-                    },
-                    100,
-                    maxWaitTime
-                );
-
+                const duration = await AudioUtils.getDurationClip(soundId);
                 if (cancelLoadSounds) {
                     break;
                 }
+                if (duration > 0) {
+                    this.playSound(soundId);
+                    await FunctionUtils.delay(duration * 1000);
+                }
             }
 
-            timeoutCancelId && clearTimeout(timeoutCancelId);
+            timeoutCancelWinningSound && clearTimeout(timeoutCancelWinningSound);
         }
     }
 
@@ -153,10 +148,5 @@ export default class Game extends GameComponent {
             this.hasResetBox = true;
             this.winningResult.hide();
         }
-    }
-
-    @render(gc.Audios.AudioStore, (store) => store.sfxState)
-    updateStateSfx(sfxState: gc.Audios.ISFXState) {
-        this.sfxState = sfxState;
     }
 }
