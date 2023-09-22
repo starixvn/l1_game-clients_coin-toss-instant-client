@@ -67,7 +67,7 @@ export const languages = {
         "message_no_game_offer": "Tài khoản của bạn không được hỗ trợ trên cổng game này. Vui lòng liên hệ với cấp trên.",
         "message_not_enough_scoin": "Bạn hiện không có đủ Scoin để cược.",
         "message_option_maxbet": "Tiền cược tối đa ở cửa này là %{maxBet}",
-        "message_place_bets": "Bắt Đầu Đặt Cược",
+        "message_place_bets": "Mời Đặt Cược",
         "message_placebet_failed": "Game %{gameName} (#%{gameRoundId})\n\nĐặt cược không thành công! (%{errorCode})",
         "message_placebet_next_round": "Vui lòng đặt cược ở phiên sau.",
         "message_play_on_otherdevice": "Bạn hoặc ai đó đang chơi [game] bằng tài khoản này.",

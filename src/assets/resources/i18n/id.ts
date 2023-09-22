@@ -119,6 +119,7 @@ export const languages = {
         "blue": "BIRU",
         "cold": "DINGIN",
         "double_dice": "Dobel",
+        "game_icon_name": "Permainan Warna",
         "game_name": "Permainan Warna",
         "glossary_blue": "BIRU",
         "glossary_cold": "DINGIN",

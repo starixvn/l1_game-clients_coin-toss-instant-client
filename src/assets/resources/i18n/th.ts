@@ -119,6 +119,7 @@ export const languages = {
         "blue": "BLUE",
         "cold": "สีเย็น",
         "double_dice": "สองเท่า",
+        "game_icon_name": "เกมสี",
         "game_name": "เกมสี",
         "glossary_blue": "น้ำเงิน",
         "glossary_cold": "สีเย็น",
