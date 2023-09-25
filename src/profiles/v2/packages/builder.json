@@ -11,7 +11,7 @@
         "progress": 1,
         "state": "success",
         "stage": "build",
-        "message": "9-20-2023 11:20:58 build success in 254114 ms!",
+        "message": "9-25-2023 10:43:17 build success in 240544 ms!",
         "options": {
           "name": "cocos-3x",
           "platform": "web-mobile",
@@ -51,7 +51,7 @@
               "uuid": "41c56f39-fd80-4431-9cbe-b37ff65f2352"
             },
             {
-              "url": "db://assets/game-instant/splash.scene",
+              "url": "db://assets/game-instant/splash/splash.scene",
               "uuid": "374bdfc3-a787-4bd2-817b-4efe75860854"
             }
           ],
@@ -66,7 +66,7 @@
           "bundleCommonChunk": false,
           "logDest": "project://temp/builder/log/web-mobile4-13-2023 09-39.log"
         },
-        "time": "9-20-2023 11:16:44",
+        "time": "9-25-2023 10:39:17",
         "dirty": false
       }
     }
