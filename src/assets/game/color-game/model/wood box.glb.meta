@@ -103,7 +103,7 @@
       "name": "Cylinder.001.mesh",
       "userData": {
         "gltfIndex": 3,
-        "triangleCount": 380
+        "triangleCount": 70
       },
       "ver": "1.1.1",
       "imported": true,
@@ -175,7 +175,7 @@
       "name": "Cylinder.mesh",
       "userData": {
         "gltfIndex": 7,
-        "triangleCount": 380
+        "triangleCount": 70
       },
       "ver": "1.1.1",
       "imported": true,
@@ -325,6 +325,7 @@
         "_techIdx": 0,
         "_defines": [
           {
+            "USE_INSTANCING": true,
             "USE_ALBEDO_MAP": true
           },
           {},

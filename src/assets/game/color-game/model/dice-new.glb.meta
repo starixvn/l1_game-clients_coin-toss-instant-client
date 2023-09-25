@@ -156,6 +156,7 @@
           {
             "IS_ANISOTROPY": true,
             "FIX_ANISOTROPIC_ROTATION_MAP": true,
+            "USE_INSTANCING": true,
             "USE_ALBEDO_MAP": true
           },
           {},
