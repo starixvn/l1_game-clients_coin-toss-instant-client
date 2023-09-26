@@ -886,7 +886,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 41.88,
+      "width": 48.16,
       "height": 40
     },
     "_anchorPoint": {
@@ -925,8 +925,8 @@
     "_string": "200",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 20,
-    "_fontSize": 20,
+    "_actualFontSize": 23,
+    "_fontSize": 23,
     "_fontFamily": "Arial",
     "_lineHeight": 40,
     "_overflow": 0,
@@ -991,7 +991,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 35,
+      "y": 32.818,
       "z": 0
     },
     "_lrot": {
@@ -1031,7 +1031,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 34.86,
+      "width": 39.21,
       "height": 40
     },
     "_anchorPoint": {
@@ -1062,16 +1062,16 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 245,
-      "g": 195,
-      "b": 11,
+      "r": 255,
+      "g": 255,
+      "b": 255,
       "a": 255
     },
     "_string": "150",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 16,
-    "_fontSize": 16,
+    "_actualFontSize": 18,
+    "_fontSize": 18,
     "_fontFamily": "Arial",
     "_lineHeight": 40,
     "_overflow": 0,
@@ -2268,7 +2268,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 42.5,
+      "width": 48.88,
       "height": 40
     },
     "_anchorPoint": {
@@ -2307,8 +2307,8 @@
     "_string": "600",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 20,
-    "_fontSize": 20,
+    "_actualFontSize": 23,
+    "_fontSize": 23,
     "_fontFamily": "Arial",
     "_lineHeight": 40,
     "_overflow": 0,
@@ -2373,7 +2373,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 35,
+      "y": 32.818,
       "z": 0
     },
     "_lrot": {
@@ -2413,7 +2413,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 34.86,
+      "width": 39.21,
       "height": 40
     },
     "_anchorPoint": {
@@ -2444,16 +2444,16 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 245,
-      "g": 195,
-      "b": 11,
+      "r": 255,
+      "g": 255,
+      "b": 255,
       "a": 255
     },
     "_string": "300",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 16,
-    "_fontSize": 16,
+    "_actualFontSize": 18,
+    "_fontSize": 18,
     "_fontFamily": "Arial",
     "_lineHeight": 40,
     "_overflow": 0,
@@ -3650,7 +3650,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 42.5,
+      "width": 48.88,
       "height": 40
     },
     "_anchorPoint": {
@@ -3689,8 +3689,8 @@
     "_string": "600",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 20,
-    "_fontSize": 20,
+    "_actualFontSize": 23,
+    "_fontSize": 23,
     "_fontFamily": "Arial",
     "_lineHeight": 40,
     "_overflow": 0,
@@ -3755,7 +3755,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 35,
+      "y": 32.818,
       "z": 0
     },
     "_lrot": {
@@ -3795,7 +3795,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 34.86,
+      "width": 39.21,
       "height": 40
     },
     "_anchorPoint": {
@@ -3826,16 +3826,16 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 245,
-      "g": 195,
-      "b": 11,
+      "r": 255,
+      "g": 255,
+      "b": 255,
       "a": 255
     },
     "_string": "300",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 16,
-    "_fontSize": 16,
+    "_actualFontSize": 18,
+    "_fontSize": 18,
     "_fontFamily": "Arial",
     "_lineHeight": 40,
     "_overflow": 0,
@@ -4992,7 +4992,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -32.989000000000004,
+      "y": -31,
       "z": 0
     },
     "_lrot": {
@@ -5032,7 +5032,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 41.88,
+      "width": 48.16,
       "height": 40
     },
     "_anchorPoint": {
@@ -5071,8 +5071,8 @@
     "_string": "200",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 20,
-    "_fontSize": 20,
+    "_actualFontSize": 23,
+    "_fontSize": 23,
     "_fontFamily": "Arial",
     "_lineHeight": 40,
     "_overflow": 0,
@@ -5137,7 +5137,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 36,
+      "y": 33.818,
       "z": 0
     },
     "_lrot": {
@@ -5177,7 +5177,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 46.29,
+      "width": 52.07,
       "height": 40
     },
     "_anchorPoint": {
@@ -5208,16 +5208,16 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 245,
-      "g": 195,
-      "b": 11,
+      "r": 255,
+      "g": 255,
+      "b": 255,
       "a": 255
     },
     "_string": "1000",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 16,
-    "_fontSize": 16,
+    "_actualFontSize": 18,
+    "_fontSize": 18,
     "_fontFamily": "Arial",
     "_lineHeight": 40,
     "_overflow": 0,
@@ -6374,7 +6374,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -32.812,
+      "y": -31,
       "z": 0
     },
     "_lrot": {
@@ -6414,7 +6414,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 41.88,
+      "width": 48.16,
       "height": 40
     },
     "_anchorPoint": {
@@ -6453,8 +6453,8 @@
     "_string": "200",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 20,
-    "_fontSize": 20,
+    "_actualFontSize": 23,
+    "_fontSize": 23,
     "_fontFamily": "Arial",
     "_lineHeight": 40,
     "_overflow": 0,
@@ -6519,7 +6519,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 36,
+      "y": 33.818,
       "z": 0
     },
     "_lrot": {
@@ -6559,7 +6559,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 46.29,
+      "width": 52.07,
       "height": 40
     },
     "_anchorPoint": {
@@ -6590,16 +6590,16 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 245,
-      "g": 195,
-      "b": 11,
+      "r": 255,
+      "g": 255,
+      "b": 255,
       "a": 255
     },
     "_string": "1000",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 16,
-    "_fontSize": 16,
+    "_actualFontSize": 18,
+    "_fontSize": 18,
     "_fontFamily": "Arial",
     "_lineHeight": 40,
     "_overflow": 0,
@@ -7756,7 +7756,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -32.635000000000005,
+      "y": -31,
       "z": 0
     },
     "_lrot": {
@@ -7796,7 +7796,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 41.88,
+      "width": 48.16,
       "height": 40
     },
     "_anchorPoint": {
@@ -7835,8 +7835,8 @@
     "_string": "200",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 20,
-    "_fontSize": 20,
+    "_actualFontSize": 23,
+    "_fontSize": 23,
     "_fontFamily": "Arial",
     "_lineHeight": 40,
     "_overflow": 0,
@@ -7901,7 +7901,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 36,
+      "y": 33.818,
       "z": 0
     },
     "_lrot": {
@@ -7941,7 +7941,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 46.29,
+      "width": 52.07,
       "height": 40
     },
     "_anchorPoint": {
@@ -7972,16 +7972,16 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 245,
-      "g": 195,
-      "b": 11,
+      "r": 255,
+      "g": 255,
+      "b": 255,
       "a": 255
     },
     "_string": "1000",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 16,
-    "_fontSize": 16,
+    "_actualFontSize": 18,
+    "_fontSize": 18,
     "_fontFamily": "Arial",
     "_lineHeight": 40,
     "_overflow": 0,
@@ -8546,6 +8546,7 @@
       "__id__": 0
     },
     "fileId": "e0Uw0CPhxLf4oPh3eRsagv",
+    "instance": null,
     "targetOverrides": null
   }
 ]
