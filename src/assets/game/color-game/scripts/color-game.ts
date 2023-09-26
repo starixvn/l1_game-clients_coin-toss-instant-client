@@ -128,7 +128,7 @@ export class ColorGame extends Component {
         return this.openRecords[index];
     }
 
-    setResultDices(results: Number[], faceUp: any, percent: number) {
+    setResultDices(results: number[], faceUp: any, percent: number) {
         this.dices.forEach((dice, index) => {
             const result = results[index];
             dice.setResult(+result, faceUp[index], percent, index);

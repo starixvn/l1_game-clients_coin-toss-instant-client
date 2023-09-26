@@ -1,7 +1,7 @@
-import { _decorator, Color, Label, Sprite, SpriteAtlas } from "cc";
+import gc from "@sg/game-client-base";
+import { _decorator, Label, Sprite, SpriteAtlas } from "cc";
 import { BaseResultBodyItem } from "db://shared-components/game/bet-history/scripts/components/bet-history-body-item";
 import { BetChoice } from "../dtf-commons";
-import gc from "@sg/game-client-base";
 import { resultMapper } from "./bet-detail-body-item";
 
 const { ccclass, property } = _decorator;

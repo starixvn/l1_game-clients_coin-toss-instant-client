@@ -3,7 +3,7 @@ import { _decorator, Component, Label } from "cc";
 const { ccclass, property } = _decorator;
 
 @ccclass
-export class ColorGameDiceOddsItem extends Component {
+export class DiceOddsItem extends Component {
     @property(Label)
     lblOdds: Label = null;
 

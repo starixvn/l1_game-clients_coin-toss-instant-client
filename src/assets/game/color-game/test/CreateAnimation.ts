@@ -4,8 +4,8 @@ import { ColorGameBox } from "../scripts/color-game-box";
 import Dice from "../scripts/dice";
 const { ccclass, property } = _decorator;
 
-@ccclass("test")
-export class test extends Component {
+@ccclass("CreateAnimation")
+export class CreateAnimation extends Component {
     @property(Node)
     diceContainer: Node = null;
 

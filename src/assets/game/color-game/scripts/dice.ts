@@ -19,7 +19,7 @@ export default class Dice extends Component {
 
     setResult(face: number, cubeUpVector: Vec3, percent: number, diceIndex: number) {
         const node = this.render;
-        let upVector;
+        let upVector: Vec3;
         switch (face) {
             case ColorDice.Pink:
                 upVector = v3(0, 1, 0);
@@ -45,7 +45,7 @@ export default class Dice extends Component {
                 return;
         }
 
-        let upRotate = new Quat();
+        const upRotate = new Quat();
         Quat.rotationTo(upRotate, Vec3.UP, upVector);
 
         const extra = new Quat();
@@ -57,7 +57,7 @@ export default class Dice extends Component {
 
         Quat.multiply(upRotate, extra, upRotate);
 
-        let rotateToOrigin = new Quat();
+        const rotateToOrigin = new Quat();
         Quat.rotationTo(rotateToOrigin, Vec3.UP, cubeUpVector);
 
         const multiply = new Quat();
