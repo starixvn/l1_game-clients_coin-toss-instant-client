@@ -1,5 +1,5 @@
 import gc from "@sg/game-client-base";
-import { MeshRenderer, Node, Texture2D, _decorator, tween, v3 } from "cc";
+import { BatchingUtility, MeshRenderer, Node, Texture2D, _decorator, tween, v3 } from "cc";
 import Observer from "observer";
 import { ObserverComponent } from "../../../../extensions/shared-components/assets/shared/common-components/observer-component/scripts/observer-component";
 const { Configs } = gc;
@@ -22,6 +22,11 @@ export class ColorGameBox extends ObserverComponent {
 
     private readonly openEulerAngleZ = 30;
     private readonly closeEulerAngleZ = -90;
+
+    onLoad() {
+        super.onLoad();
+        BatchingUtility.batchStaticModel(this.node.getChildByName("box"), this.node);
+    }
 
     open(animated = true) {
         return new Promise<void>((resolve) => {
