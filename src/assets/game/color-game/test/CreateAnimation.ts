@@ -149,7 +149,6 @@ export class CreateAnimation extends Component {
 
         const applyForce = () =>
             rigidBodies.forEach((body) => {
-                // body.applyLocalForce(Vec3.random(new Vec3(), 3), Vec3.UP);
                 body.applyLocalForce(v3(0, 2, 0), Vec3.random(new Vec3(), 1));
             });
 
