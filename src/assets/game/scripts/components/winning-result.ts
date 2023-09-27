@@ -10,7 +10,7 @@ export class ColorGameWinningResult extends WinningResult {
     @property(Node)
     colors: Node[] = [];
 
-    private colorHex = {
+    private readonly colorHex = {
         [ColorDice.Yellow]: "#ffcf00",
         [ColorDice.Red]: "#cb2821",
         [ColorDice.Pink]: "#fd477c",

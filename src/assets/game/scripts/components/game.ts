@@ -40,7 +40,7 @@ export default class Game extends GameComponent {
     override namespace = settings.name;
     override containerOptions = containerOptions;
 
-    private winningSounds = {
+    private readonly winningSounds = {
         [ColorDice.Yellow]: "yellow",
         [ColorDice.Red]: "red",
         [ColorDice.Pink]: "pink",
