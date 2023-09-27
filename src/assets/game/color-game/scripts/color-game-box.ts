@@ -2,7 +2,7 @@ import gc from "@sg/game-client-base";
 import { MeshRenderer, Node, Texture2D, _decorator, tween, v3 } from "cc";
 import Observer from "observer";
 import { ObserverComponent } from "../../../../extensions/shared-components/assets/shared/common-components/observer-component/scripts/observer-component";
-const { Configs, Rounds } = gc;
+const { Configs } = gc;
 const { ccclass, property } = _decorator;
 const { render } = Observer;
 
@@ -60,10 +60,5 @@ export class ColorGameBox extends ObserverComponent {
         const logoRender = this.logoNode.getComponent(MeshRenderer);
         const logoMat = logoRender.getMaterialInstance(0);
         logoMat.setProperty("mainTexture", isSystemSG ? this.logoSGTexture : this.logoVGTexture);
-    }
-
-    @render(Rounds.RoundTimeStore, (store) => store.isWaiting)
-    test(isWaiting: boolean) {
-        console.log("============================= ", isWaiting);
     }
 }
