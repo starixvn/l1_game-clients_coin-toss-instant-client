@@ -11,18 +11,8 @@ variables:
   INTEGRATION_IMAGE: pentagon/l1_color_game_client
   INTEGRATION_WS_PATH: colorgame
 
-stages:
-  - test
-  - scan-config
-  - transform-config
-  - build-cocos-web
-  - build
-  - integration-test
-  - deploy
-  - post-deploy
-
 .build_cocos_creator_script: &build_cocos_creator_script
-  stage: build-cocos-web
+  stage: build
   script:
     - echo "====== Build Cocos Web Mobile ======"
     - |
@@ -96,7 +86,7 @@ unit_test_js:
       - if: "$CI_COMMIT_BRANCH"
 
 cocos_integration_tests:
-  stage: integration-test
+  stage: test
   allow_failure: true
   before_script:
     - cd $COCOS_PROJECT_DIR
@@ -165,6 +155,7 @@ cocos_integration_tests:
     paths:
       - ./test-results
     expire_in: 1 day
+  retry: 1
 
 cocos_integration_build:
   stage: build
