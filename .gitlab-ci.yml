@@ -12,7 +12,7 @@ variables:
   INTEGRATION_WS_PATH: colorgame
 
 .build_cocos_creator_script: &build_cocos_creator_script
-  stage: build
+  stage: test
   script:
     - echo "====== Build Cocos Web Mobile ======"
     - |
@@ -158,7 +158,7 @@ cocos_integration_tests:
   retry: 1
 
 cocos_integration_build:
-  stage: build
+  stage: test
   allow_failure: true
   before_script: []
   script:
@@ -195,7 +195,7 @@ cocos_integration_docker_build:
     entrypoint: [""]
   tags:
     - docker
-  stage: build
+  stage: test
   allow_failure: true
   before_script:
     - export CI_REGISTRY_IMAGE=$DOCKER_REG_LOCAL_URL/$INTEGRATION_IMAGE:$CI_COMMIT_SHORT_SHA
