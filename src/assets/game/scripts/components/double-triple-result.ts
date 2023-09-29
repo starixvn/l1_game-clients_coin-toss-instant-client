@@ -33,12 +33,18 @@ export class ColorGameDoubleTripleResult extends ObserverComponent {
             const choice = item.name;
             item.active = false;
 
-            if (Object.keys(colorConstant.resultMapper).indexOf(choice) >= 0) {
-                const xValue = Object.values(result).filter((value) => value === colorConstant.resultMapper[choice]).length;
+            if (choice in colorConstant.resultMapper) {
+                const xValue = Object.values(result).reduce(
+                    (count, value) => count + (value === colorConstant.resultMapper[choice] ? 1 : 0),
+                    0
+                );
 
                 if (xValue > 1) {
                     item.active = true;
-                    item.getComponent(Sprite).spriteFrame = xValue === 2 ? double : triple;
+                    const spriteComponent = item.getComponent(Sprite);
+                    if (spriteComponent?.spriteFrame) {
+                        spriteComponent.spriteFrame = xValue === 2 ? double : triple;
+                    }
                 }
             }
         });
