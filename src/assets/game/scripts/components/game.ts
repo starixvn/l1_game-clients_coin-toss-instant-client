@@ -74,7 +74,7 @@ export default class Game extends GameComponent {
     @render(Rounds.RoundStore, (store) => store.clientRoundId)
     storeClientRoundId(clientRoundId: number) {
         this.clientRoundId = clientRoundId;
-        this.calculateForDices();
+        this.calculateForDices(clientRoundId);
     }
 
     @render(Rounds.RoundTimeStore, (store) => store.isInRoundTime)
@@ -86,10 +86,10 @@ export default class Game extends GameComponent {
         }
     }
 
-    calculateForDices() {
+    calculateForDices(roundId: number) {
         const seedNumber = 123;
-        this.openAnimationIndex = (this.clientRoundId * seedNumber) % this.colorGame.openAnimationCount;
-        const temp = (this.clientRoundId * seedNumber).toString().slice(-3);
+        this.openAnimationIndex = (roundId * seedNumber) % this.colorGame.openAnimationCount;
+        const temp = (roundId * seedNumber).toString().slice(-3);
         this.randomResults = [];
         for (let i = 0; i < 3; i++) {
             this.randomResults.push(+temp[i] % 6);
@@ -144,6 +144,7 @@ export default class Game extends GameComponent {
     async handleStartRound(isStartRound: boolean) {
         if (isStartRound) {
             super.handleStartRound(isStartRound);
+            this.calculateForDices(this.clientRoundId + 1);
             this.colorGame.resetColorBox(this.randomResults);
             this.hasResetBox = true;
             this.winningResult.hide();
