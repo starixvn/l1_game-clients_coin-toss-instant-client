@@ -53,7 +53,6 @@ export class ColorGameBox extends ObserverComponent {
                 .to(0.5, {
                     eulerAngles: v3(eulerAngles.x, eulerAngles.y, this.closeEulerAngleZ),
                 })
-                .delay(0.2)
                 .call(resolve)
                 .start();
         });

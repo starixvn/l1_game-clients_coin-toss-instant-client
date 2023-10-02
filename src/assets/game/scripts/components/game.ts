@@ -1,10 +1,10 @@
 import gc from "@sg/game-client-base";
 import { Label, _decorator } from "cc";
+import { AudioUtils } from "db://shared-components/game/audios/utils";
 import GameComponent from "db://shared-components/game/scripts/components/game-component";
 import { startGame } from "db://shared-components/shared/scripts/startup";
 import { AnimationUtils, FunctionUtils } from "db://shared-components/shared/utils";
 import Observer from "observer";
-import { AudioUtils } from "../../../../extensions/shared-components/assets/game/audios/utils/audio-utils";
 import { siteConfigs } from "../../../scripts/site-configs";
 import { ColorGame } from "../../color-game/scripts/color-game";
 import { ColorDice } from "../../color-game/scripts/dice";
@@ -113,18 +113,18 @@ export default class Game extends GameComponent {
 
     async winningSound(data: gc.GameServiceMessage.TResult) {
         if (data) {
-            let cancelLoadSounds = false;
+            let isCancelLoadSounds = false;
             const maxWaitTime = 5000;
             const results = Object.values(data);
             const timeoutCancelWinningSound = setTimeout(() => {
-                cancelLoadSounds = true;
+                isCancelLoadSounds = true;
             }, maxWaitTime);
 
             for (const result of results) {
                 const winColorName = this.winningSounds[result];
                 const soundId = this.getAudioKeyForLanguage(winColorName);
                 const duration = await AudioUtils.getDurationClip(soundId);
-                if (cancelLoadSounds) {
+                if (isCancelLoadSounds) {
                     break;
                 }
                 if (duration > 0) {
