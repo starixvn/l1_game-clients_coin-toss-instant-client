@@ -26,7 +26,7 @@
     "_active": true,
     "_components": [],
     "_prefab": {
-      "__id__": 475
+      "__id__": 474
     },
     "_lpos": {
       "__type__": "cc.Vec3",
@@ -57,7 +57,7 @@
     },
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 541
+      "__id__": 540
     },
     "_id": "41c56f39-fd80-4431-9cbe-b37ff65f2352"
   },
@@ -245,6 +245,9 @@
     "_active": true,
     "_components": [
       {
+        "__id__": 468
+      },
+      {
         "__id__": 469
       },
       {
@@ -258,9 +261,6 @@
       },
       {
         "__id__": 473
-      },
-      {
-        "__id__": 474
       }
     ],
     "_prefab": null,
@@ -352,7 +352,7 @@
     "_priority": 2,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 284.4,
+    "_orthoHeight": 338.8,
     "_near": 0,
     "_far": 2000,
     "_color": {
@@ -1911,7 +1911,7 @@
     ],
     "value": {
       "__type__": "cc.Size",
-      "width": 61.7578125,
+      "width": 61.74462565104167,
       "height": 52.92
     }
   },
@@ -1931,7 +1931,7 @@
     ],
     "value": {
       "__type__": "cc.Size",
-      "width": 72.373046875,
+      "width": 72.357578125,
       "height": 52.92
     }
   },
@@ -1951,7 +1951,7 @@
     ],
     "value": {
       "__type__": "cc.Size",
-      "width": 61.9140625,
+      "width": 61.900838216145836,
       "height": 52.92
     }
   },
@@ -1971,7 +1971,7 @@
     ],
     "value": {
       "__type__": "cc.Size",
-      "width": 111.38671875,
+      "width": 111.36506998697918,
       "height": 50.4
     }
   },
@@ -1991,7 +1991,7 @@
     ],
     "value": {
       "__type__": "cc.Size",
-      "width": 110.8203125,
+      "width": 110.79876953125,
       "height": 50.4
     }
   },
@@ -2011,7 +2011,7 @@
     ],
     "value": {
       "__type__": "cc.Size",
-      "width": 111.54296875,
+      "width": 111.52128255208333,
       "height": 50.4
     }
   },
@@ -2031,7 +2031,7 @@
     ],
     "value": {
       "__type__": "cc.Size",
-      "width": 373.75,
+      "width": 373.6851220703125,
       "height": 40
     }
   },
@@ -2051,7 +2051,7 @@
     ],
     "value": {
       "__type__": "cc.Vec3",
-      "x": -131.181640625,
+      "x": -131.16002604166667,
       "y": 0,
       "z": 0
     }
@@ -2072,7 +2072,7 @@
     ],
     "value": {
       "__type__": "cc.Vec3",
-      "x": -0.078125,
+      "x": -0.07810628255208485,
       "y": 0,
       "z": 0
     }
@@ -2093,7 +2093,7 @@
     ],
     "value": {
       "__type__": "cc.Vec3",
-      "x": 131.103515625,
+      "x": 131.08191975911458,
       "y": 0,
       "z": 0
     }
@@ -2114,7 +2114,7 @@
     ],
     "value": {
       "__type__": "cc.Vec3",
-      "x": 6.064453125,
+      "x": 6.0620906575520905,
       "y": 0,
       "z": 0
     }
@@ -2135,7 +2135,7 @@
     ],
     "value": {
       "__type__": "cc.Vec3",
-      "x": 16.064453125,
+      "x": 16.06209065755209,
       "y": 0,
       "z": 0
     }
@@ -2156,7 +2156,7 @@
     ],
     "value": {
       "__type__": "cc.Vec3",
-      "x": 16.962890625,
+      "x": 16.958193359375002,
       "y": 0,
       "z": 0
     }
@@ -2177,7 +2177,7 @@
     ],
     "value": {
       "__type__": "cc.Vec3",
-      "x": 26.962890625,
+      "x": 26.958193359375002,
       "y": 0,
       "z": 0
     }
@@ -2198,7 +2198,7 @@
     ],
     "value": {
       "__type__": "cc.Vec3",
-      "x": 6.142578125,
+      "x": 6.140196940104175,
       "y": 0,
       "z": 0
     }
@@ -2219,7 +2219,7 @@
     ],
     "value": {
       "__type__": "cc.Vec3",
-      "x": 16.142578125,
+      "x": 16.140196940104175,
       "y": 0,
       "z": 0
     }
@@ -2240,7 +2240,7 @@
     ],
     "value": {
       "__type__": "cc.Size",
-      "width": 39.62890625,
+      "width": 39.620444335937506,
       "height": 52.92
     }
   },
@@ -2260,7 +2260,7 @@
     ],
     "value": {
       "__type__": "cc.Size",
-      "width": 28.447265625,
+      "width": 28.441191406250002,
       "height": 52.92
     }
   },
@@ -2280,7 +2280,7 @@
     ],
     "value": {
       "__type__": "cc.Size",
-      "width": 39.62890625,
+      "width": 39.620444335937506,
       "height": 52.92
     }
   },
@@ -7089,18 +7089,16 @@
       },
       {
         "__id__": 464
-      },
+      }
+    ],
+    "removedComponents": [
       {
         "__id__": 466
       },
       {
         "__id__": 467
-      },
-      {
-        "__id__": 468
       }
-    ],
-    "removedComponents": []
+    ]
   },
   {
     "__type__": "CCPropertyOverrideInfo",
@@ -7175,7 +7173,7 @@
     "value": {
       "__type__": "cc.Size",
       "width": 448,
-      "height": 618
+      "height": 664
     }
   },
   {
@@ -7190,45 +7188,31 @@
       "__id__": 465
     },
     "propertyPath": [
-      "_left"
+      "_contentSize"
     ],
-    "value": 182
+    "value": {
+      "__type__": "cc.Size",
+      "width": 1398,
+      "height": 664
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "d96PbXQc9KSq8xH6HBtljc"
+    ]
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "c4FJO+kw5DzYDbeIOTn68N"
+    ]
   },
   {
     "__type__": "cc.TargetInfo",
     "localID": [
       "c7moEnp/9Amo3VobG5x96F"
     ]
-  },
-  {
-    "__type__": "CCPropertyOverrideInfo",
-    "targetInfo": {
-      "__id__": 465
-    },
-    "propertyPath": [
-      "_right"
-    ],
-    "value": 182
-  },
-  {
-    "__type__": "CCPropertyOverrideInfo",
-    "targetInfo": {
-      "__id__": 465
-    },
-    "propertyPath": [
-      "_top"
-    ],
-    "value": -104
-  },
-  {
-    "__type__": "CCPropertyOverrideInfo",
-    "targetInfo": {
-      "__id__": 465
-    },
-    "propertyPath": [
-      "_bottom"
-    ],
-    "value": -104
   },
   {
     "__type__": "cc.UITransform",
@@ -7350,79 +7334,79 @@
     "instance": null,
     "targetOverrides": [
       {
-        "__id__": 476
+        "__id__": 475
       },
       {
-        "__id__": 479
+        "__id__": 478
       },
       {
-        "__id__": 482
+        "__id__": 481
       },
       {
-        "__id__": 484
+        "__id__": 483
       },
       {
-        "__id__": 486
+        "__id__": 485
       },
       {
-        "__id__": 488
+        "__id__": 487
       },
       {
-        "__id__": 490
+        "__id__": 489
       },
       {
-        "__id__": 493
+        "__id__": 492
       },
       {
-        "__id__": 496
+        "__id__": 495
       },
       {
-        "__id__": 499
+        "__id__": 498
       },
       {
-        "__id__": 502
+        "__id__": 501
       },
       {
-        "__id__": 505
+        "__id__": 504
       },
       {
-        "__id__": 508
+        "__id__": 507
       },
       {
-        "__id__": 510
+        "__id__": 509
       },
       {
-        "__id__": 512
+        "__id__": 511
       },
       {
-        "__id__": 514
+        "__id__": 513
       },
       {
-        "__id__": 516
+        "__id__": 515
       },
       {
-        "__id__": 518
+        "__id__": 517
       },
       {
-        "__id__": 520
+        "__id__": 519
       },
       {
-        "__id__": 523
+        "__id__": 522
       },
       {
-        "__id__": 526
+        "__id__": 525
       },
       {
-        "__id__": 529
+        "__id__": 528
       },
       {
-        "__id__": 532
+        "__id__": 531
       },
       {
-        "__id__": 535
+        "__id__": 534
       },
       {
-        "__id__": 538
+        "__id__": 537
       }
     ],
     "nestedPrefabInstanceRoots": [
@@ -7503,7 +7487,7 @@
       "__id__": 361
     },
     "sourceInfo": {
-      "__id__": 477
+      "__id__": 476
     },
     "propertyPath": [
       "musicSource"
@@ -7512,7 +7496,7 @@
       "__id__": 361
     },
     "targetInfo": {
-      "__id__": 478
+      "__id__": 477
     }
   },
   {
@@ -7535,7 +7519,7 @@
       "__id__": 361
     },
     "sourceInfo": {
-      "__id__": 480
+      "__id__": 479
     },
     "propertyPath": [
       "sfxSource"
@@ -7544,7 +7528,7 @@
       "__id__": 361
     },
     "targetInfo": {
-      "__id__": 481
+      "__id__": 480
     }
   },
   {
@@ -7564,7 +7548,7 @@
   {
     "__type__": "cc.TargetOverrideInfo",
     "source": {
-      "__id__": 472
+      "__id__": 471
     },
     "sourceInfo": null,
     "propertyPath": [
@@ -7572,7 +7556,7 @@
     ],
     "target": null,
     "targetInfo": {
-      "__id__": 483
+      "__id__": 482
     }
   },
   {
@@ -7584,7 +7568,7 @@
   {
     "__type__": "cc.TargetOverrideInfo",
     "source": {
-      "__id__": 472
+      "__id__": 471
     },
     "sourceInfo": null,
     "propertyPath": [
@@ -7593,7 +7577,7 @@
     ],
     "target": null,
     "targetInfo": {
-      "__id__": 485
+      "__id__": 484
     }
   },
   {
@@ -7605,7 +7589,7 @@
   {
     "__type__": "cc.TargetOverrideInfo",
     "source": {
-      "__id__": 472
+      "__id__": 471
     },
     "sourceInfo": null,
     "propertyPath": [
@@ -7614,7 +7598,7 @@
     ],
     "target": null,
     "targetInfo": {
-      "__id__": 487
+      "__id__": 486
     }
   },
   {
@@ -7626,7 +7610,7 @@
   {
     "__type__": "cc.TargetOverrideInfo",
     "source": {
-      "__id__": 472
+      "__id__": 471
     },
     "sourceInfo": null,
     "propertyPath": [
@@ -7635,7 +7619,7 @@
     ],
     "target": null,
     "targetInfo": {
-      "__id__": 489
+      "__id__": 488
     }
   },
   {
@@ -7650,7 +7634,7 @@
       "__id__": 143
     },
     "sourceInfo": {
-      "__id__": 491
+      "__id__": 490
     },
     "propertyPath": [
       "container"
@@ -7659,7 +7643,7 @@
       "__id__": 143
     },
     "targetInfo": {
-      "__id__": 492
+      "__id__": 491
     }
   },
   {
@@ -7681,7 +7665,7 @@
       "__id__": 143
     },
     "sourceInfo": {
-      "__id__": 494
+      "__id__": 493
     },
     "propertyPath": [
       "container"
@@ -7690,7 +7674,7 @@
       "__id__": 143
     },
     "targetInfo": {
-      "__id__": 495
+      "__id__": 494
     }
   },
   {
@@ -7712,7 +7696,7 @@
       "__id__": 143
     },
     "sourceInfo": {
-      "__id__": 497
+      "__id__": 496
     },
     "propertyPath": [
       "container"
@@ -7721,7 +7705,7 @@
       "__id__": 143
     },
     "targetInfo": {
-      "__id__": 498
+      "__id__": 497
     }
   },
   {
@@ -7743,7 +7727,7 @@
       "__id__": 143
     },
     "sourceInfo": {
-      "__id__": 500
+      "__id__": 499
     },
     "propertyPath": [
       "staticGroups",
@@ -7754,7 +7738,7 @@
       "__id__": 143
     },
     "targetInfo": {
-      "__id__": 501
+      "__id__": 500
     }
   },
   {
@@ -7776,7 +7760,7 @@
       "__id__": 143
     },
     "sourceInfo": {
-      "__id__": 503
+      "__id__": 502
     },
     "propertyPath": [
       "staticGroups",
@@ -7787,7 +7771,7 @@
       "__id__": 143
     },
     "targetInfo": {
-      "__id__": 504
+      "__id__": 503
     }
   },
   {
@@ -7809,7 +7793,7 @@
       "__id__": 143
     },
     "sourceInfo": {
-      "__id__": 506
+      "__id__": 505
     },
     "propertyPath": [
       "staticGroups",
@@ -7820,7 +7804,7 @@
       "__id__": 143
     },
     "targetInfo": {
-      "__id__": 507
+      "__id__": 506
     }
   },
   {
@@ -7839,7 +7823,7 @@
   {
     "__type__": "cc.TargetOverrideInfo",
     "source": {
-      "__id__": 472
+      "__id__": 471
     },
     "sourceInfo": null,
     "propertyPath": [
@@ -7847,7 +7831,7 @@
     ],
     "target": null,
     "targetInfo": {
-      "__id__": 509
+      "__id__": 508
     }
   },
   {
@@ -7859,7 +7843,7 @@
   {
     "__type__": "cc.TargetOverrideInfo",
     "source": {
-      "__id__": 472
+      "__id__": 471
     },
     "sourceInfo": null,
     "propertyPath": [
@@ -7869,7 +7853,7 @@
       "__id__": 2
     },
     "targetInfo": {
-      "__id__": 511
+      "__id__": 510
     }
   },
   {
@@ -7881,7 +7865,7 @@
   {
     "__type__": "cc.TargetOverrideInfo",
     "source": {
-      "__id__": 472
+      "__id__": 471
     },
     "sourceInfo": null,
     "propertyPath": [
@@ -7891,7 +7875,7 @@
       "__id__": 268
     },
     "targetInfo": {
-      "__id__": 513
+      "__id__": 512
     }
   },
   {
@@ -7903,7 +7887,7 @@
   {
     "__type__": "cc.TargetOverrideInfo",
     "source": {
-      "__id__": 472
+      "__id__": 471
     },
     "sourceInfo": null,
     "propertyPath": [
@@ -7913,7 +7897,7 @@
       "__id__": 205
     },
     "targetInfo": {
-      "__id__": 515
+      "__id__": 514
     }
   },
   {
@@ -7935,7 +7919,7 @@
       "__id__": 196
     },
     "targetInfo": {
-      "__id__": 517
+      "__id__": 516
     }
   },
   {
@@ -7957,7 +7941,7 @@
       "__id__": 43
     },
     "targetInfo": {
-      "__id__": 519
+      "__id__": 518
     }
   },
   {
@@ -7972,7 +7956,7 @@
       "__id__": 205
     },
     "sourceInfo": {
-      "__id__": 521
+      "__id__": 520
     },
     "propertyPath": [
       "resultNode",
@@ -7982,7 +7966,7 @@
       "__id__": 205
     },
     "targetInfo": {
-      "__id__": 522
+      "__id__": 521
     }
   },
   {
@@ -8003,7 +7987,7 @@
       "__id__": 205
     },
     "sourceInfo": {
-      "__id__": 524
+      "__id__": 523
     },
     "propertyPath": [
       "resultNode",
@@ -8013,7 +7997,7 @@
       "__id__": 205
     },
     "targetInfo": {
-      "__id__": 525
+      "__id__": 524
     }
   },
   {
@@ -8034,7 +8018,7 @@
       "__id__": 205
     },
     "sourceInfo": {
-      "__id__": 527
+      "__id__": 526
     },
     "propertyPath": [
       "resultNode",
@@ -8044,7 +8028,7 @@
       "__id__": 205
     },
     "targetInfo": {
-      "__id__": 528
+      "__id__": 527
     }
   },
   {
@@ -8065,7 +8049,7 @@
       "__id__": 205
     },
     "sourceInfo": {
-      "__id__": 530
+      "__id__": 529
     },
     "propertyPath": [
       "resultNode",
@@ -8075,7 +8059,7 @@
       "__id__": 205
     },
     "targetInfo": {
-      "__id__": 531
+      "__id__": 530
     }
   },
   {
@@ -8096,7 +8080,7 @@
       "__id__": 205
     },
     "sourceInfo": {
-      "__id__": 533
+      "__id__": 532
     },
     "propertyPath": [
       "resultNode",
@@ -8106,7 +8090,7 @@
       "__id__": 205
     },
     "targetInfo": {
-      "__id__": 534
+      "__id__": 533
     }
   },
   {
@@ -8127,7 +8111,7 @@
       "__id__": 205
     },
     "sourceInfo": {
-      "__id__": 536
+      "__id__": 535
     },
     "propertyPath": [
       "resultNode",
@@ -8137,7 +8121,7 @@
       "__id__": 205
     },
     "targetInfo": {
-      "__id__": 537
+      "__id__": 536
     }
   },
   {
@@ -8158,7 +8142,7 @@
       "__id__": 285
     },
     "sourceInfo": {
-      "__id__": 539
+      "__id__": 538
     },
     "propertyPath": [
       "_target"
@@ -8167,7 +8151,7 @@
       "__id__": 285
     },
     "targetInfo": {
-      "__id__": 540
+      "__id__": 539
     }
   },
   {
@@ -8185,25 +8169,25 @@
   {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 542
+      "__id__": 541
     },
     "shadows": {
-      "__id__": 543
+      "__id__": 542
     },
     "_skybox": {
-      "__id__": 544
+      "__id__": 543
     },
     "fog": {
-      "__id__": 545
+      "__id__": 544
     },
     "octree": {
-      "__id__": 546
+      "__id__": 545
     },
     "skin": {
-      "__id__": 547
+      "__id__": 546
     },
     "lightProbeInfo": {
-      "__id__": 548
+      "__id__": 547
     },
     "bakedWithStationaryMainLight": false,
     "bakedWithHighpLightmap": false
