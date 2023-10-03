@@ -105,7 +105,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -98.447265625,
+      "x": -131.181640625,
       "y": 0,
       "z": 0
     },
@@ -161,7 +161,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -9.2236328125,
+      "x": 6.064453125,
       "y": 0,
       "z": 0
     },
@@ -202,7 +202,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 20,
+      "width": 61.7578125,
       "height": 52.92
     },
     "_anchorPoint": {
@@ -238,7 +238,7 @@
       "b": 223,
       "a": 255
     },
-    "_string": "单",
+    "_string": "Single",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 25,
@@ -342,7 +342,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 0.7763671875,
+      "x": 16.064453125,
       "y": 0,
       "z": 0
     },
@@ -383,7 +383,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 28.447265625,
+      "width": 39.62890625,
       "height": 52.92
     },
     "_anchorPoint": {
@@ -419,7 +419,7 @@
       "b": 223,
       "a": 255
     },
-    "_string": "1:5",
+    "_string": "1:55",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 25,
@@ -491,7 +491,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 58.447265625,
+      "width": 111.38671875,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -610,7 +610,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -10,
+      "x": -0.078125,
       "y": 0,
       "z": 0
     },
@@ -666,7 +666,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 0.7763671875,
+      "x": 16.962890625,
       "y": 0,
       "z": 0
     },
@@ -707,7 +707,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 40,
+      "width": 72.373046875,
       "height": 52.92
     },
     "_anchorPoint": {
@@ -743,7 +743,7 @@
       "b": 223,
       "a": 255
     },
-    "_string": "双倍",
+    "_string": "Double",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 25,
@@ -847,7 +847,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 10.7763671875,
+      "x": 26.962890625,
       "y": 0,
       "z": 0
     },
@@ -996,7 +996,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 78.447265625,
+      "width": 110.8203125,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -1115,7 +1115,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 88.447265625,
+      "x": 131.103515625,
       "y": 0,
       "z": 0
     },
@@ -1171,7 +1171,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 0.7763671875,
+      "x": 6.142578125,
       "y": 0,
       "z": 0
     },
@@ -1212,7 +1212,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 40,
+      "width": 61.9140625,
       "height": 52.92
     },
     "_anchorPoint": {
@@ -1248,7 +1248,7 @@
       "b": 223,
       "a": 255
     },
-    "_string": "三倍",
+    "_string": "Triple",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 25,
@@ -1352,7 +1352,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 10.7763671875,
+      "x": 16.142578125,
       "y": 0,
       "z": 0
     },
@@ -1393,7 +1393,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 28.447265625,
+      "width": 39.62890625,
       "height": 52.92
     },
     "_anchorPoint": {
@@ -1429,7 +1429,7 @@
       "b": 223,
       "a": 255
     },
-    "_string": "1:4",
+    "_string": "1:45",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 25,
@@ -1501,7 +1501,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 78.447265625,
+      "width": 111.54296875,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -1601,7 +1601,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 255.341796875,
+      "width": 373.75,
       "height": 40
     },
     "_anchorPoint": {
