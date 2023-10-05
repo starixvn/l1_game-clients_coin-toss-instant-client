@@ -122,7 +122,7 @@
         "_value": false
       },
       "custom-pipeline": {
-        "_value": true
+        "_value": false
       }
     },
     "includeModules": [
@@ -131,7 +131,6 @@
       "animation",
       "audio",
       "base",
-      "custom-pipeline",
       "gfx-webgl",
       "gfx-webgl2",
       "intersection-2d",
@@ -160,6 +159,6 @@
     "ENABLE_WEBGL_ANTIALIAS": false,
     "ENABLE_WEBGL_HIGHP_STRUCT_VALUES": true,
     "BATCHER2D_MEM_INCREMENT": 2303,
-    "CUSTOM_PIPELINE_NAME": "Custom"
+    "CUSTOM_PIPELINE_NAME": ""
   }
 }

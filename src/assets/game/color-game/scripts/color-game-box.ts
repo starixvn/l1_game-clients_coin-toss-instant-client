@@ -1,5 +1,5 @@
 import gc from "@sg/game-client-base";
-import { BatchingUtility, MeshRenderer, Node, Texture2D, _decorator, tween, v3 } from "cc";
+import { MeshRenderer, Node, Texture2D, _decorator, tween, v3 } from "cc";
 import Observer from "observer";
 import { ObserverComponent } from "../../../../extensions/shared-components/assets/shared/common-components/observer-component/scripts/observer-component";
 const { Configs } = gc;
@@ -20,13 +20,8 @@ export class ColorGameBox extends ObserverComponent {
     @property(Texture2D)
     logoVGTexture: Texture2D = null;
 
-    private readonly openEulerAngleZ = 30;
+    private readonly openEulerAngleZ = -10;
     private readonly closeEulerAngleZ = -90;
-
-    onLoad() {
-        super.onLoad();
-        BatchingUtility.batchStaticModel(this.node.getChildByName("box"), this.node);
-    }
 
     open(animated = true) {
         return new Promise<void>((resolve) => {
