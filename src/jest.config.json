@@ -28,7 +28,8 @@
         "inversify": "<rootDir>/tests/cocos-testing/inversify",
         "db://shared-components/(.*)": "<rootDir>/extensions/shared-components/assets/$1",
         "db://i18n/(.*)": "<rootDir>/extensions/i18n/assets/$1",
-        "socket.io-client/dist/socket.io.msgpack.min.js": "socket.io-client/dist/socket.io.js"
+        "socket.io-client/dist/socket.io.msgpack.min.js": "socket.io-client/dist/socket.io.js",
+        "^lodash-es$": "lodash"
     },
     "maxWorkers": 10
 }
