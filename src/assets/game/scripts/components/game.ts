@@ -1,5 +1,5 @@
 import gc from "@sg/game-client-base";
-import { Label, _decorator } from "cc";
+import { Label, Node, _decorator } from "cc";
 import { AudioUtils } from "db://shared-components/game/audios/utils";
 import GameComponent from "db://shared-components/game/scripts/components/game-component";
 import { startGame } from "db://shared-components/shared/scripts/startup";
@@ -28,14 +28,18 @@ export default class Game extends GameComponent {
     @property({ type: Label, override: true, visible: false })
     lblMaxBet: Label = null;
 
-    @property(ColorGameWinningResult)
-    winningResult: ColorGameWinningResult = null;
+    @property({ type: Node })
+    colorGameNode: Node = null;
 
-    @property(ColorGame)
-    colorGame: ColorGame = null;
+    @property({ type: Node })
+    winningResultNode: Node = null;
 
-    @property(ColorGameDoubleTripleResult)
-    doubleTripleResult: ColorGameDoubleTripleResult = null;
+    @property({ type: Node })
+    doubleTripleResultNode: Node = null;
+
+    private winningResult: ColorGameWinningResult = null;
+    private colorGame: ColorGame = null;
+    private doubleTripleResult: ColorGameDoubleTripleResult = null;
 
     override namespace = settings.name;
     override containerOptions = containerOptions;
@@ -58,7 +62,14 @@ export default class Game extends GameComponent {
 
     onLoad() {
         super.onLoad();
+        this.fetchComponents();
         this.winningResult.hideQuickly();
+    }
+
+    fetchComponents() {
+        this.winningResult = this.winningResultNode.getComponent(ColorGameWinningResult);
+        this.colorGame = this.colorGameNode.getComponent(ColorGame);
+        this.doubleTripleResult = this.doubleTripleResultNode.getComponent(ColorGameDoubleTripleResult);
     }
 
     async finishShowResult(result: gc.GameServiceMessage.TResult, settlementResult: gc.GameServiceMessage.TSettlementResult) {
