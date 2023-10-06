@@ -8,4 +8,6 @@ window.envConfig = {
     enableMsgpackParserOnNotification: false,
     SGConnectSubDomain: "l2-connect-2",
     backgroundNoTranslate: true,
+    boostedOddsDelayTimeByMillisecond: 900000,
+    boostedOddsGamesSupportForInstantSite: ["minisedie", "taixiu"],
 };

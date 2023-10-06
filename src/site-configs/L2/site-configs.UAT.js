@@ -10,4 +10,6 @@ window.envConfig = {
     subDirectory: "uat",
     SGConnectSubDomain: "l2-connect-uat",
     backgroundNoTranslate: true,
+    boostedOddsDelayTimeByMillisecond: 900000,
+    boostedOddsGamesSupportForInstantSite: ["minisedie", "taixiu"],
 };
