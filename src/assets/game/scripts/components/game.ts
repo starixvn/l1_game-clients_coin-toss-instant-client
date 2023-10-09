@@ -99,7 +99,7 @@ export default class Game extends GameComponent {
 
     calculateForDices(roundId: number) {
         const seedNumber = 123;
-        this.openAnimationIndex = (roundId * seedNumber) % this.colorGame.openAnimationCount;
+        this.openAnimationIndex = roundId % this.colorGame.openAnimationCount;
         const temp = (roundId * seedNumber).toString().slice(-3);
         this.randomResults = [];
         for (let i = 0; i < 3; i++) {
