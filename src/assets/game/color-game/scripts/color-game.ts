@@ -102,7 +102,6 @@ export class ColorGame extends Component {
         const stepCounts = rotation[0].length;
         const stepToRotate = this.stepToRotate;
         let step = 0;
-        console.time("playDicesAnimation");
         tween(this.node)
             .call(() => {
                 this.dices.forEach((dice, index) => {
@@ -118,9 +117,6 @@ export class ColorGame extends Component {
             .delay(1.0 / 60)
             .union()
             .repeat(stepCounts)
-            .call(() => {
-                console.timeEnd("playDicesAnimation");
-            })
             .start();
     }
 
