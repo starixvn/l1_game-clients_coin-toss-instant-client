@@ -10,6 +10,6 @@ window.envConfig = {
     subDirectory: "sit",
     SGConnectSubDomain: "l1sitconnectsite",
     backgroundNoTranslate: true,
-    boostedOddsDelayTimeByMillisecond: 900000,
-    boostedOddsGamesSupportForInstantSite: ["minisedie", "taixiu"],
+    boostedOddsDelayTimeByMinutes: 15,
+    gameIdsSupportBoostedOddsForInstantSite: [1, 9],
 };

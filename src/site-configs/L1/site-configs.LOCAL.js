@@ -9,6 +9,6 @@ window.envConfig = {
     enableMsgpackParserAllGames: false,
     SGConnectSubDomain: "connectsite",
     backgroundNoTranslate: true,
-    boostedOddsDelayTimeByMillisecond: 900000,
-    boostedOddsGamesSupportForInstantSite: ["minisedie", "taixiu"],
+    boostedOddsDelayTimeByMinutes: 1,
+    gameIdsSupportBoostedOddsForInstantSite: [1, 9],
 };
