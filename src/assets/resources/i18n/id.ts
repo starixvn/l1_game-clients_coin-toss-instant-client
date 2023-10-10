@@ -143,7 +143,9 @@ export const languages = {
     "InstantGame": {
         " message_account_blacklist_place_bet": "Gagal memasang taruhan! Akun telah ditutup. Silakan hubungi CSD untuk lebih lanjut. (%{errorCode})",
         " message_account_signout": "Akun telah keluar karena orang lain masuk ke akun ini.",
+        " message_game_excluded": "Akun Anda tidak lagi diizinkan untuk memainkan game ini. Silakan coba game lain.",
         "bet_amount_of_any_choice_incorrect": "Jumlah Taruhan Tidak Valid",
+        "game_excluded": "Akun Anda tidak lagi diizinkan untuk memainkan game ini. Silakan coba game lain.",
         "invalid_bet": "Taruhan Tidak Valid",
         "max_stake_hand": "Total taruhan maksimum di Tangan adalah %{maxBet}",
         "message_account_black_listed_place_bet": "Gagal memasang taruhan! Akun telah ditutup. Silakan hubungi CSD untuk lebih lanjut. (%{errorCode})",
@@ -187,7 +189,7 @@ export const languages = {
         "message_session_expired": "Sesi Anda telah kedaluwarsa, silakan masuk lagi.",
         "message_session_timeout": "Sesi Anda telah berakhir. Muat Ulang.",
         "message_session_timeout_place_bet": "Sesi Anda telah berakhir. Muat Ulang.",
-        "message_sys_maintenance_place_bet": "Permainan %{gameName} (#%{gameRoundId})\\n\\nGagal memasang taruhan! Permainan sedang dalam pemeliharaan.",
+        "message_sys_maintenance_place_bet": "Permainan %{gameName} (#%{gameRoundId})\n\nGagal memasang taruhan! Permainan sedang dalam pemeliharaan.",
         "message_unauthorized": "Tidak sah.",
         "message_unavailable_game": "Permainan tidak tersedia saat ini. Silakan hubungi CSD untuk lebih lanjut, terima kasih. (%{errorCode})",
         "message_user_not_found_place_bet": "Gagal memasang taruhan! Pengguna tidak ditemukan. (%{errorCode})",

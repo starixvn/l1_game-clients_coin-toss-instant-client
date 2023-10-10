@@ -143,7 +143,9 @@ export const languages = {
     "InstantGame": {
         " message_account_blacklist_place_bet": "Account has been closed. Please contact CSD for details.(%{errorCode})",
         " message_account_signout": "The account has been signed out because someone else logged into this account.",
+        " message_game_excluded": "Your account is no longer allowed to play this game. Please try other games",
         "bet_amount_of_any_choice_incorrect": "Invalid Bet Amount",
+        "game_excluded": "Your account is no longer allowed to play this game. Please try other games.",
         "invalid_bet": "Invalid Bet",
         "max_stake_hand": "Max total stake on Hand is %{maxBet}",
         "message_account_black_listed_place_bet": "Account has been closed. Please contact CSD for details.(%{errorCode})",

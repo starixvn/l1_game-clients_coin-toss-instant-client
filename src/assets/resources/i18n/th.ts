@@ -143,7 +143,9 @@ export const languages = {
     "InstantGame": {
         " message_account_blacklist_place_bet": "การวางเดิมพันล้มเหลว! บัญชีถูกปิด โปรดติดต่อแอดมินเพื่อขอรายละเอียดเพิ่มเติม (%{errorCode})",
         " message_account_signout": "บัญชีถูกออกจากระบบเนื่องจากมีคนอื่นลงชื่อเข้าใช้บัญชีนี้",
+        " message_game_excluded": "บัญชีของคุณไม่ได้รับอนุญาตให้เล่นเกมนี้อีกต่อไป โปรดลองเกมอื่น",
         "bet_amount_of_any_choice_incorrect": "จำนวนเงินเดิมพันไม่ถูกต้อง",
+        "game_excluded": "บัญชีของคุณไม่ได้รับอนุญาตให้เล่นเกมนี้อีกต่อไป โปรดลองเกมอื่น",
         "invalid_bet": "เดิมพันไม่ถูกต้อง",
         "max_stake_hand": "เดิมพันรวมสูงสุดในมือคือ %{maxBet}",
         "message_account_black_listed_place_bet": "การวางเดิมพันล้มเหลว! บัญชีถูกปิด โปรดติดต่อแอดมินเพื่อขอรายละเอียดเพิ่มเติม (%{errorCode})",
