@@ -177,6 +177,7 @@ export const languages = {
         "message_network_error_place_bet": "Gagal memasang taruhan! Kesalahan jaringan. (%{errorCode})",
         "message_nick_different_from_user_name": "Nickname must be different from your username.",
         "message_place_bet_failed": "Gagal memasang taruhan! (%{errorCode})",
+        "message_placebet_next_round": "Silakan tunggu putaran berikutnya.",
         "message_play_on_otherdevice": "Akun Anda sedang digunakan untuk memainkan [game] di browser atau perangkat lain.",
         "message_player_not_permitted_play": "Permainan dinonaktifkan. Silakan hubungi upline Anda untuk lebih lanjut, terima kasih. (%{errorCode})",
         "message_player_unpermitted_play": "Permainan dinonaktifkan. Silakan hubungi upline Anda untuk lebih lanjut, terima kasih. (%{errorCode})",

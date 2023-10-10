@@ -177,6 +177,7 @@ export const languages = {
         "message_network_error_place_bet": "Failed to place bet! Network error.(%{errorCode})",
         "message_nick_different_from_user_name": "Nickname must be different from your username.",
         "message_place_bet_failed": "Failed to place bet!(%{errorCode})",
+        "message_placebet_next_round": "Please wait for the next round.",
         "message_play_on_otherdevice": " Your account is being used to play [game] on another browser or device.",
         "message_player_not_permitted_play": "Game disabled. Please contact your upline for details.(%{errorCode})",
         "message_player_unpermitted_play": "Game disabled. Please contact your upline for details.(%{errorCode})",
