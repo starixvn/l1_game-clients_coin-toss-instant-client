@@ -83,7 +83,7 @@ export const languages = {
         "message_session_timeout_place_bet": "เกม %{gameName} (#%{gameRoundId})\n\nการวางเดิมพันล้มเหลว! เซสชั่นของคุณหมดเวลาหรือคุณยังไม่ได้เข้าสู่ระบบ กรุณาปิดหน้าต่างปัจจุบันและลองเข้าสู่ระบบอีกครั้ง",
         "message_stop_bet": "หยุดการพนัน",
         "message_sys_maintenance": "เกมอยู่ระหว่างการบำรุงรักษา",
-        "message_system_mantainance_place_bet": "เกม %{gameName} (#%{gameRoundId})\n\nการวางเดิมพันล้มเหลว! เกมอยู่ระหว่างการบำรุงรักษา ",
+        "message_sys_maintenance_place_bet": "เกม %{gameName} (#%{gameRoundId})\n\nการวางเดิมพันล้มเหลว! เกมอยู่ระหว่างการบำรุงรักษา ",
         "message_unauthorized": "ไม่ได้รับอนุญาต",
         "message_unavailable_game": "เกม %{gameName} (#%{gameRoundId})\n\nเกมไม่สามารถใช้งานได้ในขณะนี้ กรุณาติดต่อแอดมินสำหรับรายละเอียดขอบคุณ (%{errorCode})",
         "message_under_maintain": "ระบบปิดปรับปรุง กรุณาเข้ามาใช้งานใหม่อีกครั้ง",

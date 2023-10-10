@@ -83,7 +83,7 @@ export const languages = {
         "message_session_timeout_place_bet": "%{gameName} 游戏 (#%{gameRoundId})\n\n下注失败！ 您的会话已超时或您尚未登录。 请关闭当前窗口并再次尝试登录。",
         "message_stop_bet": "投注停止",
         "message_sys_maintenance": "游戏正在维护中。",
-        "message_system_mantainance_place_bet": "%{gameName} 游戏 (#%{gameRoundId})\n\n下注失败！ 游戏正在维护中。",
+        "message_sys_maintenance_place_bet": "%{gameName} 游戏 (#%{gameRoundId})\n\n下注失败！ 游戏正在维护中。",
         "message_unauthorized": "未经授权。",
         "message_unavailable_game": "%{gameName} 游戏 (#%{gameRoundId})\n\n该游戏暂时无法使用。 详情请联系CSD，谢谢。      (%{errorCode})",
         "message_under_maintain": "本网站正在维护中。 请稍后再回来。",

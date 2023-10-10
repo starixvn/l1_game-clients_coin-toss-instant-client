@@ -83,7 +83,7 @@ export const languages = {
         "message_session_timeout_place_bet": "Permainan %{gameName} (#%{gameRoundId})\n\nGagal memasang taruhan! Sesi Anda telah habis atau Anda belum masuk. Harap tutup jendela saat ini dan coba masuk lagi.",
         "message_stop_bet": "Berhenti Petaruh",
         "message_sys_maintenance": "Permainan sedang dalam pemeliharaan.",
-        "message_system_mantainance_place_bet": "Permainan %{gameName} (#%{gameRoundId})\n\nGagal memasang taruhan! Permainan sedang dalam pemeliharaan.",
+        "message_sys_maintenance_place_bet": "Permainan %{gameName} (#%{gameRoundId})\n\nGagal memasang taruhan! Permainan sedang dalam pemeliharaan.",
         "message_unauthorized": "Tidak sah.",
         "message_unavailable_game": "Permainan %{gameName} (#%{gameRoundId})\n\nPermainan tidak tersedia saat ini. Silakan hubungi CSD untuk lebih lanjut, terima kasih. (%{errorCode})",
         "message_under_maintain": "SITUS DALAM PEMELIHARAAN. SILAKAN KEMBALI LAGI.",

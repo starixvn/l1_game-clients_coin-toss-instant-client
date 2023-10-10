@@ -83,7 +83,7 @@ export const languages = {
         "message_session_timeout_place_bet": "Game %{gameName} (#%{gameRoundId})\n\nPhiên đăng nhập của bạn đã hết hạn, hoặc bạn chưa có đăng nhập. Vui lòng đóng cửa sổ game và thử đăng nhập lại. Đặt cược thất bại!",
         "message_stop_bet": "Dừng Đặt Cược",
         "message_sys_maintenance": "Hệ thống đang được bảo trì.",
-        "message_system_mantainance_place_bet": "Game %{gameName} (#%{gameRoundId})\n\nHệ thống đang được bảo trì.",
+        "message_sys_maintenance_place_bet": "Game %{gameName} (#%{gameRoundId})\n\nHệ thống đang được bảo trì.",
         "message_unauthorized": "Không được phép.",
         "message_unavailable_game": "Game %{gameName} (#%{gameRoundId})\n\nTrò chơi không khả dụng vào thời điểm này. Vui lòng liên hệ với bộ phận CSKH để biết chi tiết, cảm ơn bạn. (%{errorCode})",
         "message_under_maintain": "HỆ THỐNG ĐANG ĐƯỢC BẢO TRÌ. VUI LÒNG QUAY LẠI SAU.",
