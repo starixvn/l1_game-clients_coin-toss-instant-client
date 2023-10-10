@@ -1479,7 +1479,7 @@
     "_enabled": true,
     "__prefab": null,
     "_shadingScale": 1,
-    "_id": "98ALFUVKlBnptld0lmXhzy"
+    "_id": "5bmeTbOqhKM7alwxxyJoUI"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -1868,6 +1868,7 @@
       "__id__": 0
     },
     "fileId": "b1ZX4O1EVFmaTE1YoA+6p5",
+    "instance": null,
     "targetOverrides": [
       {
         "__id__": 120
