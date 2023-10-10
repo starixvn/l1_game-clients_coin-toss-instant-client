@@ -148,20 +148,15 @@
         "__editorExtras__": {},
         "_native": "",
         "_effectAsset": {
-          "__uuid__": "c8f66d17-351a-48da-a12c-0212d28575c4",
+          "__uuid__": "107847de-d185-41f3-8312-725d0c181115",
           "__expectedType__": "cc.EffectAsset"
         },
         "_techIdx": 0,
         "_defines": [
           {
-            "IS_ANISOTROPY": true,
-            "FIX_ANISOTROPIC_ROTATION_MAP": true,
             "USE_INSTANCING": true,
             "USE_ALBEDO_MAP": true
           },
-          {},
-          {},
-          {},
           {},
           {}
         ],
@@ -194,46 +189,17 @@
                 {}
               ]
             }
-          },
-          {
-            "rasterizerState": {},
-            "depthStencilState": {},
-            "blendState": {
-              "targets": [
-                {}
-              ]
-            }
-          },
-          {
-            "rasterizerState": {},
-            "depthStencilState": {},
-            "blendState": {
-              "targets": [
-                {}
-              ]
-            }
-          },
-          {
-            "rasterizerState": {},
-            "depthStencilState": {},
-            "blendState": {
-              "targets": [
-                {}
-              ]
-            }
           }
         ],
         "_props": [
           {
-            "roughness": 0,
             "mainTexture": {
               "__uuid__": "86ebfbae-6df7-439c-841a-75cb422a8e17@e39f7",
               "__expectedType__": "cc.Texture2D"
-            }
+            },
+            "roughness": 0,
+            "metallic": 0
           },
-          {},
-          {},
-          {},
           {},
           {}
         ]
