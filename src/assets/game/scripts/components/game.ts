@@ -96,8 +96,7 @@ export default class Game extends GameComponent {
     @render(Rounds.RoundTimeStore, (store) => store.isInRoundTime)
     renderInRoundTime(isInRoundTime: boolean) {
         if (isInRoundTime && !this.hasResetBox) {
-            this.colorGame.resetColorBox(this.randomResults);
-            this.hasResetBox = true;
+            this.resetColorBox();
             this.winningResult.hideQuickly();
         }
     }
@@ -186,11 +185,15 @@ export default class Game extends GameComponent {
         if (isStartRound) {
             super.handleStartRound(isStartRound);
             this.calculateForDices(this.clientRoundId + 1);
-            this.colorGame.resetColorBox(this.randomResults);
-            this.activeCameras(true);
-            this.disableCamerasWithDelay(1);
-            this.hasResetBox = true;
+            this.resetColorBox();
             this.winningResult.hide();
         }
+    }
+
+    private resetColorBox() {
+        this.activeCameras(true);
+        this.colorGame.resetColorBox(this.randomResults);
+        this.disableCamerasWithDelay(1);
+        this.hasResetBox = true;
     }
 }
