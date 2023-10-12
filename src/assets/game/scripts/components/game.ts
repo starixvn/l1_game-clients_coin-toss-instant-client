@@ -48,6 +48,7 @@ export default class Game extends GameComponent {
 
     override namespace = settings.name;
     override containerOptions = containerOptions;
+    isLoading = true;
 
     private readonly winningSounds = {
         [ColorDice.Yellow]: "yellow",
@@ -95,7 +96,7 @@ export default class Game extends GameComponent {
 
     @render(Rounds.RoundTimeStore, (store) => store.isInRoundTime)
     renderInRoundTime(isInRoundTime: boolean) {
-        if (isInRoundTime && !this.hasResetBox) {
+        if (isInRoundTime && !this.hasResetBox && !this.isLoading) {
             this.resetColorBox();
             this.winningResult.hideQuickly();
         }
@@ -195,5 +196,10 @@ export default class Game extends GameComponent {
         this.colorGame.resetColorBox(this.randomResults);
         this.disableCamerasWithDelay(1);
         this.hasResetBox = true;
+    }
+
+    @render(gc.App.AppStore, (store) => store.isLoading)
+    updateLoading(isLoading: boolean) {
+        this.isLoading = isLoading;
     }
 }
