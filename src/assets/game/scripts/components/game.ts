@@ -9,6 +9,8 @@ import { siteConfigs } from "../../../scripts/site-configs";
 import { ColorGame } from "../../color-game/scripts/color-game";
 import { ColorDice } from "../../color-game/scripts/dice";
 import { containerOptions, settings } from "../game-settings";
+import { CameraHandler } from "../handlers/camera-handler";
+import { CameraStore } from "../stores/camera-store";
 import "./../../../resources/i18n";
 import { ColorGameDoubleTripleResult } from "./double-triple-result";
 import { ColorGameWinningResult } from "./winning-result";
@@ -17,7 +19,7 @@ const { Rounds, Translator } = gc;
 startGame(settings.name, containerOptions, siteConfigs);
 
 const { ccclass, property } = _decorator;
-const { observer, render } = Observer;
+const { observer, render, handle } = Observer;
 
 @ccclass
 @observer(settings.name)
@@ -36,6 +38,9 @@ export default class Game extends GameComponent {
 
     @property({ type: Node })
     doubleTripleResultNode: Node = null;
+
+    @property(Node)
+    camera3D: Node = null;
 
     private winningResult: ColorGameWinningResult = null;
     private colorGame: ColorGame = null;
@@ -117,9 +122,34 @@ export default class Game extends GameComponent {
             } else {
                 this.colorGame.showResultStatic(results, animationIndex);
             }
-
+            this.activeCameras(true);
+            this.disableCamerasWithDelay(hasAnimation ? 2 : 0.1);
             this.hasResetBox = false;
         }
+    }
+
+    @handle(CameraHandler, (handler, active: boolean) => handler.activateMainCamera(active))
+    activate3DCamera(active: boolean) {
+        return active;
+    }
+
+    @handle(CameraHandler, (handler, active: boolean) => handler.activateMiniCamera(active))
+    activateMiniCamera(active: boolean) {
+        return active;
+    }
+
+    activeCameras(active: boolean) {
+        this.activate3DCamera(active);
+        this.activateMiniCamera(active);
+    }
+
+    @render(CameraStore, (store) => store.mainCameraActive)
+    update3DCameraVisibility(active: boolean) {
+        this.camera3D.active = active;
+    }
+
+    disableCamerasWithDelay(delay: number) {
+        this.scheduleOnce(() => this.activeCameras(false), delay);
     }
 
     async winningSound(data: gc.GameServiceMessage.TResult) {
@@ -157,6 +187,8 @@ export default class Game extends GameComponent {
             super.handleStartRound(isStartRound);
             this.calculateForDices(this.clientRoundId + 1);
             this.colorGame.resetColorBox(this.randomResults);
+            this.activeCameras(true);
+            this.disableCamerasWithDelay(1);
             this.hasResetBox = true;
             this.winningResult.hide();
         }

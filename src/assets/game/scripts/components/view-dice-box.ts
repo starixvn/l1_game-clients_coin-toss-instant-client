@@ -2,6 +2,8 @@ import gc from "@sg/game-client-base";
 import { _decorator, Camera, Node, RenderTexture, Sprite, SpriteFrame, Tween, tween, UITransform } from "cc";
 import Observer from "observer";
 import { ObserverComponent } from "../../../../extensions/shared-components/assets/shared/common-components/observer-component/scripts/observer-component";
+import { CameraHandler } from "../handlers/camera-handler";
+import { CameraStore } from "../stores/camera-store";
 
 const { Rounds } = gc;
 const { RoundTimeStore } = Rounds;
@@ -69,6 +71,22 @@ export class ColorGameViewDicesBox extends ObserverComponent {
         this.generateRenderSpriteFrames();
     }
 
+    @handle(CameraHandler, (handler, active: boolean) => handler.activateMiniCamera(active))
+    activeMiniCamera(active: boolean) {
+        return active;
+    }
+
+    @render(CameraStore, (store) => store.miniCameraActive)
+    update3DCameraVisibility(active: boolean) {
+        if (!this.camera) {
+            return;
+        }
+        this.camera.node.active = active;
+        if (active) {
+            this.scheduleOnce(this.disableMiniCamera, 0.1);
+        }
+    }
+
     @handle(gc.Audios.AudioHandler, (handle, id: string) => handle.playSFX(id))
     playSoundClick() {
         return gc.Audios.AudioIds.CLICK;
@@ -112,10 +130,15 @@ export class ColorGameViewDicesBox extends ObserverComponent {
     }
 
     displayCamera(type: CameraType) {
+        this.activeMiniCamera(true);
         const cameraNode = this.cameraNodes[type];
         this.camera.node.position = cameraNode.position;
         this.camera.node.rotation = cameraNode.rotation;
         this.camera.fov = this.fov[type];
+    }
+
+    disableMiniCamera() {
+        this.activeMiniCamera(false);
     }
 
     onClickTop() {

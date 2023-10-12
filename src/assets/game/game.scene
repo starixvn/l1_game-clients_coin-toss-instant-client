@@ -633,7 +633,7 @@
     "_priority": 2,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 420.05250875145856,
+    "_orthoHeight": 508.1411901983664,
     "_near": 0,
     "_far": 1000,
     "_color": {
@@ -7102,6 +7102,9 @@
     },
     "doubleTripleResultNode": {
       "__id__": 188
+    },
+    "camera3D": {
+      "__id__": 2
     },
     "_id": "a5mppcr9xMh7eLStNdpO8s"
   },
