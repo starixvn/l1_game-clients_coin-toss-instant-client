@@ -21,6 +21,11 @@ startGame(settings.name, containerOptions, siteConfigs);
 const { ccclass, property } = _decorator;
 const { observer, render, handle } = Observer;
 
+type ResultSoundInfo = {
+    soundId: string;
+    duration: number;
+};
+
 @ccclass
 @observer(settings.name)
 export default class Game extends GameComponent {
@@ -65,6 +70,7 @@ export default class Game extends GameComponent {
     protected hasResetBox = false;
     protected diceDropSound = "dice_drop";
     protected delayTimeShowWinningBox = 2;
+    protected resultsSoundInfo: ResultSoundInfo[] = [];
 
     onLoad() {
         super.onLoad();
@@ -153,29 +159,48 @@ export default class Game extends GameComponent {
     }
 
     async winningSound(data: gc.GameServiceMessage.TResult) {
-        if (data) {
-            let isCancelLoadSounds = false;
-            const maxWaitTime = 5000;
-            const results = Object.values(data);
-            const timeoutCancelWinningSound = setTimeout(() => {
-                isCancelLoadSounds = true;
-            }, maxWaitTime);
+        if (!data) {
+            return;
+        }
 
-            for (const result of results) {
-                const winColorName = this.winningSounds[result];
-                const soundId = this.getAudioKeyForLanguage(winColorName);
+        await this.loadSoundResultBeforeRead(data);
+        if (this.resultsSoundInfo.length > 1) {
+            await this.playSequentialSounds();
+        }
+    }
+
+    async playSequentialSounds() {
+        for (const resultSoundInfo of this.resultsSoundInfo) {
+            this.playSound(resultSoundInfo.soundId);
+            await FunctionUtils.delay(resultSoundInfo.duration * 1000);
+        }
+    }
+
+    async loadSoundResultBeforeRead(data: gc.GameServiceMessage.TResult) {
+        let isCancelLoadSounds = false;
+        const maxWaitTime = 5000;
+        const results = Object.values(data);
+
+        const timeoutCancelWinningSound = setTimeout(() => {
+            isCancelLoadSounds = true;
+        }, maxWaitTime);
+
+        for (const result of results) {
+            if (isCancelLoadSounds) {
+                break;
+            }
+            const winColorName = this.winningSounds[result];
+            const soundId = this.getAudioKeyForLanguage(winColorName);
+            if (soundId) {
                 const duration = await AudioUtils.getDurationClip(soundId);
-                if (isCancelLoadSounds) {
-                    break;
-                }
+
                 if (duration > 0) {
-                    this.playSound(soundId);
-                    await FunctionUtils.delay(duration * 1000);
+                    this.resultsSoundInfo.push({ soundId, duration });
                 }
             }
-
-            timeoutCancelWinningSound && clearTimeout(timeoutCancelWinningSound);
         }
+
+        timeoutCancelWinningSound && clearTimeout(timeoutCancelWinningSound);
     }
 
     getAudioKeyForLanguage(name: string): string {
@@ -188,6 +213,7 @@ export default class Game extends GameComponent {
             this.calculateForDices(this.clientRoundId + 1);
             this.resetColorBox();
             this.winningResult.hide();
+            this.resultsSoundInfo = [];
         }
     }
 
