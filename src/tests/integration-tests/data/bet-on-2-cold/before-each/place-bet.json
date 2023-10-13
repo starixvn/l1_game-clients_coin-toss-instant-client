@@ -32,6 +32,7 @@
                         "minBet": 1,
                         "maxBet": 3000
                     },
+                    "rebet": null,
                     "ownChip": {
                         "betChoice": "cold",
                         "amount": 1
