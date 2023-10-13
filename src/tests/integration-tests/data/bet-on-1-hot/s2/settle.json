@@ -11,11 +11,11 @@
                         "finish": {
                             "result": { "dice1": 0, "dice2": 1, "dice3": 4 },
                             "settlementResult": {
-                                "yellow": true,
+                                "yellow": false,
                                 "red": true,
                                 "pink": false,
-                                "white": false,
-                                "blue": true,
+                                "white": true,
+                                "blue": false,
                                 "green": false,
                                 "hot": true,
                                 "cold": false
@@ -31,13 +31,14 @@
                     "payload": {
                         "status": {
                             "winningByChoices": {
+                                "yellow": 0,
+                                "red": 0,
+                                "pink": 0,
+                                "white": 20,
+                                "blue": 0,
+                                "green": 0,
                                 "hot": 0,
-                                "cold": 0,
-                                "tie": 0.5,
-                                "blackDragon": 0,
-                                "redDragon": 0,
-                                "blackTiger": 0,
-                                "redTiger": 0
+                                "cold": 0
                             },
                             "win": true,
                             "bet": 0.5
@@ -46,7 +47,7 @@
                 },
                 {
                     "namespace": "/user/colorgame",
-                    "event": "DragonTigerFight",
+                    "event": "ColorGame",
                     "payload": {
                         "winners": {
                             "roundId": 2,
@@ -54,15 +55,16 @@
                                 "abc": {
                                     "rate": 1,
                                     "win": true,
-                                    "bet": 390,
+                                    "bet": 196,
                                     "winningByChoices": {
-                                        "hot": 0,
-                                        "cold": 390,
-                                        "tie": 0,
-                                        "blackDragon": 0,
-                                        "redDragon": 0,
-                                        "blackTiger": 0,
-                                        "redTiger": 0
+                                        "yellow": 0,
+                                        "red": 0,
+                                        "pink": 0,
+                                        "white": 0,
+                                        "blue": 0,
+                                        "green": 0,
+                                        "hot": 196,
+                                        "cold": 0
                                     }
                                 }
                             }

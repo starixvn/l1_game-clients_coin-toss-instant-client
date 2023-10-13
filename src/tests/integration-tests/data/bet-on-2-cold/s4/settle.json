@@ -9,7 +9,11 @@
                     "event": "ColorGame",
                     "payload": {
                         "finish": {
-                            "result": { "dice1": 0, "dice2": 1, "dice3": 4 },
+                            "result": {
+                                "dice1": 0,
+                                "dice2": 1,
+                                "dice3": 4
+                            },
                             "settlementResult": {
                                 "yellow": true,
                                 "red": true,
@@ -31,13 +35,14 @@
                     "payload": {
                         "status": {
                             "winningByChoices": {
+                                "yellow": 0,
+                                "red": 0,
+                                "pink": 0,
+                                "white": 0,
+                                "blue": 100,
+                                "green": 0,
                                 "hot": 0,
-                                "cold": 1.95,
-                                "tie": 0,
-                                "blackDragon": 0,
-                                "redDragon": 0,
-                                "blackTiger": 0,
-                                "redTiger": 0
+                                "cold": 0
                             },
                             "win": true,
                             "bet": 1.95
