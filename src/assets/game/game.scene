@@ -178,7 +178,7 @@
     "_id": "e5kHZYhO5MIpH1cDzIlIRp"
   },
   {
-    "__type__": "cc.TAA",
+    "__type__": "cc.Fxaa",
     "_name": "",
     "_objFlags": 0,
     "__editorExtras__": {},
@@ -187,9 +187,7 @@
     },
     "_enabled": true,
     "__prefab": null,
-    "_sampleScale": 1,
-    "_feedback": 0.95,
-    "_id": "b6rXEfEGtIQpxhp/kqDsYj"
+    "_id": "a0oMUkYm1Bv6A/MXkMWVOl"
   },
   {
     "__type__": "cc.Camera",
@@ -633,7 +631,7 @@
     "_priority": 2,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 508.1411901983664,
+    "_orthoHeight": 592.4857142857144,
     "_near": 0,
     "_far": 1000,
     "_color": {
@@ -8170,29 +8168,29 @@
       "x": 1,
       "y": 1,
       "z": 1,
-      "w": 0.44270815625
+      "w": 0.520833125
     },
     "_skyColor": {
       "__type__": "cc.Vec4",
       "x": 1,
       "y": 1,
       "z": 1,
-      "w": 0.44270815625
+      "w": 0.520833125
     },
-    "_skyIllumHDR": 17000,
-    "_skyIllum": 17000,
+    "_skyIllumHDR": 20000,
+    "_skyIllum": 20000,
     "_groundAlbedoHDR": {
       "__type__": "cc.Vec4",
-      "x": 1,
-      "y": 1,
-      "z": 1,
+      "x": 0.2549019607843137,
+      "y": 0.2549019607843137,
+      "z": 0.2549019607843137,
       "w": 1
     },
     "_groundAlbedo": {
       "__type__": "cc.Vec4",
-      "x": 1,
-      "y": 1,
-      "z": 1,
+      "x": 0.2549019607843137,
+      "y": 0.2549019607843137,
+      "z": 0.2549019607843137,
       "w": 1
     },
     "_skyColorLDR": {
