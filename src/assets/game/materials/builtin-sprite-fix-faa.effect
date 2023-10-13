@@ -85,12 +85,15 @@ CCProgram sprite-fs %{
     #endif
 
     o *= color;
-    if(o.r > 0.0 || o.g > 0.0 && o.b > 0.0) {
-      float delta = distance(o.rgb, vec3(0.0,0.0,0.0));
-      if(delta > 0.4){
+    if(o.r > 0.0 || o.g > 0.0) {
+      float totalRG = o.r + o.g;
+      if (totalRG >= 0.43 && o.b > 0.0)
+      {
         o.a = 1.0;
-      }else{
-        o.a = delta;
+      }
+      else
+      {
+        o.a = 0.0;
       }
     } else {
       o.a = 0.0;

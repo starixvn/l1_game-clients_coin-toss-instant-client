@@ -229,7 +229,7 @@
       "__id__": 7
     },
     "_customMaterial": {
-      "__uuid__": "c0a441e9-c2f7-4fe5-b2f4-33c44edf8931",
+      "__uuid__": "3aa59858-4ddb-4883-b8c2-601c62963b3d",
       "__expectedType__": "cc.Material"
     },
     "_srcBlendFactor": 2,
@@ -1657,6 +1657,7 @@
     "__prefab": {
       "__id__": 70
     },
+    "miniCameraContainer": null,
     "renderSprite": {
       "__id__": 6
     },
