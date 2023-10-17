@@ -87,7 +87,7 @@ CCProgram sprite-fs %{
     o *= color;
     if(o.r > 0.0 || o.g > 0.0) {
       float totalRG = o.r + o.g;
-      if (totalRG >= 0.43 && o.b > 0.0)
+      if (totalRG >= 0.35 && o.b > 0.0)
       {
         o.a = 1.0;
       }
