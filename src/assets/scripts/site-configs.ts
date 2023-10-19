@@ -27,6 +27,7 @@ const defaultConfig: gc.Configs.SiteConfigs = {
     tolgeeUrl: "",
     boostedOddsDelayTimeByMinutes: 2,
     gameIdsSupportBoostedOddsForInstantSite: [1, 9],
+    storagePrefixKey: "si",
 };
 
 let configDev = {
@@ -49,3 +50,4 @@ export const siteConfigs: gc.Configs.SiteConfigs =
     window.envConfig && window.envConfig.isDev ? defaultConfig : { ...defaultConfig, ...configDev, ...window.envConfig };
 
 window.envConfig = siteConfigs;
+gc.StorageManager.setPrefixKey(siteConfigs.storagePrefixKey);
