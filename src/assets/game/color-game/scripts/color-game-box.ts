@@ -1,5 +1,5 @@
 import gc from "@sg/game-client-base";
-import { MeshRenderer, Node, Texture2D, _decorator, tween, v3 } from "cc";
+import { Mesh, MeshRenderer, Node, _decorator, tween, v3 } from "cc";
 import Observer from "observer";
 import { ObserverComponent } from "../../../../extensions/shared-components/assets/shared/common-components/observer-component/scripts/observer-component";
 const { Configs } = gc;
@@ -11,14 +11,14 @@ export class ColorGameBox extends ObserverComponent {
     @property(Node)
     lockNode: Node = null;
 
-    @property(Node)
-    logoNode: Node = null;
+    @property(MeshRenderer)
+    meshRendererLogo: MeshRenderer = null;
 
-    @property(Texture2D)
-    logoSGTexture: Texture2D = null;
+    @property(Mesh)
+    meshLogoSG: Mesh = null;
 
-    @property(Texture2D)
-    logoVGTexture: Texture2D = null;
+    @property(Mesh)
+    meshLogoVG: Mesh = null;
 
     private readonly openEulerAngleZ = -10;
     private readonly closeEulerAngleZ = -90;
@@ -55,9 +55,6 @@ export class ColorGameBox extends ObserverComponent {
 
     @render(Configs.SiteConfigs, (store) => store.systemType)
     showSystemSlogan(systemType: string) {
-        const isSystemSG = systemType === Configs.SystemConfigs.SG.name;
-        const logoRender = this.logoNode.getComponent(MeshRenderer);
-        const logoMat = logoRender.getMaterialInstance(0);
-        logoMat.setProperty("mainTexture", isSystemSG ? this.logoSGTexture : this.logoVGTexture);
+        this.meshRendererLogo.mesh = systemType === Configs.SystemConfigs.VG.name ? this.meshLogoVG : this.meshLogoSG;
     }
 }

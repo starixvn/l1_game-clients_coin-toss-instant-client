@@ -221,6 +221,132 @@
       ],
       "subMetas": {}
     },
+    "a5f8b": {
+      "importer": "gltf-mesh",
+      "uuid": "8b542add-cad9-43de-ae49-e7a0cdad8d09@a5f8b",
+      "displayName": "",
+      "id": "a5f8b",
+      "name": "Plane.001.mesh",
+      "userData": {
+        "gltfIndex": 10,
+        "triangleCount": 32
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "344db": {
+      "importer": "gltf-mesh",
+      "uuid": "8b542add-cad9-43de-ae49-e7a0cdad8d09@344db",
+      "displayName": "",
+      "id": "344db",
+      "name": "Plane.003.mesh",
+      "userData": {
+        "gltfIndex": 11,
+        "triangleCount": 12
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0a48a": {
+      "importer": "gltf-mesh",
+      "uuid": "8b542add-cad9-43de-ae49-e7a0cdad8d09@0a48a",
+      "displayName": "",
+      "id": "0a48a",
+      "name": "Cube.007.mesh",
+      "userData": {
+        "gltfIndex": 12,
+        "triangleCount": 40
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2e7eb": {
+      "importer": "gltf-mesh",
+      "uuid": "8b542add-cad9-43de-ae49-e7a0cdad8d09@2e7eb",
+      "displayName": "",
+      "id": "2e7eb",
+      "name": "Cube.008.mesh",
+      "userData": {
+        "gltfIndex": 13,
+        "triangleCount": 40
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "bdd91": {
+      "importer": "gltf-mesh",
+      "uuid": "8b542add-cad9-43de-ae49-e7a0cdad8d09@bdd91",
+      "displayName": "",
+      "id": "bdd91",
+      "name": "Cylinder.002.mesh",
+      "userData": {
+        "gltfIndex": 14,
+        "triangleCount": 70
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "41ac8": {
+      "importer": "gltf-mesh",
+      "uuid": "8b542add-cad9-43de-ae49-e7a0cdad8d09@41ac8",
+      "displayName": "",
+      "id": "41ac8",
+      "name": "Cube.001.mesh",
+      "userData": {
+        "gltfIndex": 15,
+        "triangleCount": 38
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c2d4f": {
+      "importer": "gltf-mesh",
+      "uuid": "8b542add-cad9-43de-ae49-e7a0cdad8d09@c2d4f",
+      "displayName": "",
+      "id": "c2d4f",
+      "name": "Cube.009.mesh",
+      "userData": {
+        "gltfIndex": 16,
+        "triangleCount": 28
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
     "e39f7": {
       "importer": "texture",
       "uuid": "8b542add-cad9-43de-ae49-e7a0cdad8d09@e39f7",
@@ -298,7 +424,14 @@
         "8b542add-cad9-43de-ae49-e7a0cdad8d09@53dde",
         "8b542add-cad9-43de-ae49-e7a0cdad8d09@c244a",
         "8b542add-cad9-43de-ae49-e7a0cdad8d09@fd4a2",
-        "8b542add-cad9-43de-ae49-e7a0cdad8d09@97b51"
+        "8b542add-cad9-43de-ae49-e7a0cdad8d09@97b51",
+        "8b542add-cad9-43de-ae49-e7a0cdad8d09@a5f8b",
+        "8b542add-cad9-43de-ae49-e7a0cdad8d09@344db",
+        "8b542add-cad9-43de-ae49-e7a0cdad8d09@0a48a",
+        "8b542add-cad9-43de-ae49-e7a0cdad8d09@2e7eb",
+        "8b542add-cad9-43de-ae49-e7a0cdad8d09@bdd91",
+        "8b542add-cad9-43de-ae49-e7a0cdad8d09@41ac8",
+        "8b542add-cad9-43de-ae49-e7a0cdad8d09@c2d4f"
       ],
       "skeletons": [],
       "textures": [

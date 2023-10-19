@@ -1489,16 +1489,16 @@
     "lockNode": {
       "__id__": 47
     },
-    "logoNode": {
-      "__id__": 42
+    "meshRendererLogo": {
+      "__id__": 5
     },
-    "logoSGTexture": {
-      "__uuid__": "643d2cb4-d2ae-4991-bf35-1b23d03c984a@6c48a",
-      "__expectedType__": "cc.Texture2D"
+    "meshLogoSG": {
+      "__uuid__": "8b542add-cad9-43de-ae49-e7a0cdad8d09@fd4a2",
+      "__expectedType__": "cc.Mesh"
     },
-    "logoVGTexture": {
-      "__uuid__": "1ea2d202-a8b4-44c4-85ed-d2e714478f2c@6c48a",
-      "__expectedType__": "cc.Texture2D"
+    "meshLogoVG": {
+      "__uuid__": "8b542add-cad9-43de-ae49-e7a0cdad8d09@41ac8",
+      "__expectedType__": "cc.Mesh"
     },
     "_id": ""
   },
