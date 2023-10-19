@@ -22,6 +22,10 @@ export class ColorGameWinningResult extends WinningResult {
     protected delayTimeShowWinning = 2;
     protected durationTimeShowWinning = 5;
 
+    showQuickly() {
+        this.node.scale = v3(1, 1, 1);
+        this.node.active = true;
+    }
     show(duration = 0.3) {
         return new Promise((resolve) => {
             this.node.scale = v3(0, 0, 0);

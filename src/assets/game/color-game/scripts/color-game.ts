@@ -65,7 +65,6 @@ export class ColorGame extends Component {
         }
         this.showAllDices();
         this.box.open();
-        log("showResult ", animationIndex);
         const animationInfo = this.getOpenAnimation(animationIndex);
         this.playDicesAnimation(animationInfo.rotation, (percent) => {
             this.setResultDices(results, animationInfo.faceUp, percent);

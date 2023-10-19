@@ -84,16 +84,6 @@ export default class Game extends GameComponent {
         this.doubleTripleResult = this.doubleTripleResultNode.getComponent(ColorGameDoubleTripleResult);
     }
 
-    async finishShowResult(result: gc.GameServiceMessage.TResult, settlementResult: gc.GameServiceMessage.TSettlementResult) {
-        this.winningResult.setResult(result);
-        this.playSound(this.diceDropSound);
-        await AnimationUtils.delayTime(this.delayTimeShowWinningBox);
-        this.winningSound(result);
-        this.winningResult.show();
-        this.doubleTripleResult.setResult(result);
-        super.finishShowResult(result, settlementResult);
-    }
-
     @render(Rounds.RoundStore, (store) => store.clientRoundId)
     storeClientRoundId(clientRoundId: number) {
         this.clientRoundId = clientRoundId;
@@ -122,15 +112,21 @@ export default class Game extends GameComponent {
         if (result) {
             const results = Object.values(result);
             const animationIndex = this.openAnimationIndex;
-
-            if (hasAnimation) {
-                this.colorGame.showResult(results, animationIndex);
-            } else {
-                this.colorGame.showResultStatic(results, animationIndex);
-            }
             this.activeCameras(true);
             this.disableCamerasWithDelay(hasAnimation ? 2 : 0.1);
             this.hasResetBox = false;
+            this.winningResult.setResult(result);
+            if (hasAnimation) {
+                this.winningSound(result);
+                this.colorGame.showResult(results, animationIndex);
+                this.playSound(this.diceDropSound);
+                await AnimationUtils.delayTime(this.delayTimeShowWinningBox);
+                this.winningResult.show();
+            } else {
+                this.colorGame.showResultStatic(results, animationIndex);
+                this.winningResult.showQuickly();
+            }
+            this.doubleTripleResult.setResult(result);
         }
     }
 
