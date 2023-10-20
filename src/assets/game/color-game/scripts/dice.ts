@@ -72,5 +72,6 @@ export default class Dice extends Component {
     enablePhysics(enabled) {
         const rigidBody = this.cube.getComponent(RigidBody);
         rigidBody.enabled = enabled;
+        rigidBody.clearVelocity();
     }
 }

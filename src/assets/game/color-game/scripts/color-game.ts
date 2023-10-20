@@ -47,6 +47,10 @@ export class ColorGame extends Component {
         this.openRecords.push(...records);
     }
 
+    changeOpenRecord(record: Record) {
+        this.openRecords = [record];
+    }
+
     changeCloseRecord(records: Record) {
         this.closeRecord = records;
     }

@@ -28,9 +28,11 @@ export class CreateAnimation extends Component {
     protected tempRotation = { 0: [], 1: [], 2: [] };
 
     protected records = [];
+    protected newRecord;
 
     onLoad() {
         this.dices = this.diceContainer.getComponentsInChildren(Dice);
+        this.clearRecordsStorage();
     }
 
     update(dt: number) {
@@ -84,8 +86,27 @@ export class CreateAnimation extends Component {
         this.createNewRecord();
     }
 
-    onPushNewRecordForOpen() {
-        this.colorGame.pushNewRecordForOpen(this.records);
+    onGeneralClick(event: any) {
+        const name = event.target.name;
+        const dict = {
+            "select-new-record": this.onSelectNewRecord.bind(this),
+            "preview-new-record": this.onPreviewNewRecord.bind(this),
+        };
+
+        dict[name] && dict[name]();
+    }
+
+    onSelectNewRecord() {
+        this.records.push(this.newRecord);
+        sys.localStorage.setItem("color-game-animation", JSON.stringify(this.records));
+    }
+
+    clearRecordsStorage() {
+        sys.localStorage.setItem("color-game-animation", "");
+    }
+
+    onPreviewNewRecord() {
+        this.colorGame.changeOpenRecord(this.newRecord);
     }
 
     onChangeCloseRecord() {
@@ -118,11 +139,10 @@ export class CreateAnimation extends Component {
                 }
             });
         });
-        this.records.push({
+        this.newRecord = {
             rotation: this.tempRotation,
             faceUp,
-        });
-        sys.localStorage.setItem("color-game-animation", JSON.stringify(this.records));
+        };
     }
 
     async onCloseClick() {
