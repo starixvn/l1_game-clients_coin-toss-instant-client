@@ -11,4 +11,5 @@ window.envConfig = {
     backgroundNoTranslate: true,
     boostedOddsDelayTimeByMinutes: 1,
     gameIdsSupportBoostedOddsForInstantSite: [1, 9],
+    storagePrefixKey: "si",
 };
