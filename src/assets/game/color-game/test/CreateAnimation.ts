@@ -47,8 +47,8 @@ export class CreateAnimation extends Component {
         this.dices.forEach((dice, index) => {
             const { position, eulerAngles } = dice.cube;
             const info = {
-                position: v3(position),
-                eulerAngles: v3(eulerAngles),
+                position: v3(+position.x.toFixed(3), +position.y.toFixed(3), +position.z.toFixed(3)),
+                eulerAngles: v3(+eulerAngles.x.toFixed(3), +eulerAngles.y.toFixed(3), +eulerAngles.z.toFixed(3)),
             };
 
             this.tempRotation[index].push(info);
