@@ -17,11 +17,6 @@
           "inBundle": false
         },
         {
-          "url": "db://shared-components/shared/common-components/integrations/identifier.scene",
-          "uuid": "8fa0d7ef-6c87-40c2-bd73-c63184ba47ff",
-          "inBundle": false
-        },
-        {
           "url": "db://assets/game-instant/game-instant-landscape.scene",
           "uuid": "ad2c4f56-4008-49e0-891a-0f6d92bb381f"
         },
@@ -30,7 +25,7 @@
           "uuid": "41c56f39-fd80-4431-9cbe-b37ff65f2352"
         },
         {
-          "url": "db://assets/game-instant/splash.scene",
+          "url": "db://assets/game-instant/splash/splash.scene",
           "uuid": "374bdfc3-a787-4bd2-817b-4efe75860854"
         }
       ],
