@@ -8,10 +8,10 @@
       "1681353552761": {
         "type": "build",
         "id": "1681353552761",
-        "progress": 1,
-        "state": "success",
+        "progress": 0.21111111111111114,
+        "state": "processing",
         "stage": "build",
-        "message": "10-9-2023 13:24:58 build success in 120796 ms!",
+        "message": "Build script in bundle start",
         "options": {
           "name": "cocos-3x",
           "platform": "web-mobile",
@@ -60,11 +60,47 @@
           "taskName": "web-mobile",
           "server": "",
           "startSceneAssetBundle": false,
-          "bundleConfigs": [],
+          "bundleConfigs": [
+            {
+              "name": "main",
+              "root": "",
+              "output": true
+            },
+            {
+              "name": "internal",
+              "root": "",
+              "output": true
+            },
+            {
+              "name": "start-scene",
+              "root": "",
+              "output": true
+            },
+            {
+              "root": "db://assets/resources",
+              "name": "resources",
+              "output": true
+            },
+            {
+              "root": "db://shared-components/game/boosted-odds",
+              "name": "boosted-odds",
+              "output": true
+            },
+            {
+              "root": "db://shared-components/shared/shared-bundle",
+              "name": "shared-bundle",
+              "output": true
+            },
+            {
+              "root": "db://shared-components/splash/splash-bundle",
+              "name": "splash-bundle",
+              "output": true
+            }
+          ],
           "bundleCommonChunk": false,
           "logDest": "project://temp/builder/log/web-mobile4-13-2023 09-39.log"
         },
-        "time": "10-9-2023 13:22:57",
+        "time": "10-24-2023 16:48:38",
         "dirty": false
       }
     }
@@ -103,6 +139,38 @@
     "polyfills": {
       "asyncFunctions": true
     },
-    "md5Cache": false
+    "md5Cache": false,
+    "bundleConfigs": [
+      {
+        "name": "main",
+        "root": "",
+        "output": true
+      },
+      {
+        "name": "internal",
+        "root": "",
+        "output": true
+      },
+      {
+        "name": "start-scene",
+        "root": "",
+        "output": true
+      },
+      {
+        "root": "db://assets/resources",
+        "name": "resources",
+        "output": true
+      },
+      {
+        "root": "db://shared-components/game/boosted-odds",
+        "name": "boosted-odds",
+        "output": true
+      },
+      {
+        "root": "db://shared-components/shared/shared-bundle",
+        "name": "shared-bundle",
+        "output": true
+      }
+    ]
   }
 }

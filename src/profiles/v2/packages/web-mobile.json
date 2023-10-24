@@ -35,7 +35,39 @@
       "polyfills": {
         "asyncFunctions": true
       },
-      "md5Cache": false
+      "md5Cache": false,
+      "bundleConfigs": [
+        {
+          "name": "main",
+          "root": "",
+          "output": true
+        },
+        {
+          "name": "internal",
+          "root": "",
+          "output": true
+        },
+        {
+          "name": "start-scene",
+          "root": "",
+          "output": true
+        },
+        {
+          "root": "db://assets/resources",
+          "name": "resources",
+          "output": true
+        },
+        {
+          "root": "db://shared-components/game/boosted-odds",
+          "name": "boosted-odds",
+          "output": true
+        },
+        {
+          "root": "db://shared-components/shared/shared-bundle",
+          "name": "shared-bundle",
+          "output": true
+        }
+      ]
     },
     "options": {
       "web-mobile": {
