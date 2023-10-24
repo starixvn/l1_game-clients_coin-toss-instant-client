@@ -2,12 +2,12 @@
   "ver": "1.1.45",
   "importer": "prefab",
   "imported": true,
-  "uuid": "b92f2721-dc68-4064-9fdc-df35178743a8",
+  "uuid": "557482f0-9933-485a-a324-5708babe571c",
   "files": [
     ".json"
   ],
   "subMetas": {},
   "userData": {
-    "syncNodeName": "landscape-background"
+    "syncNodeName": "splash-background"
   }
 }

@@ -2,12 +2,12 @@
   "ver": "1.1.45",
   "importer": "prefab",
   "imported": true,
-  "uuid": "557482f0-9933-485a-a324-5708babe571c",
+  "uuid": "b92f2721-dc68-4064-9fdc-df35178743a8",
   "files": [
     ".json"
   ],
   "subMetas": {},
   "userData": {
-    "syncNodeName": "portrait-background"
+    "syncNodeName": "splash-background"
   }
 }
