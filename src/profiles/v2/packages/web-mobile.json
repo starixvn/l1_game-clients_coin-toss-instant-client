@@ -32,7 +32,8 @@
       "polyfills": {
         "asyncFunctions": true
       },
-      "md5Cache": false
+      "md5Cache": false,
+      "bundleConfigs": []
     },
     "options": {
       "web-mobile": {
