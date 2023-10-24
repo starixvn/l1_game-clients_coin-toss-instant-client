@@ -1,5 +1,5 @@
 import gc from "@sg/game-client-base";
-import { Label, Node, _decorator } from "cc";
+import { Label, Node, Prefab, _decorator, instantiate } from "cc";
 import { AudioUtils } from "db://shared-components/game/audios/utils";
 import GameComponent from "db://shared-components/game/scripts/components/game-component";
 import { startGame } from "db://shared-components/shared/scripts/startup";
@@ -14,6 +14,7 @@ import { CameraStore } from "../stores/camera-store";
 import "./../../../resources/i18n";
 import { ColorGameDoubleTripleResult } from "./double-triple-result";
 import { ColorGameWinningResult } from "./winning-result";
+
 const { Rounds, Translator } = gc;
 
 startGame(settings.name, containerOptions, siteConfigs);
