@@ -8,10 +8,10 @@
       "1681353552761": {
         "type": "build",
         "id": "1681353552761",
-        "progress": 0.21111111111111114,
-        "state": "processing",
+        "progress": 1,
+        "state": "success",
         "stage": "build",
-        "message": "Build script in bundle start",
+        "message": "10-25-2023 16:05:08 build success in 69724 ms!",
         "options": {
           "name": "cocos-3x",
           "platform": "web-mobile",
@@ -34,23 +34,24 @@
           "scenes": [
             {
               "url": "db://assets/game/game.scene",
-              "uuid": "4229fd91-1ded-407f-b130-7b678b820c27",
-              "inBundle": false
+              "uuid": "4229fd91-1ded-407f-b130-7b678b820c27"
             },
             {
               "url": "db://assets/game/splash/splash.scene",
-              "uuid": "cdeb5c24-9ba8-4cab-a306-8a562fd04b39",
-              "inBundle": false
+              "uuid": "cdeb5c24-9ba8-4cab-a306-8a562fd04b39"
             },
             {
-              "url": "db://shared-components/session-timeout/session-timeout.scene",
-              "uuid": "1b4ca76d-3ce5-41e6-a47c-0fb1f85bb3f4",
-              "inBundle": false
+              "url": "db://shared-components/shared/shared-bundle/fonts/test-font.scene",
+              "uuid": "ef8d96c0-1d8b-4754-bba7-025d93dbdba1",
+              "bundle": "db://shared-components/shared/shared-bundle"
             },
             {
               "url": "db://shared-components/under-maintenance/under-maintenance.scene",
-              "uuid": "3640a00f-a2ed-4aec-b369-779ede63f5df",
-              "inBundle": false
+              "uuid": "3640a00f-a2ed-4aec-b369-779ede63f5df"
+            },
+            {
+              "url": "db://shared-components/session-timeout/session-timeout.scene",
+              "uuid": "1b4ca76d-3ce5-41e6-a47c-0fb1f85bb3f4"
             }
           ],
           "web-desktop": [],
@@ -77,30 +78,20 @@
               "output": true
             },
             {
-              "root": "db://assets/resources",
-              "name": "resources",
-              "output": true
-            },
-            {
-              "root": "db://shared-components/game/boosted-odds",
-              "name": "boosted-odds",
-              "output": true
-            },
-            {
               "root": "db://shared-components/shared/shared-bundle",
               "name": "shared-bundle",
               "output": true
             },
             {
-              "root": "db://shared-components/splash/splash-bundle",
-              "name": "splash-bundle",
+              "root": "db://assets/resources",
+              "name": "resources",
               "output": true
             }
           ],
           "bundleCommonChunk": false,
           "logDest": "project://temp/builder/log/web-mobile4-13-2023 09-39.log"
         },
-        "time": "10-24-2023 16:48:38",
+        "time": "10-25-2023 16:03:58",
         "dirty": false
       }
     }
@@ -117,23 +108,24 @@
     "scenes": [
       {
         "url": "db://assets/game/game.scene",
-        "uuid": "4229fd91-1ded-407f-b130-7b678b820c27",
-        "inBundle": false
+        "uuid": "4229fd91-1ded-407f-b130-7b678b820c27"
       },
       {
         "url": "db://assets/game/splash/splash.scene",
-        "uuid": "cdeb5c24-9ba8-4cab-a306-8a562fd04b39",
-        "inBundle": false
+        "uuid": "cdeb5c24-9ba8-4cab-a306-8a562fd04b39"
       },
       {
-        "url": "db://shared-components/session-timeout/session-timeout.scene",
-        "uuid": "1b4ca76d-3ce5-41e6-a47c-0fb1f85bb3f4",
-        "inBundle": false
+        "url": "db://shared-components/shared/shared-bundle/fonts/test-font.scene",
+        "uuid": "ef8d96c0-1d8b-4754-bba7-025d93dbdba1",
+        "bundle": "db://shared-components/shared/shared-bundle"
       },
       {
         "url": "db://shared-components/under-maintenance/under-maintenance.scene",
-        "uuid": "3640a00f-a2ed-4aec-b369-779ede63f5df",
-        "inBundle": false
+        "uuid": "3640a00f-a2ed-4aec-b369-779ede63f5df"
+      },
+      {
+        "url": "db://shared-components/session-timeout/session-timeout.scene",
+        "uuid": "1b4ca76d-3ce5-41e6-a47c-0fb1f85bb3f4"
       }
     ],
     "polyfills": {
@@ -157,18 +149,13 @@
         "output": true
       },
       {
-        "root": "db://assets/resources",
-        "name": "resources",
-        "output": true
-      },
-      {
-        "root": "db://shared-components/game/boosted-odds",
-        "name": "boosted-odds",
-        "output": true
-      },
-      {
         "root": "db://shared-components/shared/shared-bundle",
         "name": "shared-bundle",
+        "output": true
+      },
+      {
+        "root": "db://assets/resources",
+        "name": "resources",
         "output": true
       }
     ]
