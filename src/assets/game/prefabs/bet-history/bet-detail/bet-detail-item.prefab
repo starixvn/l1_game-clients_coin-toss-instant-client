@@ -543,7 +543,7 @@
     "_string": "Yellow",
     "_horizontalAlign": 0,
     "_verticalAlign": 1,
-    "_actualFontSize": 19,
+    "_actualFontSize": 22.97783251231527,
     "_fontSize": 19,
     "_fontFamily": "Arial",
     "_lineHeight": 44,
@@ -599,8 +599,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 59.8388671875,
-      "height": 55.44
+      "width": 59.81843190863273,
+      "height": 55.440000000000005
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1185,7 +1185,7 @@
     "_overflow": 0,
     "_enableWrapText": true,
     "_font": {
-      "__uuid__": "07a085e4-b80a-4758-a072-1fa33654490b",
+      "__uuid__": "ef8509f0-8c17-4d46-8ca0-a31d72a99153",
       "__expectedType__": "cc.BitmapFont"
     },
     "_isSystemFontUsed": false,
