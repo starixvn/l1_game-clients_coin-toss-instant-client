@@ -1,5 +1,5 @@
 import gc from "@sg/game-client-base";
-import { Label, Node, Prefab, _decorator, instantiate } from "cc";
+import { Label, Node, _decorator } from "cc";
 import { AudioUtils } from "db://shared-components/game/audios/utils";
 import GameComponent from "db://shared-components/game/scripts/components/game-component";
 import { startGame } from "db://shared-components/shared/scripts/startup";
