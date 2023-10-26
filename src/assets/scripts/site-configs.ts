@@ -25,6 +25,7 @@ const defaultConfig: gc.Configs.SiteConfigs = {
     },
     mainObserverNamespace: "ColorGame",
     tolgeeUrl: "",
+    boostedOddsDelayTimeByMinutes: 2,
 };
 
 let configDev = {
