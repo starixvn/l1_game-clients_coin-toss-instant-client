@@ -8,10 +8,10 @@
       "1681353552761": {
         "type": "build",
         "id": "1681353552761",
-        "progress": 1,
-        "state": "success",
+        "progress": 0.21111111111111114,
+        "state": "processing",
         "stage": "build",
-        "message": "10-25-2023 16:05:08 build success in 69724 ms!",
+        "message": "Build script start",
         "options": {
           "name": "cocos-3x",
           "platform": "web-mobile",
@@ -91,7 +91,7 @@
           "bundleCommonChunk": false,
           "logDest": "project://temp/builder/log/web-mobile4-13-2023 09-39.log"
         },
-        "time": "10-25-2023 16:03:58",
+        "time": "10-26-2023 12:53:07",
         "dirty": false
       }
     }
