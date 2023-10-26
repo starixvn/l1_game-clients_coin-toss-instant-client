@@ -151,7 +151,12 @@ export default class Game extends GameComponent {
     }
 
     disableCamerasWithDelay(delay: number) {
-        this.scheduleOnce(() => this.activeCameras(false), delay);
+        this.unschedule(this.disableCameras);
+        this.scheduleOnce(this.disableCameras, delay);
+    }
+
+    disableCameras() {
+        this.activeCameras(false);
     }
 
     async winningSound(data: gc.GameServiceMessage.TResult) {
