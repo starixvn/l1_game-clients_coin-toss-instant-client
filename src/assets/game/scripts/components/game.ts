@@ -116,12 +116,13 @@ export default class Game extends GameComponent {
             this.disableCamerasWithDelay(hasAnimation ? 2 : 0.1);
             this.hasResetBox = false;
             this.winningResult.setResult(result);
+            this.loadSoundResultBeforeRead(result);
             if (hasAnimation) {
-                this.winningSound(result);
                 this.colorGame.showResult(results, animationIndex);
                 this.playSound(this.diceDropSound);
                 await AnimationUtils.delayTime(this.delayTimeShowWinningBox);
                 this.winningResult.show();
+                this.winningSound();
             } else {
                 this.colorGame.showResultStatic(results, animationIndex);
                 this.winningResult.showQuickly();
@@ -159,12 +160,7 @@ export default class Game extends GameComponent {
         this.activeCameras(false);
     }
 
-    async winningSound(data: gc.GameServiceMessage.TResult) {
-        if (!data) {
-            return;
-        }
-
-        await this.loadSoundResultBeforeRead(data);
+    async winningSound() {
         if (this.resultsSoundInfo.length > 1) {
             await this.playSequentialSounds();
         }
