@@ -180,6 +180,7 @@ export const languages = {
         "message_maxbet_of_oneofchoice_reached": "Tiền cược của một trong các cửa vượt mức quy định.",
         "message_min_bet_notice": "Tiền cược tối thiểu là %{minBet}",
         "message_network_error_place_bet": "Lỗi kết nối mạng. Đặt cược thất bại!(%{errorCode})",
+        "message_new_update_available": "Vui lòng tải lại trang để cập nhật phiên bản mới.",
         "message_nick_different_from_user_name": "Tên nhân vật không được trùng với tên đăng nhập.",
         "message_option_maxbet": "Tiền cược tối đa ở cửa này là %{maxBet}",
         "message_place_bet_failed": "Đặt cược không thành công.(%{errorCode})",

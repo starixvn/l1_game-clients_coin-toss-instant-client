@@ -180,6 +180,7 @@ export const languages = {
         "message_maxbet_of_oneofchoice_reached": "One of your bet choices has exceeded the bet limit.",
         "message_min_bet_notice": "Min bet for this option is %{minBet}",
         "message_network_error_place_bet": "Failed to place bet! Network error.(%{errorCode})",
+        "message_new_update_available": "New update available. Please refresh the page.",
         "message_nick_different_from_user_name": "Nickname must be different from your username.",
         "message_option_maxbet": "Max bet for this option is %{maxBet}",
         "message_place_bet_failed": "Failed to place bet!(%{errorCode})",

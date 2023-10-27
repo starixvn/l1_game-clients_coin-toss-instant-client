@@ -180,6 +180,7 @@ export const languages = {
         "message_maxbet_of_oneofchoice_reached": "Salah satu pilihan taruhan Anda telah melampaui batas taruhan.",
         "message_min_bet_notice": "Taruhan minimum untuk opsi ini adalah %{minBet}",
         "message_network_error_place_bet": "Gagal memasang taruhan! Kesalahan jaringan. (%{errorCode})",
+        "message_new_update_available": "Pembaruan baru tersedia. Harap segarkan halaman.",
         "message_nick_different_from_user_name": "Nickname must be different from your username.",
         "message_option_maxbet": "Taruhan maksimum untuk opsi ini adalah %{maxBet}",
         "message_place_bet_failed": "Gagal memasang taruhan! (%{errorCode})",

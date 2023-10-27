@@ -180,6 +180,7 @@ export const languages = {
         "message_maxbet_of_oneofchoice_reached": "หนึ่งในตัวเลือกการเดิมพันของคุณเกินขีดจำกัดการเดิมพัน",
         "message_min_bet_notice": "เดิมพันขั้นต่ำสำหรับตัวเลือกนี้คือ \n%{minBet}",
         "message_network_error_place_bet": "การวางเดิมพันล้มเหลว! เกิดข้อผิดพลาดของเครือข่าย (%{errorCode})",
+        "message_new_update_available": "มีการปรับปรุงใหม่ โปรดรีเฟรชหน้าเว็บไซต์",
         "message_nick_different_from_user_name": "Nickname must be different from your username.",
         "message_option_maxbet": "เดิมพันสูงสุดสำหรับตัวเลือกนี้คือ\n%{maxBet}",
         "message_place_bet_failed": "ล้มเหลวในการวางเดิมพัน! (%{errorCode})",

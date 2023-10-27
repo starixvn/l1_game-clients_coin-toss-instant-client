@@ -180,6 +180,7 @@ export const languages = {
         "message_maxbet_of_oneofchoice_reached": "您的下注選項之一已超過下注限制。",
         "message_min_bet_notice": "此選項的最小賭注是 %{minBet}",
         "message_network_error_place_bet": "下注失敗！網絡錯誤。(%{errorCode})",
+        "message_new_update_available": "有新的更新可用。請刷新頁面。",
         "message_nick_different_from_user_name": "Nickname must be different from your username.",
         "message_option_maxbet": "此選項的最大賭注是 %{maxBet}",
         "message_place_bet_failed": "下注失敗！(%{errorCode})",
