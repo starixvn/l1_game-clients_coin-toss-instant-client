@@ -10,5 +10,5 @@ window.envConfig = {
     subDirectory: "uat",
     SGConnectSubDomain: "l2-connect-uat",
     backgroundNoTranslate: true,
-    boostedOddsDelayTimeByMinutes: 15,
+    boostedOddsDelayTimeByMinutes: 2,
 };

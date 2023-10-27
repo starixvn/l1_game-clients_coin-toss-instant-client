@@ -11,5 +11,5 @@ window.envConfig = {
     SGConnectSubDomain: "l2-connect-sit",
     defaultLanguage: "en",
     backgroundNoTranslate: true,
-    boostedOddsDelayTimeByMinutes: 15,
+    boostedOddsDelayTimeByMinutes: 2,
 };

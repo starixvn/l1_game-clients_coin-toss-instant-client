@@ -10,5 +10,5 @@ window.envConfig = {
     subDirectory: "sit",
     SGConnectSubDomain: "l1sitconnectsite",
     backgroundNoTranslate: true,
-    boostedOddsDelayTimeByMinutes: 15,
+    boostedOddsDelayTimeByMinutes: 2,
 };
