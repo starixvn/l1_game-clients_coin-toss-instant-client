@@ -33,6 +33,7 @@ let configDev = {
     userServiceUrlDev: defaultConfig.userServiceUrlDev,
     serverDomainMapper: defaultConfig.serverDomainMapper,
     notificationServiceUrlDev: defaultConfig.notificationServiceUrlDev,
+    boostedOddsDelayTimeByMinutes: defaultConfig.boostedOddsDelayTimeByMinutes,
 };
 
 if (window.envConfig) {
@@ -41,6 +42,7 @@ if (window.envConfig) {
         userServiceUrlDev: undefined,
         serverDomainMapper: undefined,
         notificationServiceUrlDev: undefined,
+        boostedOddsDelayTimeByMinutes: undefined,
     };
 }
 
