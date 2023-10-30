@@ -69,6 +69,7 @@ export default class Game extends GameComponent {
     protected randomResults = [1, 1, 1];
     protected hasResetBox = false;
     protected diceDropSound = "dice_drop";
+    protected delayDiceDropSound = 0.1;
     protected delayTimeShowWinningBox = 2;
     protected resultsSoundInfo: ResultSoundInfo[] = [];
 
@@ -119,7 +120,7 @@ export default class Game extends GameComponent {
             this.loadSoundResultBeforeRead(result);
             if (hasAnimation) {
                 this.colorGame.showResult(results, animationIndex);
-                this.playSound(this.diceDropSound);
+                this.handleDiceDropSound();
                 await AnimationUtils.delayTime(this.delayTimeShowWinningBox);
                 this.winningResult.show();
                 this.winningSound();
@@ -129,6 +130,11 @@ export default class Game extends GameComponent {
             }
             this.doubleTripleResult.setResult(result);
         }
+    }
+
+    async handleDiceDropSound() {
+        await AnimationUtils.delayTime(this.delayDiceDropSound);
+        this.playSound(this.diceDropSound);
     }
 
     @handle(CameraHandler, (handler, active: boolean) => handler.activateMainCamera(active))
