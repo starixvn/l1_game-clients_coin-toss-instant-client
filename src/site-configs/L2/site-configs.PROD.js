@@ -10,6 +10,5 @@ window.envConfig = {
     SGConnectSubDomain: "connect",
     backgroundNoTranslate: true,
     boostedOddsDelayTimeByMinutes: 15,
-    gameIdsSupportBoostedOddsForInstantSite: [1, 9],
     storagePrefixKey: "si",
 };

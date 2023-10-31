@@ -26,7 +26,6 @@ const defaultConfig: gc.Configs.SiteConfigs = {
     mainObserverNamespace: "ColorGame",
     tolgeeUrl: "",
     boostedOddsDelayTimeByMinutes: 2,
-    gameIdsSupportBoostedOddsForInstantSite: [1, 9],
     storagePrefixKey: "si",
 };
 
