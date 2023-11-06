@@ -1,6 +1,10 @@
 import { _decorator } from "cc";
 import gc from "@sg/game-client-base";
-import BaseBetDetailBodyItem from "db://shared-components/game/bet-history/scripts/components/bet-detail/bet-detail-body-item";
+import {
+    BetDetailLogItemType,
+    GameRoundBetDetailsLog,
+} from "db://shared-components/game/bet-history/scripts/components/bet-detail/bet-detail-log-item";
+import BetDetailLogItem from "db://shared-components/game/bet-history/scripts/components/bet-detail/bet-detail-log-item";
 
 const { ccclass } = _decorator;
 const { FormatUtils } = gc;
@@ -28,20 +32,17 @@ const oddMapper: { [key: number]: string } = {
 
 const inferableChoices = ["hot", "cold"];
 
+type ColorGameBetDetailLogItemType = BetDetailLogItemType & {
+    result: gc.BetHistory.DynamicObject<ColorGameResult>;
+};
+
 @ccclass
-export default class BetDetailBodyItem extends BaseBetDetailBodyItem {
-    setData(
-        betDetailsLog: gc.BetHistory.BetDetailsLog,
-        index: number,
-        odds: gc.BetHistory.DynamicObject<number>,
-        settlementResult: gc.BetHistory.DynamicObject<boolean>,
-        result: gc.BetHistory.DynamicObject<ColorGameResult>,
-        freeBet: boolean,
-        fractionalOddsFormat: boolean
-    ) {
-        const { amount, choice } = betDetailsLog;
+export default class BetDetailBodyItem extends BetDetailLogItem {
+    setData(data: BetDetailLogItemType) {
+        const { betDetailsLog, odds, settlementResult, result, freeBet, fractionalOddsFormat } = data;
+        const { amount, choice } = betDetailsLog as GameRoundBetDetailsLog & gc.BetHistory.DynamicObject<object>;
         const isWin = settlementResult[choice];
-        super.setData(betDetailsLog, index, odds, settlementResult, result, freeBet, fractionalOddsFormat);
+        super.setData(data);
 
         const winningOdd = this.getWinningOdd(choice, isWin, result, odds);
         const effectiveOdds = freeBet ? winningOdd - 1 : winningOdd;
@@ -59,17 +60,12 @@ export default class BetDetailBodyItem extends BaseBetDetailBodyItem {
         }
     }
 
-    getWinningOdd(
-        choice: string,
-        isWin: boolean,
-        result: gc.BetHistory.DynamicObject<ColorGameResult>,
-        odds: gc.BetHistory.DynamicObject<number>
-    ) {
+    getWinningOdd(choice: string, isWin: boolean, result: gc.BetHistory.DynamicObject<object>, odds: gc.BetHistory.DynamicObject<number>) {
         const winningOddsName = this.getWinningOddName(choice, isWin, result);
         return winningOddsName === "" ? 0 : odds[winningOddsName];
     }
 
-    getWinningOddName(choice: string, isWin: boolean, result: gc.BetHistory.DynamicObject<ColorGameResult>) {
+    getWinningOddName(choice: string, isWin: boolean, result: gc.BetHistory.DynamicObject<object>) {
         if (inferableChoices.includes(choice) && isWin) {
             return choice;
         } else if (isWin) {

@@ -543,7 +543,7 @@
     "_string": "Yellow",
     "_horizontalAlign": 0,
     "_verticalAlign": 1,
-    "_actualFontSize": 22.97783251231527,
+    "_actualFontSize": 19,
     "_fontSize": 19,
     "_fontFamily": "Arial",
     "_lineHeight": 44,
@@ -599,8 +599,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 59.81843190863273,
-      "height": 55.440000000000005
+      "width": 59.8388671875,
+      "height": 55.44
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
