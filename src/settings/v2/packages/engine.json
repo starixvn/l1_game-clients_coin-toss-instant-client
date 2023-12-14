@@ -12,7 +12,7 @@
         "_value": true
       },
       "gfx-webgl2": {
-        "_value": true
+        "_value": false
       },
       "animation": {
         "_value": true
@@ -133,7 +133,6 @@
       "base",
       "custom-pipeline",
       "gfx-webgl",
-      "gfx-webgl2",
       "intersection-2d",
       "occlusion-query",
       "particle",
