@@ -2,6 +2,7 @@ import gc from "@sg/game-client-base";
 import { Mesh, MeshRenderer, Node, _decorator, tween, v3 } from "cc";
 import Observer from "observer";
 import { ObserverComponent } from "../../../../extensions/shared-components/assets/shared/common-components/observer-component/scripts/observer-component";
+import { FunctionUtils } from "../../../../extensions/shared-components/assets/shared/utils";
 const { Configs } = gc;
 const { ccclass, property } = _decorator;
 const { render } = Observer;
@@ -19,6 +20,9 @@ export class ColorGameBox extends ObserverComponent {
 
     @property(Mesh)
     meshLogoVG: Mesh = null;
+
+    @property(Mesh)
+    meshLogoSP: Mesh = null;
 
     private readonly openEulerAngleZ = -10;
     private readonly closeEulerAngleZ = -90;
@@ -55,6 +59,14 @@ export class ColorGameBox extends ObserverComponent {
 
     @render(Configs.SiteConfigs, (store) => store.systemType)
     showSystemSlogan(systemType: string) {
-        this.meshRendererLogo.mesh = systemType === Configs.SystemConfigs.VG.name ? this.meshLogoVG : this.meshLogoSG;
+        let meshRendererLogo = this.meshRendererLogo.mesh;
+
+        if (systemType === Configs.SystemConfigs.VG.name) {
+            meshRendererLogo = FunctionUtils.isSabaPlay() ? this.meshLogoSP : this.meshLogoVG;
+        } else {
+            meshRendererLogo = this.meshLogoSG;
+        }
+
+        this.meshRendererLogo.mesh = meshRendererLogo;
     }
 }
