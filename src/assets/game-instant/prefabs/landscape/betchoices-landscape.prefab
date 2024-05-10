@@ -119,7 +119,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "trump",
+    "_name": "head",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
@@ -2010,7 +2010,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "biden",
+    "_name": "tail",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
