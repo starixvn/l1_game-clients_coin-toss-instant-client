@@ -87,14 +87,14 @@ export default class Game extends GameComponent {
     async showResult(result: gc.GameServiceMessage.TResult, hasAnimation: boolean) {
         if (result) {
             this.hasResetBox = false;
-            this.winningResult.setResult(result);
+            //this.winningResult.setResult(result);
             this.loadSoundResultBeforeRead(result);
             if (hasAnimation) {
                 await AnimationUtils.delayTime(this.delayTimeShowWinningBox);
-                this.winningResult.show();
+                //this.winningResult.show();
                 this.winningSound();
             } else {
-                this.winningResult.showQuickly();
+                //this.winningResult.showQuickly();
             }
             this.doubleTripleResult.setResult(result);
         }

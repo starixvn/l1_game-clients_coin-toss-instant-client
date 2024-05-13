@@ -20,10 +20,10 @@ const defaultConfig: gc.Configs.SiteConfigs = {
     enableMsgpackParserAllGames: false,
     enableMsgpackParserOnNotification: false,
     websocket: {
-        proxyPath: "colorgame",
-        route: "colorgame",
+        proxyPath: "cointoss",
+        route: "cointoss",
     },
-    mainObserverNamespace: "ColorGame",
+    mainObserverNamespace: "CoinToss",
     tolgeeUrl: "",
     boostedOddsDelayTimeByMinutes: 2,
     storagePrefixKey: "si",
