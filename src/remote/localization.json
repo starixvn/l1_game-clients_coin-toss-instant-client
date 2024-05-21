@@ -1,18 +1,18 @@
 {
     "lobbyNames": {
-        "en": "COLOR GAME",
-        "id": "Permainan Warna",
-        "th": "เกมสี",
-        "vi": "XÍ NGẦU LỤC SẮC",
-        "zh_cn": "色彩游戏",
-        "zh_tw": "色彩遊戲"
+        "en": "Coin Toss",
+        "id": "Coin Toss id",
+        "th": "Coin Toss th",
+        "vi": "Coin Toss vi",
+        "zh_cn": "Coin Toss zh_cn",
+        "zh_tw": "Coin Toss zh_tw"
     },
     "gameNames": {
-        "en": "Color Game",
-        "id": "Permainan Warna",
-        "th": "เกมสี",
-        "vi": "Xí Ngầu Lục Sắc",
-        "zh_cn": "色彩游戏",
-        "zh_tw": "色彩遊戲"
+        "en": "Coin Toss",
+        "id": "Coin Toss id",
+        "th": "Coin Toss th",
+        "vi": "Coin Toss vi",
+        "zh_cn": "Coin Toss zh_cn",
+        "zh_tw": "Coin Toss zh_tw"
     }
 }
