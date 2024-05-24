@@ -8,9 +8,9 @@ export const settings = {
     durations: {
         wholeRound: 29,
         lockingBet: 3,
-        placingBet: 17,
-        generatingResult: 6,
-        startRound: 3,
+        placingBet: 20,
+        generatingResult: 3,
+        startRound: 2,
     },
     numberOfRoundHistory: 100,
 };
