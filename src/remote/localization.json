@@ -1,18 +1,18 @@
 {
     "lobbyNames": {
         "en": "Coin Toss",
-        "id": "Coin Toss id",
-        "th": "Coin Toss th",
-        "vi": "Coin Toss vi",
-        "zh_cn": "Coin Toss zh_cn",
-        "zh_tw": "Coin Toss zh_tw"
+        "id": "Lempar Koin",
+        "th": "Lempar Koin",
+        "vi": "Tung Đồng Xu",
+        "zh_cn": "抛硬币",
+        "zh_tw": "抛硬幣"
     },
     "gameNames": {
         "en": "Coin Toss",
-        "id": "Coin Toss id",
-        "th": "Coin Toss th",
-        "vi": "Coin Toss vi",
-        "zh_cn": "Coin Toss zh_cn",
-        "zh_tw": "Coin Toss zh_tw"
+        "id": "Lempar Koin",
+        "th": "Lempar Koin",
+        "vi": "Tung Đồng Xu",
+        "zh_cn": "抛硬币",
+        "zh_tw": "抛硬幣"
     }
 }
