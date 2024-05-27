@@ -1,6 +1,5 @@
-import { _decorator } from "cc";
+import { _decorator, Component } from "cc";
 import gc from "@sg/game-client-base";
-import BaseBetDetailBodyItem from "db://shared-components/game/bet-history/scripts/components/bet-detail/bet-detail-body-item";
 
 const { ccclass } = _decorator;
 const { FormatUtils } = gc;
@@ -29,35 +28,8 @@ const oddMapper: { [key: number]: string } = {
 const inferableChoices = ["hot", "cold"];
 
 @ccclass
-export default class BetDetailBodyItem extends BaseBetDetailBodyItem {
-    setData(
-        betDetailsLog: gc.BetHistory.BetDetailsLog,
-        index: number,
-        odds: gc.BetHistory.DynamicObject<number>,
-        settlementResult: gc.BetHistory.DynamicObject<boolean>,
-        result: gc.BetHistory.DynamicObject<ColorGameResult>,
-        freeBet: boolean,
-        fractionalOddsFormat: boolean
-    ) {
-        const { amount, choice } = betDetailsLog;
-        const isWin = settlementResult[choice];
-        super.setData(betDetailsLog, index, odds, settlementResult, result, freeBet, fractionalOddsFormat);
-
-        const winningOdd = this.getWinningOdd(choice, isWin, result, odds);
-        const effectiveOdds = freeBet ? winningOdd - 1 : winningOdd;
-        const winningAmount = amount * effectiveOdds;
-        this.lblWin.string = FormatUtils.numberWithCommas(winningAmount, 2);
-        this.setHighlightTicketDetail(winningAmount > amount);
-
-        if (inferableChoices.includes(choice)) {
-            const inferableOdd = freeBet ? odds[choice] - 1 : odds[choice];
-            this.lblOdds.string = (fractionalOddsFormat ? FormatUtils.numberWithCommas(+inferableOdd - 1, 2) : inferableOdd).toString();
-        } else {
-            this.lblOdds.string = isWin
-                ? (fractionalOddsFormat ? FormatUtils.numberWithCommas(+effectiveOdds - 1, 2) : effectiveOdds).toString()
-                : "-";
-        }
-    }
+export default class BetDetailBodyItem extends Component {
+    setData() {}
 
     getWinningOdd(
         choice: string,
