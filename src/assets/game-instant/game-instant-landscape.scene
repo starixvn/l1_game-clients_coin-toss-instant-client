@@ -731,7 +731,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 406.00000000000006,
-      "y": 204.99999999999997,
+      "y": 205.00000000000003,
       "z": 0
     },
     "_lrot": {
@@ -816,7 +816,7 @@
     "_priority": 2,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 240.23456790123456,
+    "_orthoHeight": 205,
     "_near": 0,
     "_far": 1000,
     "_color": {
@@ -2127,6 +2127,7 @@
     "highlightStatic": null,
     "highlightAnim": null,
     "choice": null,
+    "lblBetPercentage": null,
     "_id": "632C1xtfdIDYJ+M6XHrPFn"
   },
   {
@@ -2165,6 +2166,7 @@
     "highlightStatic": null,
     "highlightAnim": null,
     "choice": null,
+    "lblBetPercentage": null,
     "_id": "88sJPObRNGTYuuCHfGvtiJ"
   },
   {
@@ -2313,7 +2315,7 @@
     ],
     "value": {
       "__type__": "cc.Size",
-      "width": 25.019368455129396,
+      "width": 25.02685546875,
       "height": 37.8
     }
   },
@@ -2333,7 +2335,7 @@
     ],
     "value": {
       "__type__": "cc.Size",
-      "width": 25.019368455129396,
+      "width": 25.02685546875,
       "height": 37.8
     }
   },
@@ -3162,7 +3164,7 @@
     ],
     "value": {
       "__type__": "cc.Vec3",
-      "x": -220,
+      "x": 220,
       "y": 64,
       "z": 0
     }
@@ -3183,7 +3185,7 @@
     ],
     "value": {
       "__type__": "cc.Vec3",
-      "x": 220,
+      "x": -220,
       "y": 64,
       "z": 0
     }
@@ -4163,6 +4165,7 @@
     "instance": {
       "__id__": 259
     },
+    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -5082,6 +5085,7 @@
     "nodeBetItems": {
       "__id__": 70
     },
+    "delayAnimPayChips": 1.25,
     "_id": "b2OCmRIihBUKPm9+zad3Kh"
   },
   {
@@ -7724,8 +7728,8 @@
     "_target": null,
     "_left": 5.684341886080802e-14,
     "_right": 5.684341886080802e-14,
-    "_top": -2.842170943040401e-14,
-    "_bottom": -2.842170943040401e-14,
+    "_top": 2.842170943040401e-14,
+    "_bottom": 2.842170943040401e-14,
     "_horizontalCenter": 0,
     "_verticalCenter": 0,
     "_isAbsLeft": true,
