@@ -164,8 +164,8 @@ export const languages = {
     "CoinToss": {
         "game_icon_name": "Coin Toss",
         "game_name": "Coin Toss",
-        "glossary_head": "Trump",
-        "glossary_tail": "Biden"
+        "glossary_head": "Biden",
+        "glossary_tail": "Trump"
     },
     "InstantGame": {
         "bet_amount_of_any_choice_incorrect": "Invalid Bet Amount",

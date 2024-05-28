@@ -164,8 +164,8 @@ export const languages = {
     "CoinToss": {
         "game_icon_name": "抛硬幣",
         "game_name": "抛硬幣",
-        "glossary_head": "川普",
-        "glossary_tail": "拜登"
+        "glossary_head": "拜登",
+        "glossary_tail": "川普"
     },
     "InstantGame": {
         "bet_amount_of_any_choice_incorrect": "投注金額無效",

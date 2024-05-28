@@ -190,7 +190,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 78.63657422335643,
+      "width": 78.64757168964275,
       "height": 37.800000000000004
     },
     "_anchorPoint": {
@@ -229,7 +229,7 @@
     "_string": "Trump",
     "_horizontalAlign": 2,
     "_verticalAlign": 1,
-    "_actualFontSize": 28.197044334975367,
+    "_actualFontSize": 30.44334975369458,
     "_fontSize": 24,
     "_fontFamily": "Arial",
     "_lineHeight": 30,
@@ -295,7 +295,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 28.65914355583911,
+      "x": 28.661892922410686,
       "y": -3,
       "z": 0
     },
@@ -423,7 +423,7 @@
       "a": 255
     },
     "_spriteFrame": {
-      "__uuid__": "c5156f0c-54bb-4245-ad2d-40337de37a65@f9941",
+      "__uuid__": "62dba303-8fb5-427b-bd8e-5cab8dbf20de@3799f",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_type": 0,
@@ -559,7 +559,7 @@
       "a": 255
     },
     "_spriteFrame": {
-      "__uuid__": "37a4db18-93bf-446f-b42d-d6acd9d934fa@f9941",
+      "__uuid__": "62dba303-8fb5-427b-bd8e-5cab8dbf20de@0051b",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_type": 0,
@@ -687,7 +687,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 63.31828711167822,
+      "width": 63.32378584482137,
       "height": 42
     },
     "_anchorPoint": {
@@ -861,7 +861,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 93.902261666032,
+      "width": 93.91539585150562,
       "height": 37.800000000000004
     },
     "_anchorPoint": {
@@ -900,7 +900,7 @@
     "_string": "#123456",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 28.197044334975367,
+    "_actualFontSize": 30.44334975369458,
     "_fontSize": 24,
     "_fontFamily": "Arial",
     "_lineHeight": 30,

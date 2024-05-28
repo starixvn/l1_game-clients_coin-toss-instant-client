@@ -163,8 +163,8 @@ export const languages = {
     "CoinToss": {
         "game_icon_name": "Tung Đồng Xu",
         "game_name": "Tung Đồng Xu",
-        "glossary_head": "Trump",
-        "glossary_tail": "Biden"
+        "glossary_head": "Biden",
+        "glossary_tail": "Trump"
     },
     "InstantGame": {
         "bet_amount_of_any_choice_incorrect": "Tiền cược của một trong các cửa không hợp lệ.",
