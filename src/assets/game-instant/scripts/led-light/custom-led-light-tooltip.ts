@@ -5,8 +5,8 @@ import { BetChoice } from "../coin-toss-choices";
 const { ccclass, property } = _decorator;
 
 enum ColorResult {
-    tail = "#0535b3",
-    head = "#d5301a",
+    head = "#0535b3",
+    tail = "#d5301a",
 }
 @ccclass("CustomLedLightTooltip")
 export class CustomLedLightTooltip extends LedLightTooltip {
@@ -36,7 +36,7 @@ export class CustomLedLightTooltip extends LedLightTooltip {
     }
     
     protected updateChipInfo(choice: string) {
-        this.chipBlue.node.active = choice === "tail";
-        this.chipRed.node.active = choice === "head";
+        this.chipBlue.node.active = choice === "head";
+        this.chipRed.node.active = choice === "tail";
     }
 }
