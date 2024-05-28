@@ -10,12 +10,12 @@ describe("settings", () => {
     it("should have data as expected", () => {
         // Assert
         expect(settings).toStrictEqual({
-            id: 71,
-            name: "ColorGame",
+            id: 80,
+            name: "CoinToss",
             durations: {
-                wholeRound: 41,
+                wholeRound: 29,
                 lockingBet: 3,
-                placingBet: 30,
+                placingBet: 20,
                 generatingResult: 3,
                 startRound: 2,
             },
