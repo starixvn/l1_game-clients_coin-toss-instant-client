@@ -9,15 +9,9 @@ export class CoinTossResultStatistic extends ResultStatistic {
     supportStatisticKeys = "head,tail";
 
     protected generateStatisticalData(histories: gc.RoundHistories.RoundHistory[]) {
-        console.log(JSON.stringify(histories));
+        //console.log(JSON.stringify(histories));
         const statisticCount = histories.reduce((result, history) => {
             this.statisticKeys?.forEach((key) => {
-                if (history.result["dice1"] > 1) {
-                    history.result["tail"] = true;
-                } else {
-                    history.result["head"] = true;
-                }
-
                 if (history.result[key]) {
                     result[key] = (result[key] || 0) + 1;
                 }
@@ -25,7 +19,7 @@ export class CoinTossResultStatistic extends ResultStatistic {
             return result;
         }, {});
         const statisticPercent = Object.keys(statisticCount).reduce((result, key) => {
-            result[key] = `${(statisticCount[key] / histories.length) * 100}%`;
+            result[key] = `${Math.round((statisticCount[key] / histories.length) * 100)}%`;
             return result;
         }, {});
 
