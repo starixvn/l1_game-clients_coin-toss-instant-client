@@ -161,7 +161,12 @@ export const languages = {
         "under_maintenance_time": "เริ่มต้นจาก %{startTime} ถึง %{endTime} (GMT+8)",
         "win": "ชนะ"
     },
-    "CoinToss": {},
+    "CoinToss": {
+        "game_icon_name": "โยนเหรียญ",
+        "game_name": "โยนเหรียญ",
+        "glossary_head": "ไบเดน",
+        "glossary_tail": "ทรัมป์"
+    },
     "InstantGame": {
         "bet_amount_of_any_choice_incorrect": "จำนวนเงินเดิมพันไม่ถูกต้อง",
         "game_excluded": "บัญชีของคุณไม่ได้รับอนุญาตให้เล่นเกมนี้อีกต่อไป โปรดลองเกมอื่น",

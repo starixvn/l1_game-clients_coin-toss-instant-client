@@ -816,7 +816,7 @@
     "_priority": 2,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 236.19496855345912,
+    "_orthoHeight": 209.8980582524272,
     "_near": 0,
     "_far": 1000,
     "_color": {
@@ -2324,7 +2324,7 @@
     ],
     "value": {
       "__type__": "cc.Size",
-      "width": 25.022348655844635,
+      "width": 25.01752651177564,
       "height": 37.800000000000004
     }
   },
@@ -2344,7 +2344,7 @@
     ],
     "value": {
       "__type__": "cc.Size",
-      "width": 25.022348655844635,
+      "width": 25.01752651177564,
       "height": 37.800000000000004
     }
   },
@@ -5064,7 +5064,7 @@
     ],
     "value": {
       "__type__": "cc.Vec3",
-      "x": 261.5,
+      "x": 261,
       "y": 0,
       "z": 0
     }
@@ -5085,7 +5085,7 @@
     ],
     "value": {
       "__type__": "cc.Vec3",
-      "x": 260.5,
+      "x": 261,
       "y": 0,
       "z": 0
     }
@@ -5124,7 +5124,7 @@
     "propertyPath": [
       "_right"
     ],
-    "value": 6
+    "value": 6.5
   },
   {
     "__type__": "cc.TargetInfo",
@@ -5201,7 +5201,7 @@
     "propertyPath": [
       "_right"
     ],
-    "value": 7
+    "value": 6.5
   },
   {
     "__type__": "cc.TargetInfo",

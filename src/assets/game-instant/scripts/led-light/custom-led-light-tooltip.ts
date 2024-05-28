@@ -26,25 +26,17 @@ export class CustomLedLightTooltip extends LedLightTooltip {
         const name = gc.Translator.gameTranslate(`glossary_${winChoice}`);
         this.result.string = name.toUpperCase();
         this.result.color = new Color(ColorResult[winChoice]);
-        this.showChipInfo(winChoice);
+        this.updateChipInfo(winChoice);
         this.showTooltip();
     }
 
     protected findWinningChoice(ledLightInfo: gc.RoundHistories.RoundHistory): string {
         const choices = [BetChoice.Trump, BetChoice.Biden];
-        let winChoice = "";
-
-        choices.forEach((choice) => {
-            if (ledLightInfo.settlementResult[choice]) {
-                winChoice = choice;
-            }
-        });
-
-        return winChoice;
+        return choices.find(choice => ledLightInfo.settlementResult[choice]) || "";
     }
-
-    protected showChipInfo(choice: string) {
-        choice === "tail" ? (this.chipBlue.node.active = true) : (this.chipBlue.node.active = false);
-        choice === "head" ? (this.chipRed.node.active = true) : (this.chipRed.node.active = false);
+    
+    protected updateChipInfo(choice: string) {
+        this.chipBlue.node.active = choice === "tail";
+        this.chipRed.node.active = choice === "head";
     }
 }
