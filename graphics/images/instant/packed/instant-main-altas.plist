@@ -184,6 +184,21 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
+            <key>blue.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{13,12}</string>
+                <key>spriteSourceSize</key>
+                <string>{13,12}</string>
+                <key>textureRect</key>
+                <string>{{144,1008},{13,12}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
             <key>chipdo.png</key>
             <dict>
                 <key>aliases</key>
@@ -213,6 +228,21 @@
                 <string>{{565,987},{34,35}}</string>
                 <key>textureRotated</key>
                 <true/>
+            </dict>
+            <key>grey.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{26,15}</string>
+                <key>spriteSourceSize</key>
+                <string>{26,15}</string>
+                <key>textureRect</key>
+                <string>{{244,1003},{26,15}}</string>
+                <key>textureRotated</key>
+                <false/>
             </dict>
             <key>history-result-0.png</key>
             <dict>
@@ -514,33 +544,18 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>progress-bar-blue.png</key>
+            <key>red.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{24,15}</string>
+                <string>{12,12}</string>
                 <key>spriteSourceSize</key>
-                <string>{24,15}</string>
+                <string>{12,12}</string>
                 <key>textureRect</key>
-                <string>{{244,1003},{24,15}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>progress-bar-red.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{24,15}</string>
-                <key>spriteSourceSize</key>
-                <string>{24,15}</string>
-                <key>textureRect</key>
-                <string>{{270,1003},{24,15}}</string>
+                <string>{{158,1008},{12,12}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -783,7 +798,7 @@
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:ec58f25c158c4b84c17d2170a9ebf803:798a95f581e23b5bfb9ea848ba99afed:964059e5c905f6861aa079259705ccc9$</string>
+            <string>$TexturePacker:SmartUpdate:d249e90b0b6359119a769342b2fc6484:b03055e510640f181c3fa2160811d451:964059e5c905f6861aa079259705ccc9$</string>
             <key>textureFileName</key>
             <string>instant-main-altas.png</string>
         </dict>
