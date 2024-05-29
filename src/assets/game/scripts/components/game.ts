@@ -6,7 +6,6 @@ import { startGame } from "db://shared-components/shared/scripts/startup";
 import { AnimationUtils, FunctionUtils } from "db://shared-components/shared/utils";
 import Observer from "observer";
 import { siteConfigs } from "../../../scripts/site-configs";
-import { ColorDice } from "../../color-game/scripts/dice";
 import { containerOptions, settings } from "../game-settings";
 import "./../../../resources/i18n";
 import { ColorGameDoubleTripleResult } from "./double-triple-result";
@@ -46,14 +45,7 @@ export default class Game extends GameComponent {
     override containerOptions = containerOptions;
     isLoading = true;
 
-    private readonly winningSounds = {
-        [ColorDice.Yellow]: "yellow",
-        [ColorDice.Red]: "red",
-        [ColorDice.Pink]: "pink",
-        [ColorDice.White]: "white",
-        [ColorDice.Blue]: "blue",
-        [ColorDice.Green]: "green",
-    };
+    private readonly winningSounds = {};
 
     protected clientRoundId = -1;
     protected openAnimationIndex = 0;
@@ -88,7 +80,7 @@ export default class Game extends GameComponent {
         if (result) {
             this.hasResetBox = false;
             //this.winningResult.setResult(result);
-            this.loadSoundResultBeforeRead(result);
+            // this.loadSoundResultBeforeRead(result);
             if (hasAnimation) {
                 await AnimationUtils.delayTime(this.delayTimeShowWinningBox);
                 //this.winningResult.show();

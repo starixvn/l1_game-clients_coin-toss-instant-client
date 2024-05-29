@@ -10,8 +10,8 @@
         "id": "1681353552761",
         "progress": 1,
         "state": "success",
-        "stage": "run",
-        "message": "10-24-2023 17:50:46 run package E:\\project\\color-game-client\\src\\build\\web-mobile success!",
+        "stage": "build",
+        "message": "5-29-2024 11:30:44 build success in 141416 ms!",
         "options": {
           "name": "cocos-3x",
           "platform": "web-mobile",
@@ -66,77 +66,8 @@
           "bundleCommonChunk": false,
           "logDest": "project://temp/builder/log/web-mobile4-13-2023 09-39.log"
         },
-        "time": "10-24-2023 17:49:17",
-        "dirty": true,
-        "rawOptions": {
-          "name": "cocos-3x",
-          "platform": "web-mobile",
-          "buildPath": "project://build",
-          "debug": false,
-          "md5Cache": false,
-          "skipCompressTexture": false,
-          "sourceMaps": false,
-          "polyfills": {
-            "asyncFunctions": true
-          },
-          "experimentalEraseModules": false,
-          "useBuiltinServer": false,
-          "mainBundleIsRemote": false,
-          "mainBundleCompressionType": "merge_dep",
-          "useSplashScreen": false,
-          "packAutoAtlas": true,
-          "startScene": "374bdfc3-a787-4bd2-817b-4efe75860854",
-          "outputName": "web-mobile",
-          "scenes": [
-            {
-              "url": "db://shared-components/feature-structure/scene.scene",
-              "uuid": "b97b166d-3dd1-4968-8fa8-488f447e05b0",
-              "inBundle": false
-            },
-            {
-              "url": "db://shared-components/shared/common-components/integrations/identifier.scene",
-              "uuid": "8fa0d7ef-6c87-40c2-bd73-c63184ba47ff",
-              "inBundle": false
-            },
-            {
-              "url": "db://assets/game-instant/game-instant-landscape.scene",
-              "uuid": "ad2c4f56-4008-49e0-891a-0f6d92bb381f"
-            },
-            {
-              "url": "db://assets/game-instant/game-instant-portrait.scene",
-              "uuid": "41c56f39-fd80-4431-9cbe-b37ff65f2352"
-            },
-            {
-              "url": "db://assets/game-instant/splash/splash.scene",
-              "uuid": "374bdfc3-a787-4bd2-817b-4efe75860854"
-            }
-          ],
-          "web-desktop": [],
-          "packages": {
-            "engine": {
-              "cleanupImageCache": "off"
-            },
-            "web-mobile": {
-              "orientation": "auto",
-              "embedWebDebugger": false,
-              "__version__": "1.0.1",
-              "cullEngineAsmJsModule": false
-            },
-            "cocos-service": {
-              "configID": "f86d3e",
-              "services": [],
-              "__version__": "3.0.6"
-            }
-          },
-          "__version__": "1.3.4",
-          "web-mobile": [],
-          "taskName": "web-mobile",
-          "server": "",
-          "startSceneAssetBundle": false,
-          "bundleConfigs": [],
-          "bundleCommonChunk": false,
-          "logDest": "project://temp/builder/log/web-mobile4-13-2023 09-39.log"
-        }
+        "time": "5-29-2024 11:28:23",
+        "dirty": false
       }
     }
   },

@@ -1536,6 +1536,7 @@
       "__id__": 20
     },
     "choice": null,
+    "lblBetPercentage": null,
     "_id": ""
   },
   {
@@ -2962,6 +2963,7 @@
       "__id__": 85
     },
     "choice": null,
+    "lblBetPercentage": null,
     "_id": ""
   },
   {
@@ -4388,6 +4390,7 @@
       "__id__": 150
     },
     "choice": null,
+    "lblBetPercentage": null,
     "_id": ""
   },
   {
@@ -5814,6 +5817,7 @@
       "__id__": 215
     },
     "choice": null,
+    "lblBetPercentage": null,
     "_id": ""
   },
   {
@@ -7240,6 +7244,7 @@
       "__id__": 280
     },
     "choice": null,
+    "lblBetPercentage": null,
     "_id": ""
   },
   {
@@ -8666,6 +8671,7 @@
       "__id__": 345
     },
     "choice": null,
+    "lblBetPercentage": null,
     "_id": ""
   },
   {

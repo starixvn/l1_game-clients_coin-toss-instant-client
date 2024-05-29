@@ -2,7 +2,7 @@ import gc from "@sg/game-client-base";
 import { _decorator, Color, Node, Sprite, tween, v3 } from "cc";
 import { WinningResult } from "../../../../extensions/shared-components/assets/shared/common-components/winning-result/scripts/winning-result";
 import { AnimationUtils } from "../../../../extensions/shared-components/assets/shared/utils/utils";
-import { ColorDice } from "../../color-game/scripts/dice";
+
 const { ccclass, property } = _decorator;
 
 @ccclass("ColorGameWinningResult")
@@ -10,14 +10,7 @@ export class ColorGameWinningResult extends WinningResult {
     @property(Node)
     colors: Node[] = [];
 
-    private readonly colorHex = {
-        [ColorDice.Yellow]: "#ffcf00",
-        [ColorDice.Red]: "#cb2821",
-        [ColorDice.Pink]: "#fd477c",
-        [ColorDice.White]: "#ffffff",
-        [ColorDice.Blue]: "#168cc9",
-        [ColorDice.Green]: "#2dad2c",
-    };
+    private readonly colorHex = {};
 
     protected delayTimeShowWinning = 2;
     protected durationTimeShowWinning = 5;
