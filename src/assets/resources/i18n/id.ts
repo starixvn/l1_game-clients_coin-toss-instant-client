@@ -232,7 +232,8 @@ export const languages = {
         "message_win_limit_hit": "Gagal memasang taruhan! Batas Kemenganan. Silakan hubungi upline Anda, terima kasih. (%{errorCode})",
         "min_bet_hand": "Taruhan minimum untuk tangan ini adalah %{minBet}",
         "one_choice_allowed": "Hanya bisa bertaruh pada satu opsi.",
-        "splash_login_failed": "Gagal memuat data game. Harap tutup jendela saat ini dan coba lagi."
+        "splash_login_failed": "Gagal memuat data game. Harap tutup jendela saat ini dan coba lagi.",
+        "message_endgame_failed": "Permainan %{gameName} (#%{gameRoundId})\n\nTerjadi kesalahan, hubungi CSD untuk lebih lanjut. (%{errorCode})",
     }
 };
 

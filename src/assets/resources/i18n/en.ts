@@ -232,7 +232,8 @@ export const languages = {
         "message_win_limit_hit": "Win limit hit. Please contact your upline. (%{errorCode})",
         "min_bet_hand": "Min bet for this hand is %{minBet}",
         "one_choice_allowed": "Can only bet on one option.",
-        "splash_login_failed": "Failed to load game data. Please close the current windows and try again."
+        "splash_login_failed": "Failed to load game data. Please close the current windows and try again.",
+        "message_endgame_failed": "Game %{gameName} (#%{gameRoundId})\n\nAn error has occurred. Please contact CSD for details. (%{errorCode})",
     }
 };
 

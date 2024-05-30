@@ -231,7 +231,8 @@ export const languages = {
         "message_win_limit_hit": "Đã đạt giới hạn thắng cược. Vui lòng liên hệ với cấp trên. (%{errorCode})",
         "min_bet_hand": "Tiền cược tối thiểu của tay bài này là %{minBet}",
         "one_choice_allowed": "Chỉ được cược 1 bên.",
-        "splash_login_failed": "Đăng nhập thất bại, bạn hãy làm lại thao tác đăng nhập từ đầu."
+        "splash_login_failed": "Đăng nhập thất bại, bạn hãy làm lại thao tác đăng nhập từ đầu.",
+        "message_endgame_failed": "Game %{gameName} (#%{gameRoundId})\n\nĐã xảy ra lỗi. Vui lòng liên hệ với bộ phận CSKH để được hỗ trợ. (%{errorCode})",
     }
 };
 

@@ -232,7 +232,8 @@ export const languages = {
         "message_win_limit_hit": "下注失败！ 赢限制命中。 请联系您的上线，谢谢。(%{errorCode})",
         "min_bet_hand": "这手牌的最小下注是 %{minBet}",
         "one_choice_allowed": "只能押注一种选择。",
-        "splash_login_failed": "无法加载游戏数据。 请关闭当前窗口并重试。"
+        "splash_login_failed": "无法加载游戏数据。 请关闭当前窗口并重试。",
+        "message_endgame_failed": "%{gameName} 游戏 (#%{gameRoundId})\n\n发生错误，请联系 CSD 了解详情。(%{errorCode})",
     }
 };
 
