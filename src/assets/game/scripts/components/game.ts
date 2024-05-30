@@ -3,13 +3,13 @@ import { Label, Node, _decorator } from "cc";
 import { AudioUtils } from "db://shared-components/game/audios/utils";
 import GameComponent from "db://shared-components/game/scripts/components/game-component";
 import { startGame } from "db://shared-components/shared/scripts/startup";
-import { AnimationUtils, FunctionUtils } from "db://shared-components/shared/utils";
+import { FunctionUtils } from "db://shared-components/shared/utils";
 import Observer from "observer";
 import { siteConfigs } from "../../../scripts/site-configs";
 import { containerOptions, settings } from "../game-settings";
 import "./../../../resources/i18n";
-import { ColorGameDoubleTripleResult } from "./double-triple-result";
-import { ColorGameWinningResult } from "./winning-result";
+import { FlipCoin } from "./flip-coin";
+import { CoinTossWinningResult } from "./coin-toss-winning-result";
 
 const { Rounds, Translator } = gc;
 
@@ -36,10 +36,10 @@ export default class Game extends GameComponent {
     winningResultNode: Node = null;
 
     @property({ type: Node })
-    doubleTripleResultNode: Node = null;
+    flipCoinNode: Node = null;
 
-    private winningResult: ColorGameWinningResult = null;
-    private doubleTripleResult: ColorGameDoubleTripleResult = null;
+    private winningResult: CoinTossWinningResult = null;
+    private flipCoin: FlipCoin = null;
 
     override namespace = settings.name;
     override containerOptions = containerOptions;
@@ -48,20 +48,18 @@ export default class Game extends GameComponent {
     private readonly winningSounds = {};
 
     protected clientRoundId = -1;
-    protected openAnimationIndex = 0;
-    protected hasResetBox = false;
-    protected delayTimeShowWinningBox = 2;
     protected resultsSoundInfo: ResultSoundInfo[] = [];
 
     onLoad() {
         super.onLoad();
         this.fetchComponents();
         this.winningResult.hideQuickly();
+        this.flipCoin.setStatusNode(true);
     }
 
     fetchComponents() {
-        this.winningResult = this.winningResultNode.getComponent(ColorGameWinningResult);
-        this.doubleTripleResult = this.doubleTripleResultNode.getComponent(ColorGameDoubleTripleResult);
+        this.winningResult = this.winningResultNode.getComponent(CoinTossWinningResult);
+        this.flipCoin = this.flipCoinNode.getComponent(FlipCoin);
     }
 
     @render(Rounds.RoundStore, (store) => store.clientRoundId)
@@ -71,24 +69,20 @@ export default class Game extends GameComponent {
 
     @render(Rounds.RoundTimeStore, (store) => store.isInRoundTime)
     renderInRoundTime(isInRoundTime: boolean) {
-        if (isInRoundTime && !this.hasResetBox && !this.isLoading) {
+        if (isInRoundTime && !this.isLoading) {
             this.winningResult.hideQuickly();
         }
     }
 
     async showResult(result: gc.GameServiceMessage.TResult, hasAnimation: boolean) {
         if (result) {
-            this.hasResetBox = false;
-            //this.winningResult.setResult(result);
-            // this.loadSoundResultBeforeRead(result);
+            this.winningResult.setResult(result);
             if (hasAnimation) {
-                await AnimationUtils.delayTime(this.delayTimeShowWinningBox);
-                //this.winningResult.show();
+                this.winningResult.show();
                 this.winningSound();
             } else {
-                //this.winningResult.showQuickly();
+                this.winningResult.showQuickly();
             }
-            this.doubleTripleResult.setResult(result);
         }
     }
 
@@ -140,7 +134,7 @@ export default class Game extends GameComponent {
         if (isStartRound) {
             super.handleStartRound(isStartRound);
             this.winningResult.hide();
-            this.resultsSoundInfo = [];
+            this.flipCoin.playAnim();
         }
     }
 

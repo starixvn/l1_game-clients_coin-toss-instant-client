@@ -1,0 +1,117 @@
+{
+"skeleton": {
+	"hash": "vstOJEYUlIRBC7K4JbacN269q6o=",
+	"spine": "3.8.75",
+	"x": -991.91,
+	"y": -516.14,
+	"width": 1943.96,
+	"height": 1084.79,
+	"images": "./show-kq/",
+	"audio": "C:/Users/heidi.le/Spine/backup"
+},
+"bones": [
+	{ "name": "show-ket-qua" },
+	{ "name": "hand-right", "parent": "show-ket-qua", "x": -7.95, "y": 23.86 },
+	{ "name": "hand-left", "parent": "show-ket-qua" },
+	{ "name": "coin-trump", "parent": "show-ket-qua", "x": -6.7, "y": 10.53, "scaleX": 0.3, "scaleY": 0.3 },
+	{ "name": "coin-biden", "parent": "show-ket-qua", "x": -6.7, "y": 10.53 }
+],
+"slots": [
+	{ "name": "10001", "bone": "hand-left", "attachment": "10001" },
+	{ "name": "46", "bone": "coin-trump", "attachment": "46" },
+	{ "name": "47", "bone": "coin-biden", "attachment": "47" },
+	{ "name": "20033", "bone": "hand-right", "attachment": "20033" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"46": {
+				"46": { "x": -6.85, "y": 30.5, "width": 161, "height": 158 }
+			},
+			"47": {
+				"47": { "x": -12.11, "y": 0.83, "width": 160, "height": 159 }
+			},
+			"20033": {
+				"20033": { "width": 1920, "height": 1080 }
+			},
+			"10001": {
+				"10001": { "x": -31.91, "y": 28.66, "width": 1920, "height": 1080 }
+			}
+		}
+	}
+],
+"animations": {
+	"show-ket-qua-biden": {
+		"slots": {
+			"46": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"hand-left": {
+				"translate": [
+					{ "x": -1.34, "y": -3.13 }
+				],
+				"scale": [
+					{ "time": 2 },
+					{ "time": 2.3333, "x": 1.1, "y": 1.1 }
+				]
+			},
+			"hand-right": {
+				"translate": [
+					{ "time": 0.6 },
+					{ "time": 2, "x": 122.2, "y": -121 }
+				]
+			},
+			"coin-biden": {
+				"scale": [
+					{ "x": 0.3, "y": 0.3, "curve": "stepped" },
+					{ "time": 2, "x": 0.3, "y": 0.3 },
+					{ "time": 2.3333, "x": 0.5, "y": 0.5 }
+				]
+			},
+			"coin-trump": {
+				"scale": [
+					{ "time": 2 },
+					{ "time": 2.3333, "x": 1.667, "y": 1.667 }
+				]
+			}
+		}
+	},
+	"show-ket-qua-trump": {
+		"slots": {
+			"47": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"hand-left": {
+				"translate": [
+					{ "x": -1.34, "y": -3.13 }
+				],
+				"scale": [
+					{ "time": 2 },
+					{ "time": 2.3333, "x": 1.1, "y": 1.1 }
+				]
+			},
+			"hand-right": {
+				"translate": [
+					{ "time": 0.6 },
+					{ "time": 2, "x": 122.2, "y": -121 }
+				]
+			},
+			"coin-trump": {
+				"scale": [
+					{ "time": 2 },
+					{ "time": 2.3333, "x": 1.667, "y": 1.667 }
+				]
+			}
+		}
+	}
+}
+}
