@@ -186,6 +186,7 @@ export const languages = {
         "message_cannot_bet": "暂时不能下注。 请等待几秒钟。",
         "message_close_account": "帐户已关闭。 您的会话将在 10 秒后过期，详情请联系 CSD。(%{errorCode})",
         "message_end_game_failed": "发生了错误。 详情请联络 CSD。(%{errorCode})",
+        "message_endgame_failed": "发生了错误。 详情请联络 CSD。(%{errorCode})",
         "message_error_occured_place_bet": "下注失败！ 发生错误，请联系 CSD 了解详情。(%{errorCode})",
         "message_error_occurred": "发生错误，请联系 CSD 了解详情。(%{errorCode})",
         "message_error_occurred_full": "发生错误，请联系 CSD 了解详情。\n(%{errorCode})",
@@ -232,8 +233,7 @@ export const languages = {
         "message_win_limit_hit": "下注失败！ 赢限制命中。 请联系您的上线，谢谢。(%{errorCode})",
         "min_bet_hand": "这手牌的最小下注是 %{minBet}",
         "one_choice_allowed": "只能押注一种选择。",
-        "splash_login_failed": "无法加载游戏数据。 请关闭当前窗口并重试。",
-        "message_endgame_failed": "%{gameName} 游戏 (#%{gameRoundId})\n\n发生错误，请联系 CSD 了解详情。(%{errorCode})",
+        "splash_login_failed": "无法加载游戏数据。 请关闭当前窗口并重试。"
     }
 };
 

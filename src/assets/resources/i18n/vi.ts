@@ -185,6 +185,7 @@ export const languages = {
         "message_cannot_bet": "Không thể đặt cược vào lúc này.",
         "message_close_account": "Tài khoản đã bị đóng. Phiên đăng nhập sẽ hết hạn sau 10 giây. Vui lòng liên hệ với cấp trên. (%{errorCode})",
         "message_end_game_failed": "Phiên chơi bị lỗi. Vui lòng liên hệ bộ phận CSKH. (%{errorCode})",
+        "message_endgame_failed": "Phiên chơi bị lỗi. Vui lòng liên hệ bộ phận CSKH. (%{errorCode})",
         "message_error_occured_place_bet": "Đã xảy ra lỗi.\nVui lòng liên hệ với bộ phận CSKH. (%{errorCode})",
         "message_error_occurred": "Đã xảy ra lỗi. Vui lòng liên hệ với bộ phận CSKH để được hỗ trợ. (%{errorCode})",
         "message_error_occurred_full": "Đã xảy ra lỗi. Vui lòng liên hệ với bộ phận CSKH. (%{errorCode})",
@@ -231,8 +232,7 @@ export const languages = {
         "message_win_limit_hit": "Đã đạt giới hạn thắng cược. Vui lòng liên hệ với cấp trên. (%{errorCode})",
         "min_bet_hand": "Tiền cược tối thiểu của tay bài này là %{minBet}",
         "one_choice_allowed": "Chỉ được cược 1 bên.",
-        "splash_login_failed": "Đăng nhập thất bại, bạn hãy làm lại thao tác đăng nhập từ đầu.",
-        "message_endgame_failed": "Game %{gameName} (#%{gameRoundId})\n\nĐã xảy ra lỗi. Vui lòng liên hệ với bộ phận CSKH để được hỗ trợ. (%{errorCode})",
+        "splash_login_failed": "Đăng nhập thất bại, bạn hãy làm lại thao tác đăng nhập từ đầu."
     }
 };
 

@@ -186,6 +186,7 @@ export const languages = {
         "message_cannot_bet": "Tidak bisa bertaruh saat ini. Harap tunggu beberapa detik.",
         "message_close_account": "Akun telah ditutup. Sesi Anda akan kedaluwarsa setelah 10 detik, silakan hubungi CSD untuk detailnya. (%{errorCode})",
         "message_end_game_failed": "Sebuah kesalahan telah terjadi. Silakan hubungi CSD untuk lebih lanjut. (%{errorCode})",
+        "message_endgame_failed": "Sebuah kesalahan telah terjadi. Silakan hubungi CSD untuk lebih lanjut. (%{errorCode})",
         "message_error_occured_place_bet": "Gagal memasang taruhan! Terjadi kesalahan, hubungi CSD untuk lebih lanjut. (%{errorCode})",
         "message_error_occurred": "Terjadi kesalahan, hubungi CSD untuk lebih lanjut. (%{errorCode})",
         "message_error_occurred_full": "Terjadi kesalahan, hubungi CSD untuk lebih lanjut. (%{errorCode})",
@@ -232,8 +233,7 @@ export const languages = {
         "message_win_limit_hit": "Gagal memasang taruhan! Batas Kemenganan. Silakan hubungi upline Anda, terima kasih. (%{errorCode})",
         "min_bet_hand": "Taruhan minimum untuk tangan ini adalah %{minBet}",
         "one_choice_allowed": "Hanya bisa bertaruh pada satu opsi.",
-        "splash_login_failed": "Gagal memuat data game. Harap tutup jendela saat ini dan coba lagi.",
-        "message_endgame_failed": "Permainan %{gameName} (#%{gameRoundId})\n\nTerjadi kesalahan, hubungi CSD untuk lebih lanjut. (%{errorCode})",
+        "splash_login_failed": "Gagal memuat data game. Harap tutup jendela saat ini dan coba lagi."
     }
 };
 

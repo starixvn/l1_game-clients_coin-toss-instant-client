@@ -186,6 +186,7 @@ export const languages = {
         "message_cannot_bet": "Cannot bet at the moment. Please wait for a few seconds.",
         "message_close_account": "Account has been closed. Your session will expire after 10 seconds, please contact CSD for details.(%{errorCode})",
         "message_end_game_failed": "An error has occurred. Please contact CSD for details.(%{errorCode})",
+        "message_endgame_failed": "An error has occurred. Please contact CSD for details.(%{errorCode})",
         "message_error_occured_place_bet": "An error has occurred, please contact CSD for details.(%{errorCode})",
         "message_error_occurred": "An error has occurred, please contact CSD for details.(%{errorCode})",
         "message_error_occurred_full": "An error has occurred, please contact CSD for details.(%{errorCode})",
@@ -232,8 +233,7 @@ export const languages = {
         "message_win_limit_hit": "Win limit hit. Please contact your upline. (%{errorCode})",
         "min_bet_hand": "Min bet for this hand is %{minBet}",
         "one_choice_allowed": "Can only bet on one option.",
-        "splash_login_failed": "Failed to load game data. Please close the current windows and try again.",
-        "message_endgame_failed": "Game %{gameName} (#%{gameRoundId})\n\nAn error has occurred. Please contact CSD for details. (%{errorCode})",
+        "splash_login_failed": "Failed to load game data. Please close the current windows and try again."
     }
 };
 
