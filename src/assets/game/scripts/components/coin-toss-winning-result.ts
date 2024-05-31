@@ -22,7 +22,6 @@ export class CoinTossWinningResult extends WinningResult {
         if (isBiden) {
             name = "show-ket-qua-biden";
         }
-        console.log("name", name);
 
         return name;
     }
@@ -33,12 +32,11 @@ export class CoinTossWinningResult extends WinningResult {
     }
 
     hideQuickly() {
-        super.hideQuickly();
-        this.skeleton.node.active = false;
+        this.node.active = false;
     }
 
     show() {
-        this.skeleton.node.active = true;
+        this.node.active = true;
         return AnimationUtils.playSpine(this.skeleton, this.animName, false, this.durationShowResult);
     }
 

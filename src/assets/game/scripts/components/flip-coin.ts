@@ -9,7 +9,7 @@ export class FlipCoin extends Component {
     skeleton: sp.Skeleton = null;
 
     animName = "toss a coin";
-    durationFlipCoin = 1.5;
+    durationFlipCoin = 3;
 
     protected onLoad(): void {
         this.setStatusNode(false);
