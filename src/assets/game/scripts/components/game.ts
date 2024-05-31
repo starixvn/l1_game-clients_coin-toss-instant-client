@@ -12,7 +12,7 @@ import { CoinTossWinningResult } from "./coin-toss-winning-result";
 import { FlipCoin } from "./flip-coin";
 import { HighlightResult } from "./highlight-result";
 
-const { Rounds, Translator } = gc;
+const { Rounds, Translator, RoundHistories } = gc;
 
 startGame(settings.name, containerOptions, siteConfigs);
 
@@ -54,6 +54,7 @@ export default class Game extends GameComponent {
 
     protected clientRoundId = -1;
     protected resultsSoundInfo: ResultSoundInfo[] = [];
+    enableFixHandleFinish = true;
 
     onLoad() {
         super.onLoad();
@@ -92,8 +93,6 @@ export default class Game extends GameComponent {
             this.winningResult.setResult(result);
             if (hasAnimation) {
                 await this.winningResult.show();
-            } else {
-                this.winningResult.showQuickly();
             }
         }
     }
@@ -154,5 +153,25 @@ export default class Game extends GameComponent {
     @render(gc.App.AppStore, (store) => store.isLoading)
     updateLoading(isLoading: boolean) {
         this.isLoading = isLoading;
+    }
+
+    @render(RoundHistories.RoundHistoryStore, (store) => store.firstJoinGameHistory)
+    async renderStaticResult(firstJoinGameHistory: gc.RoundHistories.IFirstJoinGameHistory) {
+        if (!firstJoinGameHistory) {
+            return;
+        }
+
+        const lastRound = firstJoinGameHistory.roundHistory;
+        if (lastRound) {
+            const { result } = lastRound;
+            this.highlightResult.show(result);
+        }
+    }
+
+    @render(Rounds.RoundTimeStore, (store) => store.isPlacingBet)
+    handlePlacingBet(isPlacingBet: boolean) {
+        if (isPlacingBet) {
+            this.highlightResult.hide();
+        }
     }
 }
