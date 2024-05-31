@@ -162,16 +162,9 @@ export default class Game extends GameComponent {
         }
 
         const lastRound = firstJoinGameHistory.roundHistory;
-        if (lastRound) {
+        if (lastRound && firstJoinGameHistory.animationHighlight) {
             const { result } = lastRound;
             this.highlightResult.show(result);
-        }
-    }
-
-    @render(Rounds.RoundTimeStore, (store) => store.isPlacingBet)
-    handlePlacingBet(isPlacingBet: boolean) {
-        if (isPlacingBet) {
-            this.highlightResult.hide();
         }
     }
 }

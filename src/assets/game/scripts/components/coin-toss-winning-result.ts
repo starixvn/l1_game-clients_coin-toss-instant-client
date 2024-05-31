@@ -1,5 +1,5 @@
 import gc from "@sg/game-client-base";
-import { _decorator, sp, v3 } from "cc";
+import { _decorator, sp } from "cc";
 import { WinningResult } from "../../../../extensions/shared-components/assets/shared/common-components/winning-result/scripts/winning-result";
 import { AnimationUtils } from "../../../../extensions/shared-components/assets/shared/utils";
 
@@ -14,34 +14,30 @@ export class CoinTossWinningResult extends WinningResult {
     @property(sp.Skeleton)
     skeleton: sp.Skeleton = null;
 
-    animName = "";
+    private skinName = "";
+    private readonly animName = "settle";
     durationShowResult = 2;
 
-    getAnimName(isBiden: boolean) {
-        let name = "show-ket-qua-trump";
+    getSkinName(isBiden: boolean) {
+        let name = "trump";
         if (isBiden) {
-            name = "show-ket-qua-biden";
+            name = "biden";
         }
 
         return name;
-    }
-
-    showQuickly() {
-        this.node.scale = v3(1, 1, 1);
-        this.node.active = true;
     }
 
     hideQuickly() {
         this.node.active = false;
     }
 
-    show() {
+    async show() {
         this.node.active = true;
-        return AnimationUtils.playSpine(this.skeleton, this.animName, false, this.durationShowResult);
+        return AnimationUtils.playSpine(this.skeleton, this.animName, false, this.durationShowResult, this.skinName);
     }
 
     setResult(data: gc.GameServiceMessage.TResult) {
         const convertData = data as TResult;
-        this.animName = this.getAnimName(convertData?.head || false);
+        this.skinName = this.getSkinName(convertData?.head || false);
     }
 }
