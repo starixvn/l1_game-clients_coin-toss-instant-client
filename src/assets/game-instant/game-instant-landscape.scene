@@ -1317,26 +1317,6 @@
     ]
   },
   {
-    "__type__": "d486dgJXH1Hs53xywRGwvv8",
-    "_name": "",
-    "_objFlags": 0,
-    "__editorExtras__": {
-      "mountedRoot": {
-        "__id__": 27
-      }
-    },
-    "node": null,
-    "_enabled": true,
-    "__prefab": null,
-    "lblOwnBet": null,
-    "lblTotalBet": null,
-    "lblOdds": null,
-    "chipBox": null,
-    "highlightStatic": null,
-    "highlightAnim": null,
-    "choice": null,
-    "lblBetPercentage": null,
-    "_id": "632C1xtfdIDYJ+M6XHrPFn"
   },
   {
     "__type__": "cc.MountedComponentsInfo",
@@ -1356,26 +1336,7 @@
     ]
   },
   {
-    "__type__": "d486dgJXH1Hs53xywRGwvv8",
-    "_name": "",
-    "_objFlags": 0,
-    "__editorExtras__": {
-      "mountedRoot": {
-        "__id__": 27
-      }
-    },
-    "node": null,
-    "_enabled": true,
-    "__prefab": null,
-    "lblOwnBet": null,
-    "lblTotalBet": null,
-    "lblOdds": null,
-    "chipBox": null,
-    "highlightStatic": null,
-    "highlightAnim": null,
-    "choice": null,
-    "lblBetPercentage": null,
-    "_id": "88sJPObRNGTYuuCHfGvtiJ"
+    
   },
   {
     "__type__": "CCPropertyOverrideInfo",
