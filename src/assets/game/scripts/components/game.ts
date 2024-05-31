@@ -8,8 +8,9 @@ import Observer from "observer";
 import { siteConfigs } from "../../../scripts/site-configs";
 import { containerOptions, settings } from "../game-settings";
 import "./../../../resources/i18n";
-import { FlipCoin } from "./flip-coin";
 import { CoinTossWinningResult } from "./coin-toss-winning-result";
+import { FlipCoin } from "./flip-coin";
+import { HighlightResult } from "./highlight-result";
 
 const { Rounds, Translator } = gc;
 
@@ -38,8 +39,12 @@ export default class Game extends GameComponent {
     @property({ type: Node })
     flipCoinNode: Node = null;
 
+    @property({ type: Node })
+    highlightResultNode: Node = null;
+
     private winningResult: CoinTossWinningResult = null;
     private flipCoin: FlipCoin = null;
+    private highlightResult: HighlightResult = null;
 
     override namespace = settings.name;
     override containerOptions = containerOptions;
@@ -60,6 +65,7 @@ export default class Game extends GameComponent {
     fetchComponents() {
         this.winningResult = this.winningResultNode.getComponent(CoinTossWinningResult);
         this.flipCoin = this.flipCoinNode.getComponent(FlipCoin);
+        this.highlightResult = this.highlightResultNode.getComponent(HighlightResult);
     }
 
     @render(Rounds.RoundStore, (store) => store.clientRoundId)
@@ -74,12 +80,18 @@ export default class Game extends GameComponent {
         }
     }
 
+    async finishShowResult(result: gc.GameServiceMessage.TResult, settlementResult: gc.GameServiceMessage.TSettlementResult) {
+        this.highlightResult.show(result);
+        this.winningSound();
+        this.winningResult.hide();
+        super.finishShowResult(result, settlementResult);
+    }
+
     async showResult(result: gc.GameServiceMessage.TResult, hasAnimation: boolean) {
         if (result) {
             this.winningResult.setResult(result);
             if (hasAnimation) {
-                this.winningResult.show();
-                this.winningSound();
+                await this.winningResult.show();
             } else {
                 this.winningResult.showQuickly();
             }
@@ -135,6 +147,7 @@ export default class Game extends GameComponent {
             super.handleStartRound(isStartRound);
             this.winningResult.hide();
             this.flipCoin.playAnim();
+            this.highlightResult.hide();
         }
     }
 
