@@ -8,8 +8,8 @@ export class FlipCoin extends Component {
     @property(sp.Skeleton)
     skeleton: sp.Skeleton = null;
 
-    animName = "flip";
-    durationFlipCoin = 3;
+    private readonly animName = "flip";
+    private readonly durationFlipCoin = 3;
 
     protected onLoad(): void {
         this.setStatusNode(false);

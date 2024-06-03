@@ -60,7 +60,7 @@ export default class Game extends GameComponent {
         super.onLoad();
         this.fetchComponents();
         this.winningResult.hideQuickly();
-        this.flipCoin.setStatusNode(true);
+        this.flipCoin.setStatusNode(false);
     }
 
     fetchComponents() {

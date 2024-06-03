@@ -26,11 +26,10 @@ export class HighlightResult extends Component {
     }
 
     show(result: gc.GameServiceMessage.TResult) {
-        const convertResult = result as TResult;
-        if (convertResult?.head) {
-            this.setStatusNode(this.biden, true);
-        } else {
-            this.setStatusNode(this.trump, true);
-        }
+        const convertedResult = result as TResult;
+        const isHead = convertedResult?.head;
+
+        this.setStatusNode(this.biden, isHead);
+        this.setStatusNode(this.trump, !isHead);
     }
 }
