@@ -147,7 +147,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -2,
+      "y": -7,
       "z": 0
     },
     "_lrot": {
@@ -159,8 +159,8 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 0.5,
-      "y": 0.5,
+      "x": 1,
+      "y": 1,
       "z": 1
     },
     "_mobility": 0,
@@ -187,7 +187,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 78.65625,
+      "width": 80.904296875,
       "height": 37.8
     },
     "_anchorPoint": {
@@ -223,11 +223,11 @@
       "b": 21,
       "a": 255
     },
-    "_string": "Trump",
+    "_string": "TRUMP",
     "_horizontalAlign": 2,
     "_verticalAlign": 1,
-    "_actualFontSize": 30,
-    "_fontSize": 24,
+    "_actualFontSize": 28.75,
+    "_fontSize": 23,
     "_fontFamily": "Arial",
     "_lineHeight": 30,
     "_overflow": 0,
@@ -276,8 +276,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 59.328125,
-      "height": 42
+      "width": 110.904296875,
+      "height": 75
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -355,8 +355,8 @@
       "height": 40
     },
     "_startAxis": 0,
-    "_paddingLeft": 10,
-    "_paddingRight": 10,
+    "_paddingLeft": 15,
+    "_paddingRight": 15,
     "_paddingTop": 0,
     "_paddingBottom": 0,
     "_spacingX": 0,
@@ -410,7 +410,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 12.531000000000006,
+      "y": 19.531000000000006,
       "z": 0
     },
     "_lrot": {
@@ -422,8 +422,8 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 0.5,
-      "y": 0.5,
+      "x": 1,
+      "y": 1,
       "z": 1
     },
     "_mobility": 0,
@@ -450,7 +450,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 67.08984375,
+      "width": 64.29443359375,
       "height": 37.8
     },
     "_anchorPoint": {
@@ -489,8 +489,8 @@
     "_string": "#1234",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 30,
-    "_fontSize": 24,
+    "_actualFontSize": 28.75,
+    "_fontSize": 23,
     "_fontFamily": "Arial",
     "_lineHeight": 30,
     "_overflow": 0,
