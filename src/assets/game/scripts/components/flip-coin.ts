@@ -11,10 +11,6 @@ export class FlipCoin extends Component {
     private readonly animName = "flip";
     private readonly durationFlipCoin = 3;
 
-    protected onLoad(): void {
-        this.setStatusNode(false);
-    }
-
     setStatusNode(status: boolean) {
         this.node.active = status;
     }

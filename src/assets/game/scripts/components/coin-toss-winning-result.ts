@@ -18,10 +18,6 @@ export class CoinTossWinningResult extends WinningResult {
     private readonly animName = "settle";
     private readonly durationShowResult = 2;
 
-    protected onLoad(): void {
-        this.hideQuickly();
-    }
-
     getSkinName(isBiden: boolean) {
         let name = "trump";
         if (isBiden) {
