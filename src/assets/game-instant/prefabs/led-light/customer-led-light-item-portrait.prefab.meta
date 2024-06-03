@@ -1,0 +1,13 @@
+{
+  "ver": "1.1.45",
+  "importer": "prefab",
+  "imported": true,
+  "uuid": "97eb2d61-d1f8-4c2a-ba1c-5cad95ab2c13",
+  "files": [
+    ".json"
+  ],
+  "subMetas": {},
+  "userData": {
+    "syncNodeName": "customer-led-light-item-portrait"
+  }
+}

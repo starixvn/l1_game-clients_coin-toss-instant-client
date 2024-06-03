@@ -1078,7 +1078,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": -3.769,
-      "y": 10.929,
+      "y": 9.929,
       "z": 0
     },
     "_lrot": {
@@ -2137,7 +2137,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 30.020218998552807,
+      "width": 30.0322265625,
       "height": 37.8
     },
     "_anchorPoint": {
@@ -2176,7 +2176,7 @@
     "_string": "200",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 22.078817733990146,
+    "_actualFontSize": 22.5,
     "_fontSize": 18,
     "_fontFamily": "Arial",
     "_lineHeight": 30,
@@ -2345,7 +2345,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": -76.946,
-      "y": 117,
+      "y": 120,
       "z": 0
     },
     "_lrot": {
@@ -2385,7 +2385,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 50.30293666119557,
+      "width": 50.3115234375,
       "height": 43.8
     },
     "_anchorPoint": {
@@ -2424,7 +2424,7 @@
     "_string": "98%",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 26.985221674876847,
+    "_actualFontSize": 27.5,
     "_fontSize": 22,
     "_fontFamily": "Arial",
     "_lineHeight": 30,
@@ -4090,7 +4090,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 30.020218998552807,
+      "width": 30.0322265625,
       "height": 37.8
     },
     "_anchorPoint": {
@@ -4129,7 +4129,7 @@
     "_string": "200",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 22.078817733990146,
+    "_actualFontSize": 22.5,
     "_fontSize": 18,
     "_fontFamily": "Arial",
     "_lineHeight": 30,
@@ -4298,7 +4298,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 82.844,
-      "y": 117,
+      "y": 120,
       "z": 0
     },
     "_lrot": {
@@ -4338,7 +4338,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 50.30293666119557,
+      "width": 50.3115234375,
       "height": 43.8
     },
     "_anchorPoint": {
@@ -4377,7 +4377,7 @@
     "_string": "22%",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 26.985221674876847,
+    "_actualFontSize": 27.5,
     "_fontSize": 22,
     "_fontFamily": "Arial",
     "_lineHeight": 30,

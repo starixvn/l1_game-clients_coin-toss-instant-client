@@ -187,7 +187,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 78.63423678490423,
+      "width": 78.65625,
       "height": 37.8
     },
     "_anchorPoint": {
@@ -226,7 +226,7 @@
     "_string": "Trump",
     "_horizontalAlign": 2,
     "_verticalAlign": 1,
-    "_actualFontSize": 32.06896551724138,
+    "_actualFontSize": 30,
     "_fontSize": 24,
     "_fontFamily": "Arial",
     "_lineHeight": 30,
@@ -258,6 +258,8 @@
       "__id__": 0
     },
     "fileId": "5cUFkOWDRGJqWXp/D7Oj5x",
+    "instance": null,
+    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -274,7 +276,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 69.31711839245212,
+      "width": 59.328125,
       "height": 42
     },
     "_anchorPoint": {
@@ -353,8 +355,8 @@
       "height": 40
     },
     "_startAxis": 0,
-    "_paddingLeft": 15,
-    "_paddingRight": 15,
+    "_paddingLeft": 10,
+    "_paddingRight": 10,
     "_paddingTop": 0,
     "_paddingBottom": 0,
     "_spacingX": 0,
@@ -380,6 +382,8 @@
       "__id__": 0
     },
     "fileId": "96tgyh00JJFpf7/8ItjfYs",
+    "instance": null,
+    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -446,7 +450,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 67.07106461063508,
+      "width": 67.08984375,
       "height": 37.8
     },
     "_anchorPoint": {
@@ -485,7 +489,7 @@
     "_string": "#1234",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 32.06896551724138,
+    "_actualFontSize": 30,
     "_fontSize": 24,
     "_fontFamily": "Arial",
     "_lineHeight": 30,
@@ -517,6 +521,8 @@
       "__id__": 0
     },
     "fileId": "beO5I9YkhAX64mg1YUkJGB",
+    "instance": null,
+    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -580,6 +586,7 @@
       "__id__": 0
     },
     "fileId": "c46/YsCPVOJYA4mWEpNYRx",
-    "instance": null
+    "instance": null,
+    "targetOverrides": null
   }
 ]
