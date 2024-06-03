@@ -17,7 +17,7 @@ describe("settings", () => {
                 lockingBet: 3,
                 placingBet: 20,
                 generatingResult: 3,
-                startRound: 2,
+                startRound: 3,
             },
             numberOfRoundHistory: 100,
         });
