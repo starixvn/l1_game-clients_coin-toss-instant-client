@@ -15,6 +15,7 @@ export class CoinTossWinningResult extends WinningResult {
     skeleton: sp.Skeleton = null;
 
     private skinName = "";
+    private trackIndex = 0;
     private readonly animName = "settle";
     private readonly durationShowResult = 2;
 
@@ -27,17 +28,27 @@ export class CoinTossWinningResult extends WinningResult {
         return name;
     }
 
+    getTrackIndex(isBiden: boolean) {
+        let trackIndex = 0;
+        if (isBiden) {
+            trackIndex = 1;
+        }
+
+        return trackIndex;
+    }
+
     hideQuickly() {
         this.node.active = false;
     }
 
     async show() {
         this.node.active = true;
-        return AnimationUtils.playSpine(this.skeleton, this.animName, false, this.durationShowResult, this.skinName);
+        return AnimationUtils.playSkinSpine(this.skeleton, this.animName, this.skinName, this.trackIndex, false, this.durationShowResult);
     }
 
     setResult(data: gc.GameServiceMessage.TResult) {
         const convertData = data as TResult;
         this.skinName = this.getSkinName(convertData?.head || false);
+        this.trackIndex = this.getTrackIndex(convertData?.head || false);
     }
 }
