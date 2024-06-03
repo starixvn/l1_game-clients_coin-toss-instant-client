@@ -1,11 +1,11 @@
 {
-"skeleton": { "hash": "02LIqHUHM0Ajt9tsWJDqtiNSf9U=", "spine": "3.8.75", "x": -203, "y": -110.5, "width": 450, "height": 220 },
+"skeleton": { "hash": "8S7RfgnEOMQlP97SX4/rQLjmxx8=", "spine": "3.8.75" },
 "bones": [
 	{ "name": "coin_toss" }
 ],
 "slots": [
 	{ "name": "flip coin/flip_0", "bone": "coin_toss" },
-	{ "name": "settle biden/settle_0", "bone": "coin_toss", "attachment": "settle biden/settle_47" }
+	{ "name": "settle biden/settle_0", "bone": "coin_toss" }
 ],
 "skins": [
 	{
@@ -285,6 +285,7 @@
 		"slots": {
 			"settle biden/settle_0": {
 				"attachment": [
+					{ "name": "settle biden/settle_0" },
 					{ "time": 0.0417, "name": "settle biden/settle_1" },
 					{ "time": 0.0833, "name": "settle biden/settle_2" },
 					{ "time": 0.125, "name": "settle biden/settle_3" },
