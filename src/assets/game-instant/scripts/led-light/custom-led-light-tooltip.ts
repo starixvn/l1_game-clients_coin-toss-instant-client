@@ -1,8 +1,14 @@
 import gc from "@sg/game-client-base";
-import { Color, _decorator } from "cc";
+import { Color, _decorator, Node, v3, UITransform } from "cc";
 import { LedLightTooltip } from "db://shared-components/game/led-light/scripts/components/led-light-tooltip";
 import { BetChoice } from "../coin-toss-choices";
-const { ccclass } = _decorator;
+const { ccclass, property } = _decorator;
+
+export enum TipAlignment {
+    Left,
+    Cennter,
+    Right,
+}
 
 enum ColorResult {
     head = "#0535b3",
@@ -10,6 +16,12 @@ enum ColorResult {
 }
 @ccclass("CustomLedLightTooltip")
 export class CustomLedLightTooltip extends LedLightTooltip {
+    @property(Node)
+    background: Node = null;
+
+    @property()
+    offsetAligment = 0.2;
+
     protected onLoad(): void {
         super.onLoad();
     }
@@ -26,5 +38,17 @@ export class CustomLedLightTooltip extends LedLightTooltip {
     protected findWinningChoice(ledLightInfo: gc.RoundHistories.RoundHistory): string {
         const choices = [BetChoice.Trump, BetChoice.Biden];
         return choices.find((choice) => ledLightInfo.settlementResult[choice]) || "";
+    }
+
+    public setAlignment(alignment: TipAlignment) {
+        if (!this.background) {
+            return;
+        }
+        const pos = this.background.position;
+
+        const width = this.background.getComponent(UITransform).width;
+        const dict = [-0.5 + this.offsetAligment, 0, 0.5 - this.offsetAligment];
+        const posX = width * dict[alignment];
+        this.background.position = v3(posX, pos.y, pos.z);
     }
 }
