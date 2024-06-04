@@ -55,7 +55,7 @@ export default class Game extends GameComponent {
         super.onLoad();
         this.fetchComponents();
         this.winningResult.hideQuickly();
-        this.flipCoin.setStatusNode(false);
+        this.flipCoin.init();
     }
 
     fetchComponents() {
@@ -85,6 +85,7 @@ export default class Game extends GameComponent {
 
     async showResult(result: gc.GameServiceMessage.TResult, hasAnimation: boolean) {
         if (result) {
+            this.flipCoin.setStatusNode(false);
             this.loadSoundResultBeforeRead(result);
             this.winningResult.setResult(result);
             if (hasAnimation) {
@@ -147,6 +148,7 @@ export default class Game extends GameComponent {
         console.log({ ...firstJoinGameHistory });
         if (lastRound && animationHighlight && roundTime > 0) {
             const { result } = lastRound;
+            this.flipCoin.setStatusNode(false);
             this.highlightResult.show(result);
         }
     }
