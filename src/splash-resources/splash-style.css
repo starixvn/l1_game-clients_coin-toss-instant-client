@@ -25,3 +25,7 @@
 .splash-container .splash_game_name_zh_tw {
     background-image: url("./game_name_zh_tw.png?v=1");
 }
+
+.splash-container .splash_bg_game {
+    background-image: url("./splash-resources/landscape_game_background.png?v=2");
+}
