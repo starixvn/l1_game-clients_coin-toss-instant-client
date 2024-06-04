@@ -27,6 +27,7 @@
 }
 
 .splash-container .splash_bg_game {
+    top: -2vh !important;
     background-image: url("./landscape_game_background.png?v=2") !important;
 }
 
