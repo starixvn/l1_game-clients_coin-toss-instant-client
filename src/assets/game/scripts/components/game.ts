@@ -19,11 +19,6 @@ startGame(settings.name, containerOptions, siteConfigs);
 const { ccclass, property } = _decorator;
 const { observer, render } = Observer;
 
-type ResultSoundInfo = {
-    soundId: string;
-    duration: number;
-};
-
 @ccclass
 @observer(settings.name)
 export default class Game extends GameComponent {
@@ -50,10 +45,10 @@ export default class Game extends GameComponent {
     override containerOptions = containerOptions;
     isLoading = true;
 
-    private readonly winningSounds = {};
+    private readonly winningSounds = { head: "head", tail: "tail" };
 
     protected clientRoundId = -1;
-    protected resultsSoundInfo: ResultSoundInfo[] = [];
+    protected resultSoundId = "";
     enableFixHandleFinish = true;
 
     onLoad() {
@@ -83,13 +78,14 @@ export default class Game extends GameComponent {
 
     async finishShowResult(result: gc.GameServiceMessage.TResult, settlementResult: gc.GameServiceMessage.TSettlementResult) {
         this.highlightResult.show(result);
-        this.winningSound();
+        this.playWinningSound();
         this.winningResult.hide();
         super.finishShowResult(result, settlementResult);
     }
 
     async showResult(result: gc.GameServiceMessage.TResult, hasAnimation: boolean) {
         if (result) {
+            this.loadSoundResultBeforeRead(result);
             this.winningResult.setResult(result);
             if (hasAnimation) {
                 await this.winningResult.show();
@@ -97,41 +93,26 @@ export default class Game extends GameComponent {
         }
     }
 
-    async winningSound() {
-        if (this.resultsSoundInfo.length > 1) {
-            await this.playSequentialSounds();
-        }
+    playWinningSound() {
+        this.resultSoundId && this.playSound(this.resultSoundId);
     }
 
-    async playSequentialSounds() {
-        for (const resultSoundInfo of this.resultsSoundInfo) {
-            this.playSound(resultSoundInfo.soundId);
-            await FunctionUtils.delay(resultSoundInfo.duration * 1000);
-        }
-    }
-
-    async loadSoundResultBeforeRead(data: gc.GameServiceMessage.TResult) {
+    loadSoundResultBeforeRead(data: gc.GameServiceMessage.TResult) {
         let isCancelLoadSounds = false;
         const maxWaitTime = 5000;
-        const results = Object.values(data);
+        const result = Object.keys(data).find((key) => data[key]);
 
         const timeoutCancelWinningSound = setTimeout(() => {
             isCancelLoadSounds = true;
         }, maxWaitTime);
 
-        for (const result of results) {
-            if (isCancelLoadSounds) {
-                break;
-            }
-            const winColorName = this.winningSounds[result];
-            const soundId = this.getAudioKeyForLanguage(winColorName);
-            if (soundId) {
-                const duration = await AudioUtils.getDurationClip(soundId);
-
-                if (duration > 0) {
-                    this.resultsSoundInfo.push({ soundId, duration });
-                }
-            }
+        if (isCancelLoadSounds) {
+            return;
+        }
+        const winOptionName = this.winningSounds[result];
+        const soundId = this.getAudioKeyForLanguage(winOptionName);
+        if (soundId) {
+            this.resultSoundId = soundId;
         }
 
         timeoutCancelWinningSound && clearTimeout(timeoutCancelWinningSound);
@@ -147,6 +128,7 @@ export default class Game extends GameComponent {
             this.winningResult.hide();
             this.flipCoin.playAnim();
             this.highlightResult.hide();
+            this.resultSoundId = "";
         }
     }
 

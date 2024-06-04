@@ -1,113 +1,38 @@
 {
-    "blue_en": {
+    "head_en": {
         "bundle": "resources"
     },
-    "blue_vi": {
+    "head_vi": {
         "bundle": "resources"
     },
-    "blue_th": {
+    "head_th": {
         "bundle": "resources"
     },
-    "blue_id": {
+    "head_id": {
         "bundle": "resources"
     },
-    "blue_zh_cn": {
+    "head_zh_cn": {
         "bundle": "resources"
     },
-    "blue_zh_tw": {
+    "head_zh_tw": {
         "bundle": "resources"
     },
-    "green_en": {
+    "tail_en": {
         "bundle": "resources"
     },
-    "green_vi": {
+    "tail_vi": {
         "bundle": "resources"
     },
-    "green_th": {
+    "tail_th": {
         "bundle": "resources"
     },
-    "green_id": {
+    "tail_id": {
         "bundle": "resources"
     },
-    "green_zh_cn": {
+    "tail_zh_cn": {
         "bundle": "resources"
     },
-    "green_zh_tw": {
-        "bundle": "resources"
-    },
-    "pink_en": {
-        "bundle": "resources"
-    },
-    "pink_vi": {
-        "bundle": "resources"
-    },
-    "pink_th": {
-        "bundle": "resources"
-    },
-    "pink_id": {
-        "bundle": "resources"
-    },
-    "pink_zh_cn": {
-        "bundle": "resources"
-    },
-    "pink_zh_tw": {
-        "bundle": "resources"
-    },
-    "red_en": {
-        "bundle": "resources"
-    },
-    "red_vi": {
-        "bundle": "resources"
-    },
-    "red_th": {
-        "bundle": "resources"
-    },
-    "red_id": {
-        "bundle": "resources"
-    },
-    "red_zh_cn": {
-        "bundle": "resources"
-    },
-    "red_zh_tw": {
-        "bundle": "resources"
-    },
-    "white_en": {
-        "bundle": "resources"
-    },
-    "white_vi": {
-        "bundle": "resources"
-    },
-    "white_th": {
-        "bundle": "resources"
-    },
-    "white_id": {
-        "bundle": "resources"
-    },
-    "white_zh_cn": {
-        "bundle": "resources"
-    },
-    "white_zh_tw": {
-        "bundle": "resources"
-    },
-    "yellow_en": {
-        "bundle": "resources"
-    },
-    "yellow_vi": {
-        "bundle": "resources"
-    },
-    "yellow_th": {
-        "bundle": "resources"
-    },
-    "yellow_id": {
-        "bundle": "resources"
-    },
-    "yellow_zh_cn": {
-        "bundle": "resources"
-    },
-    "yellow_zh_tw": {
-        "bundle": "resources"
-    },
-    "dice_drop": {
+    "tail_zh_tw": {
         "bundle": "resources"
     }
 }
