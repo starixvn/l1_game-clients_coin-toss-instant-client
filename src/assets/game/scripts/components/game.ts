@@ -162,6 +162,7 @@ export default class Game extends GameComponent {
         }
 
         const lastRound = firstJoinGameHistory.roundHistory;
+        console.log({ ...firstJoinGameHistory });
         if (lastRound && firstJoinGameHistory.animationHighlight) {
             const { result } = lastRound;
             this.highlightResult.show(result);
