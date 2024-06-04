@@ -194,7 +194,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 139.7051296454379,
-      "height": 90.72
+      "height": 98.28
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -235,7 +235,7 @@
     "_actualFontSize": 51.19211822660099,
     "_fontSize": 48,
     "_fontFamily": "Arial",
-    "_lineHeight": 72,
+    "_lineHeight": 78,
     "_overflow": 0,
     "_enableWrapText": true,
     "_font": {
@@ -372,8 +372,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 26.84,
-      "height": 72
+      "width": 26.83481849864228,
+      "height": 90.72
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -411,7 +411,7 @@
     "_string": "0",
     "_horizontalAlign": 0,
     "_verticalAlign": 1,
-    "_actualFontSize": 48,
+    "_actualFontSize": 51.19211822660099,
     "_fontSize": 48,
     "_fontFamily": "Arial",
     "_lineHeight": 72,
@@ -427,7 +427,7 @@
     "_isBold": false,
     "_isUnderline": false,
     "_underlineHeight": 2,
-    "_cacheMode": 2,
+    "_cacheMode": 0,
     "_id": ""
   },
   {
@@ -613,7 +613,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 166.72744553634254,
-      "height": 90.72
+      "height": 98.28
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -654,7 +654,7 @@
     "_actualFontSize": 51.19211822660099,
     "_fontSize": 48,
     "_fontFamily": "Arial",
-    "_lineHeight": 72,
+    "_lineHeight": 78,
     "_overflow": 0,
     "_enableWrapText": true,
     "_font": {
@@ -791,8 +791,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 26.84,
-      "height": 72
+      "width": 26.83481849864228,
+      "height": 90.72
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -830,7 +830,7 @@
     "_string": "0",
     "_horizontalAlign": 0,
     "_verticalAlign": 1,
-    "_actualFontSize": 48,
+    "_actualFontSize": 51.19211822660099,
     "_fontSize": 48,
     "_fontFamily": "Arial",
     "_lineHeight": 72,
@@ -846,7 +846,7 @@
     "_isBold": false,
     "_isUnderline": false,
     "_underlineHeight": 2,
-    "_cacheMode": 2,
+    "_cacheMode": 0,
     "_id": ""
   },
   {
