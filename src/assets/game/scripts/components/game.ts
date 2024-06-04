@@ -161,9 +161,9 @@ export default class Game extends GameComponent {
             return;
         }
 
-        const lastRound = firstJoinGameHistory.roundHistory;
+        const { animationHighlight, roundTime, roundHistory: lastRound } = firstJoinGameHistory;
         console.log({ ...firstJoinGameHistory });
-        if (lastRound && firstJoinGameHistory.animationHighlight) {
+        if (lastRound && animationHighlight && roundTime > 0) {
             const { result } = lastRound;
             this.highlightResult.show(result);
         }
