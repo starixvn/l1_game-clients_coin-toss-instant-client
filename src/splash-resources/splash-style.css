@@ -27,5 +27,12 @@
 }
 
 .splash-container .splash_bg_game {
-    background-image: url("./splash-resources/landscape_game_background.png?v=2");
+    background-image: url("./landscape_game_background.png?v=2") !important;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+    .splash-container .splash_bg_game {
+        background-image: url("./portrait_game_background.png?v=2") !important;
+    }
+    
 }
