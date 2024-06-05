@@ -1,5 +1,5 @@
 {
-"skeleton": { "hash": "hCkyrd+SseJ/Bu6t0rIwJHzxKgc=", "spine": "3.8.75" },
+"skeleton": { "hash": "NutEHX78aVnsrY36mO/7eBO/voE=", "spine": "3.8.75" },
 "bones": [
 	{ "name": "coin_toss" },
 	{ "name": "flip", "parent": "coin_toss", "x": 5.23 },
@@ -141,7 +141,14 @@
 				"settle biden/settle_44": { "x": 22, "y": -0.5, "width": 468, "height": 220 },
 				"settle biden/settle_45": { "x": 22, "y": -0.5, "width": 468, "height": 220 },
 				"settle biden/settle_46": { "x": 22, "y": -0.5, "width": 468, "height": 220 },
-				"settle biden/settle_47": { "x": 22, "y": -0.5, "width": 468, "height": 220 }
+				"settle biden/settle_47": { "x": 22, "y": -0.5, "width": 468, "height": 220 },
+				"settle biden/settle_48": { "x": 22, "y": -0.5, "width": 468, "height": 220 },
+				"settle biden/settle_49": { "x": 22, "y": -0.5, "width": 468, "height": 220 },
+				"settle biden/settle_50": { "x": 22, "y": -0.5, "width": 468, "height": 220 },
+				"settle biden/settle_51": { "x": 22, "y": -0.5, "width": 468, "height": 220 },
+				"settle biden/settle_52": { "x": 22, "y": -0.5, "width": 468, "height": 220 },
+				"settle biden/settle_53": { "x": 22, "y": -0.5, "width": 468, "height": 220 },
+				"settle biden/settle_54": { "x": 22, "y": -0.5, "width": 468, "height": 220 }
 			}
 		}
 	},
@@ -196,7 +203,14 @@
 				"settle biden/settle_44": { "path": "settle trump/settle_44", "x": 22, "y": -0.5, "width": 468, "height": 220 },
 				"settle biden/settle_45": { "path": "settle trump/settle_45", "x": 22, "y": -0.5, "width": 468, "height": 220 },
 				"settle biden/settle_46": { "path": "settle trump/settle_46", "x": 22, "y": -0.5, "width": 468, "height": 220 },
-				"settle biden/settle_47": { "path": "settle trump/settle_47", "x": 22, "y": -0.5, "width": 468, "height": 220 }
+				"settle biden/settle_47": { "path": "settle trump/settle_47", "x": 22, "y": -0.5, "width": 468, "height": 220 },
+				"settle biden/settle_48": { "name": "settle biden/settle_47", "path": "settle trump/settle_48", "x": 22, "y": -0.5, "width": 468, "height": 220 },
+				"settle biden/settle_49": { "name": "settle biden/settle_47", "path": "settle trump/settle_49", "x": 22, "y": -0.5, "width": 468, "height": 220 },
+				"settle biden/settle_50": { "name": "settle biden/settle_47", "path": "settle trump/settle_50", "x": 22, "y": -0.5, "width": 468, "height": 220 },
+				"settle biden/settle_51": { "name": "settle biden/settle_47", "path": "settle trump/settle_51", "x": 22, "y": -0.5, "width": 468, "height": 220 },
+				"settle biden/settle_52": { "name": "settle biden/settle_47", "path": "settle trump/settle_52", "x": 22, "y": -0.5, "width": 468, "height": 220 },
+				"settle biden/settle_53": { "name": "settle biden/settle_47", "path": "settle trump/settle_53", "x": 22, "y": -0.5, "width": 468, "height": 220 },
+				"settle biden/settle_54": { "name": "settle biden/settle_47", "path": "settle trump/settle_54", "x": 22, "y": -0.5, "width": 468, "height": 220 }
 			}
 		}
 	}
@@ -334,7 +348,17 @@
 					{ "time": 1.8333, "name": "settle biden/settle_44" },
 					{ "time": 1.875, "name": "settle biden/settle_45" },
 					{ "time": 1.9167, "name": "settle biden/settle_46" },
-					{ "time": 1.9583, "name": "settle biden/settle_47" }
+					{ "time": 1.9583, "name": "settle biden/settle_47" },
+					{ "time": 2.125, "name": "settle biden/settle_30" },
+					{ "time": 2.1667, "name": "settle biden/settle_29" },
+					{ "time": 2.2083, "name": "settle biden/settle_28" },
+					{ "time": 2.25, "name": "settle biden/settle_48" },
+					{ "time": 2.2917, "name": "settle biden/settle_49" },
+					{ "time": 2.3333, "name": "settle biden/settle_50" },
+					{ "time": 2.375, "name": "settle biden/settle_51" },
+					{ "time": 2.4167, "name": "settle biden/settle_52" },
+					{ "time": 2.4583, "name": "settle biden/settle_53" },
+					{ "time": 2.5, "name": "settle biden/settle_54" }
 				]
 			}
 		}
