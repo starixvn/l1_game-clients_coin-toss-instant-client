@@ -1,9 +1,7 @@
 import gc from "@sg/game-client-base";
 import { Label, Node, _decorator } from "cc";
-import { AudioUtils } from "db://shared-components/game/audios/utils";
 import GameComponent from "db://shared-components/game/scripts/components/game-component";
 import { startGame } from "db://shared-components/shared/scripts/startup";
-import { FunctionUtils } from "db://shared-components/shared/utils";
 import Observer from "observer";
 import { siteConfigs } from "../../../scripts/site-configs";
 import { containerOptions, settings } from "../game-settings";
@@ -79,7 +77,6 @@ export default class Game extends GameComponent {
     async finishShowResult(result: gc.GameServiceMessage.TResult, settlementResult: gc.GameServiceMessage.TSettlementResult) {
         this.highlightResult.show(result);
         this.playWinningSound();
-        this.winningResult.hide();
         super.finishShowResult(result, settlementResult);
     }
 
@@ -126,7 +123,7 @@ export default class Game extends GameComponent {
     async handleStartRound(isStartRound: boolean) {
         if (isStartRound) {
             super.handleStartRound(isStartRound);
-            this.winningResult.hide();
+            this.winningResult.hideQuickly();
             this.flipCoin.playAnim();
             this.highlightResult.hide();
             this.resultSoundId = "";
