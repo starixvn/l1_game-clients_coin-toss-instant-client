@@ -80,7 +80,7 @@
         "_value": false
       },
       "particle-2d": {
-        "_value": true
+        "_value": false
       },
       "audio": {
         "_value": true
@@ -122,7 +122,7 @@
         "_value": false
       },
       "custom-pipeline": {
-        "_value": true
+        "_value": false
       }
     },
     "includeModules": [
@@ -130,10 +130,8 @@
       "animation",
       "audio",
       "base",
-      "custom-pipeline",
       "gfx-webgl",
       "intersection-2d",
-      "particle-2d",
       "physics-2d-builtin",
       "profiler",
       "spine",
