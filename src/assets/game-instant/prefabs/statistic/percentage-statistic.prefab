@@ -193,7 +193,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 139.7051296454379,
+      "width": 157.47002469034172,
       "height": 98.28
     },
     "_anchorPoint": {
@@ -229,7 +229,7 @@
       "b": 255,
       "a": 255
     },
-    "_string": "Biden",
+    "_string": "BIDEN",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 51.19211822660099,
@@ -268,7 +268,7 @@
       "__id__": 9
     },
     "key": "CoinToss.glossary_head",
-    "format": 0,
+    "format": 1,
     "_id": ""
   },
   {
@@ -612,7 +612,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 166.72744553634254,
+      "width": 176.99264519319246,
       "height": 98.28
     },
     "_anchorPoint": {
@@ -648,7 +648,7 @@
       "b": 25,
       "a": 255
     },
-    "_string": "Trump",
+    "_string": "TRUMP",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 51.19211822660099,
@@ -687,7 +687,7 @@
       "__id__": 29
     },
     "key": "CoinToss.glossary_tail",
-    "format": 0,
+    "format": 1,
     "_id": ""
   },
   {

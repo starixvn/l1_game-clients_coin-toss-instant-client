@@ -1,5 +1,5 @@
 import gc from "@sg/game-client-base";
-import { Color, _decorator, Node, v3, UITransform } from "cc";
+import { Color, _decorator, Node, v3, UITransform, CCFloat } from "cc";
 import { LedLightTooltip } from "db://shared-components/game/led-light/scripts/components/led-light-tooltip";
 import { BetChoice } from "../coin-toss-choices";
 const { ccclass, property } = _decorator;
@@ -19,7 +19,7 @@ export class CustomLedLightTooltip extends LedLightTooltip {
     @property(Node)
     background: Node = null;
 
-    @property()
+    @property(CCFloat)
     offsetAligment = 0.2;
 
     protected onLoad(): void {

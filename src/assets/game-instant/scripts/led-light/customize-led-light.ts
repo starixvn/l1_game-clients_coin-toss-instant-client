@@ -1,4 +1,4 @@
-import { Node, UITransform, _decorator, v3 } from "cc";
+import { CCFloat, Node, UITransform, _decorator, v3 } from "cc";
 import { LedLight } from "../../../../extensions/shared-components/assets/game/led-light/scripts/components/led-light";
 import { LedLightItem } from "../../../../extensions/shared-components/assets/game/led-light/scripts/components/led-light-item";
 import { CustomLedLightTooltip, TipAlignment } from "./custom-led-light-tooltip";
@@ -6,9 +6,10 @@ const { ccclass, property } = _decorator;
 
 @ccclass("CustomLedLight")
 export class CustomLedLight extends LedLight {
-    @property()
+    @property(CCFloat)
     offsetBorderCount = 2;
     override toolTipCompt: CustomLedLightTooltip;
+
     protected readonly ledLightItemListener = {
         onEnter: (node: Node) => {
             const childIndex = node.parent.children.findIndex((child) => child === node);
