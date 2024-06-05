@@ -228,7 +228,7 @@
       "__expectedType__": "sp.SkeletonData"
     },
     "defaultSkin": "default",
-    "defaultAnimation": "confetti",
+    "defaultAnimation": "",
     "_premultipliedAlpha": true,
     "_timeScale": 1,
     "_preCacheMode": 1,
@@ -596,8 +596,8 @@
       "__uuid__": "8f828178-4f61-4ead-8351-5c18e84e8853",
       "__expectedType__": "sp.SkeletonData"
     },
-    "defaultSkin": "default",
-    "defaultAnimation": "confetti",
+    "defaultSkin": "",
+    "defaultAnimation": "",
     "_premultipliedAlpha": true,
     "_timeScale": 1,
     "_preCacheMode": 1,
