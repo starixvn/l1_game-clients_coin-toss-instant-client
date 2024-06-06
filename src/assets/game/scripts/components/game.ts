@@ -142,7 +142,6 @@ export default class Game extends GameComponent {
         }
 
         const { animationHighlight, roundTime, roundHistory: lastRound } = firstJoinGameHistory;
-        console.log({ ...firstJoinGameHistory });
         if (lastRound && animationHighlight && roundTime > 0) {
             const { result } = lastRound;
             this.flipCoin.setStatusNode(false);
