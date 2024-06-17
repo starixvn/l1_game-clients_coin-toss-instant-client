@@ -1,4 +1,7 @@
 {
+    "head_music": {
+        "bundle": "resources"
+    },
     "head_en": {
         "bundle": "resources"
     },
@@ -33,6 +36,9 @@
         "bundle": "resources"
     },
     "tail_zh_tw": {
+        "bundle": "resources"
+    },
+    "tail_music": {
         "bundle": "resources"
     }
 }

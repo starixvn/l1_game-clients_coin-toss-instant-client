@@ -1,5 +1,5 @@
 import { ResultStatistic } from "db://shared-components/game/result-statistic/scripts/components/result-statistic";
-import { _decorator, Component, Label } from "cc";
+import { _decorator } from "cc";
 const { ccclass, property } = _decorator;
 import gc from "@sg/game-client-base";
 
@@ -9,7 +9,6 @@ export class CoinTossResultStatistic extends ResultStatistic {
     supportStatisticKeys = "head,tail";
 
     protected generateStatisticalData(histories: gc.RoundHistories.RoundHistory[]) {
-        //console.log(JSON.stringify(histories));
         const statisticCount = histories.reduce((result, history) => {
             this.statisticKeys?.forEach((key) => {
                 if (history.result[key]) {
@@ -18,11 +17,9 @@ export class CoinTossResultStatistic extends ResultStatistic {
             });
             return result;
         }, {});
-        const statisticPercent = Object.keys(statisticCount).reduce((result, key) => {
+        return Object.keys(statisticCount).reduce((result, key) => {
             result[key] = `${Math.round((statisticCount[key] / histories.length) * 100)}%`;
             return result;
         }, {});
-
-        return statisticPercent;
     }
 }

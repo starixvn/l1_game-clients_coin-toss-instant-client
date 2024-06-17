@@ -9,6 +9,8 @@ import "./../../../resources/i18n";
 import { CoinTossWinningResult } from "./coin-toss-winning-result";
 import { FlipCoin } from "./flip-coin";
 import { HighlightResult } from "./highlight-result";
+import { AudioUtils } from "../../../../extensions/shared-components/assets/game/audios/utils";
+import { FunctionUtils } from "../../../../extensions/shared-components/assets/shared/utils";
 
 const { Rounds, Translator, RoundHistories } = gc;
 
@@ -17,6 +19,10 @@ startGame(settings.name, containerOptions, siteConfigs);
 const { ccclass, property } = _decorator;
 const { observer, render } = Observer;
 
+type ResultSoundInfo = {
+    soundId: string;
+    duration: number;
+};
 @ccclass
 @observer(settings.name)
 export default class Game extends GameComponent {
@@ -44,9 +50,10 @@ export default class Game extends GameComponent {
     isLoading = true;
 
     private readonly winningSounds = { head: "head", tail: "tail" };
+    private readonly winningMusic = { head: "head_music", tail: "tail_music" };
 
     protected clientRoundId = -1;
-    protected resultSoundId = "";
+    protected resultSoundIds: ResultSoundInfo[] = [];
     enableFixHandleFinish = true;
 
     onLoad() {
@@ -91,11 +98,14 @@ export default class Game extends GameComponent {
         }
     }
 
-    playWinningSound() {
-        this.resultSoundId && this.playSound(this.resultSoundId);
+    async playWinningSound() {
+        for (const resultSoundInfo of this.resultSoundIds) {
+            this.playSound(resultSoundInfo.soundId);
+            await FunctionUtils.delay(resultSoundInfo.duration * 1000);
+        }
     }
 
-    loadSoundResultBeforeRead(data: gc.GameServiceMessage.TResult) {
+    async loadSoundResultBeforeRead(data: gc.GameServiceMessage.TResult) {
         let isCancelLoadSounds = false;
         const maxWaitTime = 5000;
         const result = Object.keys(data).find((key) => data[key]);
@@ -110,9 +120,12 @@ export default class Game extends GameComponent {
         const winOptionName = this.winningSounds[result];
         const soundId = this.getAudioKeyForLanguage(winOptionName);
         if (soundId) {
-            this.resultSoundId = soundId;
-        }
+            const duration = await AudioUtils.getDurationClip(soundId);
 
+            this.resultSoundIds.push({ soundId, duration });
+        }
+        const musicDuration = await AudioUtils.getDurationClip(this.winningMusic[result]);
+        this.resultSoundIds.push({ soundId: this.winningMusic[result], duration: musicDuration });
         timeoutCancelWinningSound && clearTimeout(timeoutCancelWinningSound);
     }
 
@@ -126,7 +139,7 @@ export default class Game extends GameComponent {
             this.winningResult.hideQuickly();
             this.flipCoin.playAnim();
             this.highlightResult.hide();
-            this.resultSoundId = "";
+            this.resultSoundIds = [];
         }
     }
 
