@@ -3,14 +3,14 @@ import { Label, Node, _decorator } from "cc";
 import GameComponent from "db://shared-components/game/scripts/components/game-component";
 import { startGame } from "db://shared-components/shared/scripts/startup";
 import Observer from "observer";
+import { AudioUtils } from "../../../../extensions/shared-components/assets/game/audios/utils";
+import { FunctionUtils } from "../../../../extensions/shared-components/assets/shared/utils";
 import { siteConfigs } from "../../../scripts/site-configs";
 import { containerOptions, settings } from "../game-settings";
 import "./../../../resources/i18n";
 import { CoinTossWinningResult } from "./coin-toss-winning-result";
 import { FlipCoin } from "./flip-coin";
 import { HighlightResult } from "./highlight-result";
-import { AudioUtils } from "../../../../extensions/shared-components/assets/game/audios/utils";
-import { FunctionUtils } from "../../../../extensions/shared-components/assets/shared/utils";
 
 const { Rounds, Translator, RoundHistories } = gc;
 
@@ -82,7 +82,7 @@ export default class Game extends GameComponent {
     }
 
     async finishShowResult(result: gc.GameServiceMessage.TResult, settlementResult: gc.GameServiceMessage.TSettlementResult) {
-        this.highlightResult.show(result);
+        this.highlightResult?.show(result);
         this.playWinningSound();
         super.finishShowResult(result, settlementResult);
     }
@@ -101,7 +101,7 @@ export default class Game extends GameComponent {
     async playWinningSound() {
         for (const resultSoundInfo of this.resultSoundIds) {
             this.playSound(resultSoundInfo.soundId);
-            await FunctionUtils.delay(resultSoundInfo.duration * 1000);
+            await FunctionUtils.scheduleDelay(this, resultSoundInfo.duration);
         }
     }
 
