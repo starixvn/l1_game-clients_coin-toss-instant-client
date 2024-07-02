@@ -109,7 +109,7 @@ export const languages = {
         "pf_ header_merge_client_seed": "合并客户种子",
         "pf_button_clear": "清除",
         "pf_button_save": "保存",
-        "pf_button_verify": "核实",
+        "pf_button_verify": "验证",
         "pf_client_seed_para_1": "(投注接受后不可更改种子)",
         "pf_client_seed_para_2": "每新一轮随机",
         "pf_client_seed_para_3": "手动输入",
@@ -156,16 +156,21 @@ export const languages = {
         "submit": "提交",
         "terms_and_conditions_content": "- 所有新的和现有的投注者都有资格参加促销活动并抓住机会赢得更大的奖品。\n- 中奖金额根据促销规则和奖金支付。\n- 促销适用于公司规定的特定时期。 促销期满后，投注赔率将恢复为之前的值。\n- 公司保留随时更改适用于此促销活动的任何参赛条款或修改、终止、暂停或重新安排此促销活动的权利。\n- 因本推广活动引起或与之相关的任何争议均由本公司决定。",
         "time": "时间",
+        "total": "全部的",
         "total_stake": "总赌注",
         "under_maintenance_suggest": "维护完成后请重新登录继续玩游戏。",
         "under_maintenance_time": "从 %{startTime} 到 %{endTime} (GMT+8)",
-        "win": "赢"
+        "win": "赢",
+        "you_reach_max_win": "您达到了最大胜利"
     },
     "CoinToss": {
+        "Biden_win": "拜登获胜",
         "game_icon_name": "抛硬币",
         "game_name": "抛硬币",
         "glossary_head": "拜登",
-        "glossary_tail": "特朗普"
+        "glossary_tail": "川普",
+        "trump_win": "川普获胜",
+        "you_win": "你赢了"
     },
     "InstantGame": {
         "bet_amount_of_any_choice_incorrect": "投注金额无效",
