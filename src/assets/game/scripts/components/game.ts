@@ -13,7 +13,6 @@ import { FlipCoin } from "./flip-coin";
 import { HighlightResult } from "./highlight-result";
 
 const { Rounds, Translator, RoundHistories } = gc;
-
 startGame(settings.name, containerOptions, siteConfigs);
 
 const { ccclass, property } = _decorator;
