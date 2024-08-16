@@ -71,7 +71,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "biden",
+    "_name": "harris",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
@@ -262,7 +262,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "biden",
+    "_name": "harris",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
@@ -324,13 +324,13 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 281.79998779296875,
-      "height": 352.1600036621094
+      "width": 484,
+      "height": 741
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
+      "x": 0.30785123966942146,
+      "y": 0.5269905533063428
     },
     "_id": ""
   },
@@ -361,11 +361,11 @@
       "a": 255
     },
     "_skeletonData": {
-      "__uuid__": "519c6fc4-1e69-453e-b8dd-c5c9ac73d691",
+      "__uuid__": "3ebf5a39-5942-4979-a667-9b29f9b385f9",
       "__expectedType__": "sp.SkeletonData"
     },
     "defaultSkin": "default",
-    "defaultAnimation": "Biden",
+    "defaultAnimation": "harris",
     "_premultipliedAlpha": false,
     "_timeScale": 1,
     "_preCacheMode": 0,
@@ -596,7 +596,7 @@
       "__uuid__": "8f828178-4f61-4ead-8351-5c18e84e8853",
       "__expectedType__": "sp.SkeletonData"
     },
-    "defaultSkin": "",
+    "defaultSkin": "default",
     "defaultAnimation": "",
     "_premultipliedAlpha": true,
     "_timeScale": 1,
@@ -866,7 +866,7 @@
     "__prefab": {
       "__id__": 39
     },
-    "biden": {
+    "harris": {
       "__id__": 2
     },
     "trump": {

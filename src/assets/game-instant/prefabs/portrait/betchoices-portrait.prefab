@@ -944,8 +944,8 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -1.476,
-      "y": 2.754,
+      "x": 0,
+      "y": 0,
       "z": 0
     },
     "_lrot": {
@@ -985,7 +985,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 174,
+      "width": 173,
       "height": 178
     },
     "_anchorPoint": {
@@ -1022,12 +1022,12 @@
       "a": 255
     },
     "_spriteFrame": {
-      "__uuid__": "62dba303-8fb5-427b-bd8e-5cab8dbf20de@b1b35",
+      "__uuid__": "62dba303-8fb5-427b-bd8e-5cab8dbf20de@75516",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_type": 0,
     "_fillType": 0,
-    "_sizeMode": 0,
+    "_sizeMode": 2,
     "_fillCenter": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -1080,8 +1080,8 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -1.717,
-      "y": 13.379,
+      "x": 0,
+      "y": 3.2,
       "z": 0
     },
     "_lrot": {
@@ -1121,8 +1121,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 91,
-      "height": 140
+      "width": 127,
+      "height": 136
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1158,7 +1158,7 @@
       "a": 255
     },
     "_spriteFrame": {
-      "__uuid__": "62dba303-8fb5-427b-bd8e-5cab8dbf20de@c1589",
+      "__uuid__": "62dba303-8fb5-427b-bd8e-5cab8dbf20de@cc065",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_type": 0,
@@ -1171,7 +1171,7 @@
     },
     "_fillStart": 0,
     "_fillRange": 0,
-    "_isTrimmedMode": true,
+    "_isTrimmedMode": false,
     "_useGrayscale": false,
     "_atlas": null,
     "_id": ""
@@ -2184,7 +2184,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 36.7060546875,
+      "width": 36.693534115907724,
       "height": 37.8
     },
     "_anchorPoint": {
@@ -2223,7 +2223,7 @@
     "_string": "200",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 27.5,
+    "_actualFontSize": 25.05853658536585,
     "_fontSize": 22,
     "_fontFamily": "Arial",
     "_lineHeight": 30,
@@ -2390,8 +2390,8 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -1.717,
-      "y": 13.379,
+      "x": 0,
+      "y": 3.2,
       "z": 0
     },
     "_lrot": {
@@ -2567,8 +2567,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 95,
-      "height": 140
+      "width": 127,
+      "height": 136
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -2604,7 +2604,7 @@
       "a": 255
     },
     "_spriteFrame": {
-      "__uuid__": "62dba303-8fb5-427b-bd8e-5cab8dbf20de@f2a72",
+      "__uuid__": "62dba303-8fb5-427b-bd8e-5cab8dbf20de@2e796",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_type": 0,
@@ -2617,7 +2617,7 @@
     },
     "_fillStart": 0,
     "_fillRange": 0,
-    "_isTrimmedMode": true,
+    "_isTrimmedMode": false,
     "_useGrayscale": false,
     "_atlas": null,
     "_id": ""
@@ -2708,8 +2708,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 65.1845703125,
-      "height": 43.8
+      "width": 65.16745400275613,
+      "height": 43.800000000000004
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -2747,7 +2747,7 @@
     "_string": "100%",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 28.75,
+    "_actualFontSize": 26.197560975609754,
     "_fontSize": 23,
     "_fontFamily": "Arial",
     "_lineHeight": 30,
@@ -4469,7 +4469,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 36.7060546875,
+      "width": 36.693534115907724,
       "height": 37.8
     },
     "_anchorPoint": {
@@ -4508,7 +4508,7 @@
     "_string": "200",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 27.5,
+    "_actualFontSize": 25.05853658536585,
     "_fontSize": 22,
     "_fontFamily": "Arial",
     "_lineHeight": 30,
@@ -5081,8 +5081,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 65.1845703125,
-      "height": 43.8
+      "width": 65.16745400275613,
+      "height": 43.800000000000004
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -5120,7 +5120,7 @@
     "_string": "100%",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 28.75,
+    "_actualFontSize": 26.197560975609754,
     "_fontSize": 23,
     "_fontFamily": "Arial",
     "_lineHeight": 30,

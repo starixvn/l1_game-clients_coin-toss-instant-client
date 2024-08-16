@@ -7,7 +7,7 @@ const { ccclass, property } = _decorator;
 @ccclass("HighlightResult")
 export class HighlightResult extends Component {
     @property(Node)
-    biden: Node = null;
+    harris: Node = null;
 
     @property(Node)
     trump: Node = null;
@@ -21,7 +21,7 @@ export class HighlightResult extends Component {
     }
 
     hide() {
-        this.setStatusNode(this.biden, false);
+        this.setStatusNode(this.harris, false);
         this.setStatusNode(this.trump, false);
     }
 
@@ -29,7 +29,7 @@ export class HighlightResult extends Component {
         const convertedResult = result as TResult;
         const isHead = convertedResult?.head;
 
-        this.setStatusNode(this.biden, isHead);
+        this.setStatusNode(this.harris, isHead);
         this.setStatusNode(this.trump, !isHead);
     }
 }
