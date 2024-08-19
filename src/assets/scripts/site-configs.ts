@@ -27,6 +27,7 @@ const defaultConfig: gc.Configs.SiteConfigs = {
     tolgeeUrl: "",
     boostedOddsDelayTimeByMinutes: 2,
     storagePrefixKey: "si",
+    backgroundNoTranslate: true,
 };
 
 let configDev = {

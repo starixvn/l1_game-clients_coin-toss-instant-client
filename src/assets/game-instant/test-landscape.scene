@@ -11,7 +11,7 @@
   },
   {
     "__type__": "cc.Scene",
-    "_name": "test",
+    "_name": "test-landscape",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": null,
@@ -7836,7 +7836,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": -245.717,
-      "y": 75.611,
+      "y": 35.687,
       "z": 0
     },
     "_lrot": {
@@ -7957,7 +7957,7 @@
       "__expectedType__": "sp.SkeletonData"
     },
     "defaultSkin": "default",
-    "defaultAnimation": "<None>",
+    "defaultAnimation": "confetti",
     "_premultipliedAlpha": true,
     "_timeScale": 1,
     "_preCacheMode": 1,
@@ -7994,7 +7994,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 0,
+      "y": 41,
       "z": 0
     },
     "_lrot": {
@@ -8251,7 +8251,7 @@
       "__expectedType__": "sp.SkeletonData"
     },
     "defaultSkin": "default",
-    "defaultAnimation": "<None>",
+    "defaultAnimation": "confetti",
     "_premultipliedAlpha": true,
     "_timeScale": 1,
     "_preCacheMode": 1,
