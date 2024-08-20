@@ -25,7 +25,7 @@
 
 .splash-container .bg_no_translate {
     top: -2.8vh !important;
-    left: -20px;
+    left: 0px;
     background-image: url("./landscape_game_background.png?v=4") !important;
 }
 
