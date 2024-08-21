@@ -175,7 +175,7 @@ export const languages = {
         "game_icon_name": "โยนเหรียญ",
         "game_name": "โยนเหรียญ",
         "glossary_head": "Harris",
-        "glossary_tail": "ทรัมป์",
+        "glossary_tail": "Trump",
         "trump_win": "ทรัมป์ชนะ",
         "you_win": "คุณชนะ"
     },
