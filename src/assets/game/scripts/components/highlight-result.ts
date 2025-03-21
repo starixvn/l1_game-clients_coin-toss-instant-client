@@ -1,5 +1,5 @@
 import gc from "@sg/game-client-base";
-import { Component, Node, _decorator } from "cc";
+import { Animation, Component, Node, _decorator } from "cc";
 import { TResult } from "./coin-toss-winning-result";
 
 const { ccclass, property } = _decorator;
@@ -7,10 +7,16 @@ const { ccclass, property } = _decorator;
 @ccclass("HighlightResult")
 export class HighlightResult extends Component {
     @property(Node)
-    harris: Node = null;
+    confetiHeads: Node = null;
 
     @property(Node)
-    trump: Node = null;
+    confetiTails: Node = null;
+
+    @property(Animation)
+    winHeads: Animation = null;
+
+    @property(Animation)
+    winTails: Animation = null;
 
     protected onLoad(): void {
         this.hide();
@@ -21,15 +27,19 @@ export class HighlightResult extends Component {
     }
 
     hide() {
-        this.setStatusNode(this.harris, false);
-        this.setStatusNode(this.trump, false);
+        this.setStatusNode(this.confetiHeads, false);
+        this.setStatusNode(this.confetiTails, false);
+        this.winHeads.stop();
+        this.winTails.stop();
     }
 
     show(result: gc.GameServiceMessage.TResult) {
         const convertedResult = result as TResult;
         const isHead = convertedResult?.head;
+        const animation = isHead ? this.winHeads : this.winTails;
+        animation.play();
 
-        this.setStatusNode(this.harris, isHead);
-        this.setStatusNode(this.trump, !isHead);
+        this.setStatusNode(this.confetiHeads, isHead);
+        this.setStatusNode(this.confetiTails, !isHead);
     }
 }
