@@ -6,7 +6,6 @@
     },
     "configs": {
       "migrationsConfig": {
-        "name": "Migrated Configuration",
         "cache": {
           "base": {
             "_value": true
@@ -83,7 +82,7 @@
           },
           "physics-2d": {
             "_value": true,
-            "_option": "physics-2d-builtin"
+            "_option": "physics-2d-box2d"
           },
           "physics-2d-box2d": {
             "_value": false
@@ -190,7 +189,10 @@
             "_value": false
           }
         },
-        "flags": {},
+        "flags": {
+          "LOAD_SPINE_MANUALLY": false
+        },
+        "name": "Migrated Configuration",
         "includeModules": [
           "2d",
           "affine-transform",
@@ -202,7 +204,7 @@
           "intersection-2d",
           "legacy-pipeline",
           "mask",
-          "physics-2d-builtin",
+          "physics-2d-box2d",
           "profiler",
           "rich-text",
           "spine-3.8",
