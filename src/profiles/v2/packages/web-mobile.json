@@ -27,6 +27,10 @@
         {
           "url": "db://assets/game-instant/splash/splash.scene",
           "uuid": "374bdfc3-a787-4bd2-817b-4efe75860854"
+        },
+        {
+          "url": "db://shared-components/session-timeout/session-timeout.scene",
+          "uuid": "1b4ca76d-3ce5-41e6-a47c-0fb1f85bb3f4"
         }
       ],
       "polyfills": {
@@ -53,7 +57,8 @@
         "orientation": "auto",
         "embedWebDebugger": false,
         "__version__": "1.0.1",
-        "cullEngineAsmJsModule": false
+        "cullEngineAsmJsModule": false,
+        "useWebGPU": false
       }
     },
     "__version__": "1.3.9"
