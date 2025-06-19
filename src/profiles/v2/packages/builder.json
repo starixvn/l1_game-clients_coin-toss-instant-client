@@ -1,5 +1,5 @@
 {
-  "__version__": "1.3.6",
+  "__version__": "1.3.9",
   "log": {
     "level": 2
   },
@@ -12,6 +12,7 @@
         "state": "success",
         "stage": "build",
         "message": "5-29-2024 11:30:44 build success in 141416 ms!",
+        "detailMessage": "",
         "options": {
           "name": "cocos-3x",
           "platform": "web-mobile",
@@ -64,7 +65,18 @@
           "startSceneAssetBundle": false,
           "bundleConfigs": [],
           "bundleCommonChunk": false,
-          "logDest": "project://temp/builder/log/web-mobile4-13-2023 09-39.log"
+          "logDest": "project://temp/builder/log/web-mobile4-13-2023 09-39.log",
+          "overwriteProjectSettings": {
+            "includeModules": {
+              "physics": "inherit-project-setting",
+              "physics-2d": "inherit-project-setting",
+              "gfx-webgl2": "inherit-project-setting"
+            },
+            "macroConfig": {
+              "cleanupImageCache": "off"
+            }
+          },
+          "buildMode": "normal"
         },
         "time": "5-29-2024 11:28:23",
         "dirty": false
