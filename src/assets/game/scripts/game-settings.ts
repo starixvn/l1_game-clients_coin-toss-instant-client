@@ -5,6 +5,7 @@ import { sharedContainer } from "../../scripts/shared-container";
 export const settings = {
     id: 80,
     name: "CoinToss",
+    observerNamespace: "CoinToss",
     durations: {
         wholeRound: 29,
         lockingBet: 3,
@@ -12,8 +13,7 @@ export const settings = {
         generatingResult: 2,
         startRound: 3,
     },
-    numberOfRoundHistory: 100,
-    isMiniGame: true
+    numberOfRoundHistory: 100
 };
 
 export const containerOptions: gc.IContainerOptions = {
