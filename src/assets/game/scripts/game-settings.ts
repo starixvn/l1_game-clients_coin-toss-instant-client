@@ -13,6 +13,7 @@ export const settings = {
         startRound: 3,
     },
     numberOfRoundHistory: 100,
+    isMiniGame: true
 };
 
 export const containerOptions: gc.IContainerOptions = {
