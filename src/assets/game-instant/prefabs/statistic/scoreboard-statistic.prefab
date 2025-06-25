@@ -1102,6 +1102,8 @@
       "__id__": 0
     },
     "fileId": "88wQlWL2VDypZf4C/XqF5a",
+    "instance": null,
+    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -1245,6 +1247,8 @@
       "__id__": 0
     },
     "fileId": "51dnVPKQBKlrB3ubLPtD8k",
+    "instance": null,
+    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -1684,10 +1688,12 @@
     "__prefab": {
       "__id__": 85
     },
-    "bigRoad": {
-      "__id__": 79
-    },
-    "beadRoad": null,
+    "scoreboards": [
+      {
+        "__id__": 79
+      }
+    ],
+    "resultPercentage": null,
     "_id": ""
   },
   {
