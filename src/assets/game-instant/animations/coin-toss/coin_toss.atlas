@@ -1,5 +1,5 @@
 
-coin_toss.png
+coin_toss.webp
 size: 2048,1975
 format: RGBA8888
 filter: Linear,Linear
@@ -411,7 +411,7 @@ settle trump/settle_53
   offset: 26, 57
   index: -1
 
-coin_toss2.png
+coin_toss2.webp
 size: 2023,1973
 format: RGBA8888
 filter: Linear,Linear
@@ -851,7 +851,7 @@ settle trump/settle_54
   offset: 27, 58
   index: -1
 
-coin_toss3.png
+coin_toss3.webp
 size: 2041,1876
 format: RGBA8888
 filter: Linear,Linear
@@ -1249,7 +1249,7 @@ settle trump/settle_47
   offset: 5, 12
   index: -1
 
-coin_toss4.png
+coin_toss4.webp
 size: 1285,431
 format: RGBA8888
 filter: Linear,Linear
