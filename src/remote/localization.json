@@ -4,15 +4,17 @@
         "id": "Lempar Koin",
         "th": "โยนเหรียญ",
         "vi": "Tung Đồng Xu",
-        "zh_cn": "抛硬币",
-        "zh_tw": "抛硬幣"
+        "zh_cn": "Tung Đồng Xu",
+        "zh_tw": "抛硬幣",
+        "ja": "コイントス"
     },
     "gameNames": {
         "en": "Coin Toss",
         "id": "Lempar Koin",
         "th": "โยนเหรียญ",
         "vi": "Tung Đồng Xu",
-        "zh_cn": "抛硬币",
-        "zh_tw": "抛硬幣"
+        "zh_cn": "Tung Đồng Xu",
+        "zh_tw": "抛硬幣",
+        "ja": "コイントス"
     }
 }
