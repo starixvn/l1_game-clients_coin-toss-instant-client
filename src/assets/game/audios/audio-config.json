@@ -14,6 +14,9 @@
     "head_id": {
         "bundle": "resources"
     },
+    "head_ja": {
+        "bundle": "resources"
+    },
     "head_zh_cn": {
         "bundle": "resources"
     },
@@ -30,6 +33,9 @@
         "bundle": "resources"
     },
     "tail_id": {
+        "bundle": "resources"
+    },
+    "tail_ja": {
         "bundle": "resources"
     },
     "tail_zh_cn": {
