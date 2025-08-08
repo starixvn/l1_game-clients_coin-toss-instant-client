@@ -5,6 +5,9 @@
     "head_en": {
         "bundle": "resources"
     },
+    "head_es": {
+        "bundle": "resources"
+    },
     "head_vi": {
         "bundle": "resources"
     },
@@ -24,6 +27,9 @@
         "bundle": "resources"
     },
     "tail_en": {
+        "bundle": "resources"
+    },
+    "tail_es": {
         "bundle": "resources"
     },
     "tail_vi": {

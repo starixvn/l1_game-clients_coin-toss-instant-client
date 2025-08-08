@@ -1,4 +1,5 @@
 export * as en from "./en";
+        export * as es from "./es";
     export * as id from "./id";
     export * as th from "./th";
     export * as vi from "./vi";
